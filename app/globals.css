@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #F8F7F3;
+    --bg-secondary: #EFECE6;
+    --bg-dark: #121820;
+    --bg-dark-card: #1A222D;
+    
+    --text-primary: #121820;
+    --text-muted: #5A6472;
+    --text-light: #F8F7F3;
+    --text-light-muted: #94A3B8;
+
+    --accent-blue: #2563EB;
+    --accent-teal: #0D9488;
+    --accent-gold: #D97706;
+    
+    --border-subtle: rgba(18, 24, 32, 0.08);
+    --border-dark-subtle: rgba(248, 247, 243, 0.12);
+  }
+
+  html {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    scroll-behavior: auto; /* Handled smoothly by Lenis */
+    font-family: var(--font-sans), system-ui, sans-serif;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Typography helper classes */
+  h1, h2, h3, .font-serif-editorial {
+    font-family: var(--font-serif), Georgia, serif;
+    font-weight: 400;
+  }
+}
+
+/* Lenis Smooth Scrolling Required CSS */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8F7F3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Custom Selection */
+::selection {
+  background: #121820;
+  color: #F8F7F3;
+}
+
+/* Utility Animations */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
