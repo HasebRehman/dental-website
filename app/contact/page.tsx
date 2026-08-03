@@ -31,9 +31,9 @@ export default function ContactPage() {
       <Navbar />
 
       {/* Hero Header Section */}
-      <section className="pt-44 pb-20 bg-[#43ACE0] text-[#FFFFFF] relative overflow-hidden">
+      <section className="pt-44 pb-20 bg-[#1B69B6] text-[#FFFFFF] relative overflow-hidden">
         {/* Ambient Glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#F4A261]/15 rounded-full blur-[140px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#FF7A00]/15 rounded-full blur-[140px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 text-center">
           <motion.div
@@ -42,12 +42,12 @@ export default function ContactPage() {
             transition={{ duration: 0.65 }}
           >
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FFFFFF]/20 border border-[#FFFFFF]/30 text-xs font-bold uppercase tracking-widest text-[#FFFFFF] mb-4">
-              <MapPin className="w-3.5 h-3.5 text-[#F4A261]" />
+              <MapPin className="w-3.5 h-3.5 text-[#FF7A00]" />
               <span>Dallas Family Dental Practice</span>
             </div>
 
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#FFFFFF] mb-4">
-              CONTACT <span className="text-[#F4A261]">ILLINOIS FAMILY DENTISTRY</span>
+            <h1 className="font-sans text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-[#FFFFFF] mb-4">
+              CONTACT <span className="text-[#93C5FD]">ILLINOIS FAMILY DENTISTRY</span>
             </h1>
 
             <p className="font-sans text-base sm:text-lg text-[#FFFFFF]/90 max-w-2xl mx-auto font-normal leading-relaxed mb-8">
@@ -57,7 +57,7 @@ export default function ContactPage() {
             <div className="flex flex-wrap items-center justify-center gap-4">
               <a
                 href={`tel:${siteData.phoneRaw}`}
-                className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-[#F4A261] text-[#FFFFFF] text-xs font-extrabold uppercase tracking-widest hover:bg-[#FFFFFF] hover:text-[#000000] transition-colors shadow-lg"
+                className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-[#FF7A00] text-[#FFFFFF] text-xs font-extrabold uppercase tracking-widest hover:bg-[#FFFFFF] hover:text-[#0B2545] transition-colors shadow-lg"
               >
                 <Phone className="w-4 h-4" />
                 <span>Call 469-809-1919</span>
@@ -89,31 +89,31 @@ export default function ContactPage() {
           >
             {/* Contact Info Card */}
             <div className="relative group">
-              <div className="absolute -inset-3 rounded-3xl bg-gradient-to-r from-[#43ACE0]/20 via-[#5FCAEF]/25 to-[#F4A261]/20 blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none -z-10" />
+              <div className="absolute -inset-3 rounded-3xl bg-gradient-to-r from-[#1B69B6]/15 via-[#93C5FD]/20 to-[#FF7A00]/15 blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none -z-10" />
 
-              <div className="bg-[#5FCAEF]/10 rounded-3xl p-8 sm:p-10 border border-[#43ACE0]/20 shadow-[0_20px_50px_rgba(67,172,224,0.2)]">
-                <h2 className="font-serif text-2xl font-bold text-[#000000] mb-6 flex items-center gap-2.5">
-                  <Sparkles className="w-6 h-6 text-[#F4A261]" />
+              <div className="bg-[#F8FAFC] rounded-3xl p-8 sm:p-10 border border-[#E2E8F0] shadow-md">
+                <h2 className="font-sans text-2xl font-black text-[#0B2545] mb-6 flex items-center gap-2.5">
+                  <Sparkles className="w-6 h-6 text-[#FF7A00]" />
                   <span>Practice Information</span>
                 </h2>
 
                 <ul className="space-y-6 text-xs sm:text-sm font-sans">
                   {/* Address */}
                   <li className="flex items-start gap-3.5">
-                    <div className="w-10 h-10 rounded-xl bg-[#43ACE0]/15 border border-[#43ACE0]/30 flex items-center justify-center text-[#F4A261] shrink-0 mt-0.5 shadow-xs">
+                    <div className="w-10 h-10 rounded-xl bg-[#F0F6FF] border border-[#1B69B6]/20 flex items-center justify-center text-[#FF7A00] shrink-0 mt-0.5 shadow-xs">
                       <MapPin className="w-5 h-5" />
                     </div>
                     <div>
-                      <div className="text-xs uppercase font-extrabold tracking-wider text-[#000000] mb-1">
+                      <div className="text-xs uppercase font-extrabold tracking-wider text-[#0B2545] mb-1">
                         LOCATION & ADDRESS
                       </div>
-                      <div className="font-extrabold text-[#000000] text-base mb-0.5">
+                      <div className="font-black text-[#0B2545] text-base mb-0.5">
                         Illinois Family Dentistry
                       </div>
-                      <p className="text-[#000000] leading-relaxed font-normal">
+                      <p className="text-[#475569] leading-relaxed font-normal">
                         2300 W Illinois Ave, Dallas, TX 75224
                       </p>
-                      <p className="text-[11px] text-[#000000]/70 mt-0.5">
+                      <p className="text-[11px] text-[#64748B] mt-0.5">
                         Illinois & Hampton Plaza (Next to El Rancho Supermercado)
                       </p>
                     </div>
@@ -121,20 +121,20 @@ export default function ContactPage() {
 
                   {/* Phone */}
                   <li className="flex items-start gap-3.5">
-                    <div className="w-10 h-10 rounded-xl bg-[#43ACE0]/15 border border-[#43ACE0]/30 flex items-center justify-center text-[#43ACE0] shrink-0 mt-0.5 shadow-xs">
+                    <div className="w-10 h-10 rounded-xl bg-[#F0F6FF] border border-[#1B69B6]/20 flex items-center justify-center text-[#1B69B6] shrink-0 mt-0.5 shadow-xs">
                       <Phone className="w-5 h-5" />
                     </div>
                     <div>
-                      <div className="text-xs uppercase font-extrabold tracking-wider text-[#000000] mb-1">
+                      <div className="text-xs uppercase font-extrabold tracking-wider text-[#0B2545] mb-1">
                         PHONE NUMBER
                       </div>
                       <a
                         href={`tel:${siteData.phoneRaw}`}
-                        className="font-extrabold text-[#43ACE0] text-lg hover:underline block"
+                        className="font-black text-[#1B69B6] text-lg hover:underline block"
                       >
                         469-809-1919
                       </a>
-                      <span className="text-[11px] text-[#000000]/70">
+                      <span className="text-[11px] text-[#64748B]">
                         Call or text for immediate scheduling
                       </span>
                     </div>
@@ -142,16 +142,16 @@ export default function ContactPage() {
 
                   {/* Email */}
                   <li className="flex items-start gap-3.5">
-                    <div className="w-10 h-10 rounded-xl bg-[#43ACE0]/15 border border-[#43ACE0]/30 flex items-center justify-center text-[#F4A261] shrink-0 mt-0.5 shadow-xs">
+                    <div className="w-10 h-10 rounded-xl bg-[#F0F6FF] border border-[#1B69B6]/20 flex items-center justify-center text-[#FF7A00] shrink-0 mt-0.5 shadow-xs">
                       <Mail className="w-5 h-5" />
                     </div>
                     <div>
-                      <div className="text-xs uppercase font-extrabold tracking-wider text-[#000000] mb-1">
+                      <div className="text-xs uppercase font-extrabold tracking-wider text-[#0B2545] mb-1">
                         EMAIL ADDRESS
                       </div>
                       <a
                         href={`mailto:${siteData.email}`}
-                        className="font-extrabold text-[#000000] hover:text-[#43ACE0] transition-colors block"
+                        className="font-bold text-[#0B2545] hover:text-[#1B69B6] transition-colors block"
                       >
                         {siteData.email}
                       </a>
@@ -160,14 +160,14 @@ export default function ContactPage() {
 
                   {/* Languages */}
                   <li className="flex items-start gap-3.5">
-                    <div className="w-10 h-10 rounded-xl bg-[#43ACE0]/15 border border-[#43ACE0]/30 flex items-center justify-center text-[#43ACE0] shrink-0 mt-0.5 shadow-xs">
+                    <div className="w-10 h-10 rounded-xl bg-[#F0F6FF] border border-[#1B69B6]/20 flex items-center justify-center text-[#1B69B6] shrink-0 mt-0.5 shadow-xs">
                       <Globe className="w-5 h-5" />
                     </div>
                     <div>
-                      <div className="text-xs uppercase font-extrabold tracking-wider text-[#000000] mb-1">
+                      <div className="text-xs uppercase font-extrabold tracking-wider text-[#0B2545] mb-1">
                         LANGUAGES SPOKEN
                       </div>
-                      <div className="font-extrabold text-[#000000]">
+                      <div className="font-extrabold text-[#0B2545]">
                         English & Hablamos Español
                       </div>
                     </div>
@@ -177,9 +177,9 @@ export default function ContactPage() {
             </div>
 
             {/* Operating Hours Card */}
-            <div className="bg-[#43ACE0] text-[#FFFFFF] rounded-3xl p-8 sm:p-10 shadow-2xl relative overflow-hidden">
-              <h2 className="font-serif text-2xl font-bold mb-6 flex items-center gap-2.5">
-                <Clock className="w-6 h-6 text-[#F4A261]" />
+            <div className="bg-gradient-to-br from-[#0B2545] via-[#1B69B6] to-[#0B2545] text-[#FFFFFF] rounded-3xl p-8 sm:p-10 shadow-xl border border-[#1B69B6]/40 relative overflow-hidden">
+              <h2 className="font-sans text-2xl font-black mb-6 flex items-center gap-2.5">
+                <Clock className="w-6 h-6 text-[#FF7A00]" />
                 <span>Operating Hours</span>
               </h2>
 
@@ -194,7 +194,7 @@ export default function ContactPage() {
                 </li>
                 <li className="flex justify-between border-b border-[#FFFFFF]/20 pb-2">
                   <span className="font-semibold text-[#FFFFFF]/80">Saturday</span>
-                  <span className="font-extrabold text-[#F4A261]">10:00 AM – 2:00 PM</span>
+                  <span className="font-extrabold text-[#FF7A00]">10:00 AM – 2:00 PM</span>
                 </li>
                 <li className="flex justify-between">
                   <span className="font-semibold text-[#FFFFFF]/80">Sunday</span>
@@ -213,33 +213,33 @@ export default function ContactPage() {
             className="lg:col-span-7 relative group"
           >
             {/* Backlight Ambient Glow */}
-            <div className="absolute -inset-3 rounded-3xl bg-gradient-to-r from-[#43ACE0]/20 via-[#5FCAEF]/25 to-[#F4A261]/20 blur-2xl opacity-75 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none -z-10" />
+            <div className="absolute -inset-3 rounded-3xl bg-gradient-to-r from-[#1B69B6]/15 via-[#93C5FD]/20 to-[#FF7A00]/15 blur-2xl opacity-75 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none -z-10" />
 
-            <div className="bg-[#FFFFFF] rounded-3xl p-8 sm:p-12 border border-[#43ACE0]/20 shadow-[0_25px_60px_rgba(67,172,224,0.25)]">
+            <div className="bg-[#FFFFFF] rounded-3xl p-8 sm:p-12 border border-[#E2E8F0] shadow-xl">
               <div className="mb-8">
-                <span className="text-xs uppercase tracking-widest font-extrabold text-[#F4A261] block mb-1">
+                <span className="text-xs uppercase tracking-widest font-extrabold text-[#FF7A00] block mb-1">
                   Online Scheduling
                 </span>
-                <h2 className="font-serif text-3xl sm:text-4xl text-[#000000] font-bold">
+                <h2 className="font-sans text-3xl sm:text-4xl text-[#0B2545] font-black tracking-tight">
                   Request an Appointment
                 </h2>
-                <p className="font-sans text-xs sm:text-sm text-[#000000] mt-2 font-normal">
+                <p className="font-sans text-xs sm:text-sm text-[#64748B] mt-2 font-normal">
                   Fill out the quick form below and our staff will contact you shortly to confirm your visit.
                 </p>
               </div>
 
               {formSubmitted ? (
-                <div className="bg-[#5FCAEF]/15 border border-[#43ACE0]/30 p-8 rounded-2xl text-center">
-                  <CheckCircle2 className="w-16 h-16 text-[#F4A261] mx-auto mb-4" />
-                  <h3 className="font-serif text-2xl font-bold text-[#000000] mb-2">
+                <div className="bg-[#F0F6FF] border border-[#1B69B6]/20 p-8 rounded-2xl text-center">
+                  <CheckCircle2 className="w-16 h-16 text-[#FF7A00] mx-auto mb-4" />
+                  <h3 className="font-sans text-2xl font-black text-[#0B2545] mb-2">
                     Appointment Request Received!
                   </h3>
-                  <p className="font-sans text-xs sm:text-sm text-[#000000] leading-relaxed mb-6 font-normal">
-                    Thank you, <span className="font-bold text-[#000000]">{formData.name}</span>! Our Dallas team will call or text you at <span className="font-bold text-[#43ACE0]">{formData.phone}</span> shortly to confirm your time.
+                  <p className="font-sans text-xs sm:text-sm text-[#475569] leading-relaxed mb-6 font-normal">
+                    Thank you, <span className="font-bold text-[#0B2545]">{formData.name}</span>! Our Dallas team will call or text you at <span className="font-bold text-[#1B69B6]">{formData.phone}</span> shortly to confirm your time.
                   </p>
                   <button
                     onClick={() => setFormSubmitted(false)}
-                    className="px-6 py-2.5 rounded-full bg-[#43ACE0] text-[#FFFFFF] text-xs font-extrabold uppercase tracking-widest hover:bg-[#F4A261] transition-colors"
+                    className="px-6 py-2.5 rounded-full bg-[#1B69B6] text-[#FFFFFF] text-xs font-extrabold uppercase tracking-widest hover:bg-[#FF7A00] transition-colors"
                   >
                     Submit Another Request
                   </button>
@@ -248,7 +248,7 @@ export default function ContactPage() {
                 <form onSubmit={handleSubmit} className="space-y-5 font-sans">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-xs font-extrabold uppercase tracking-wider text-[#000000] mb-2">
+                      <label className="block text-xs font-extrabold uppercase tracking-wider text-[#0B2545] mb-2">
                         Full Name *
                       </label>
                       <input
@@ -257,12 +257,12 @@ export default function ContactPage() {
                         placeholder="e.g. Maria Garcia"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full px-4 py-3.5 rounded-xl bg-[#5FCAEF]/10 border border-[#43ACE0]/20 text-xs text-[#000000] font-medium focus:outline-none focus:ring-2 focus:ring-[#43ACE0]"
+                        className="w-full px-4 py-3.5 rounded-xl bg-[#F8FAFC] border border-[#CBD5E1] text-xs text-[#0B2545] font-medium focus:outline-none focus:ring-2 focus:ring-[#1B69B6]"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-extrabold uppercase tracking-wider text-[#000000] mb-2">
+                      <label className="block text-xs font-extrabold uppercase tracking-wider text-[#0B2545] mb-2">
                         Phone Number *
                       </label>
                       <input
@@ -271,14 +271,14 @@ export default function ContactPage() {
                         placeholder="e.g. (469) 809-1919"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full px-4 py-3.5 rounded-xl bg-[#5FCAEF]/10 border border-[#43ACE0]/20 text-xs text-[#000000] font-medium focus:outline-none focus:ring-2 focus:ring-[#43ACE0]"
+                        className="w-full px-4 py-3.5 rounded-xl bg-[#F8FAFC] border border-[#CBD5E1] text-xs text-[#0B2545] font-medium focus:outline-none focus:ring-2 focus:ring-[#1B69B6]"
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-xs font-extrabold uppercase tracking-wider text-[#000000] mb-2">
+                      <label className="block text-xs font-extrabold uppercase tracking-wider text-[#0B2545] mb-2">
                         Email Address
                       </label>
                       <input
@@ -286,18 +286,18 @@ export default function ContactPage() {
                         placeholder="e.g. name@example.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full px-4 py-3.5 rounded-xl bg-[#5FCAEF]/10 border border-[#43ACE0]/20 text-xs text-[#000000] font-medium focus:outline-none focus:ring-2 focus:ring-[#43ACE0]"
+                        className="w-full px-4 py-3.5 rounded-xl bg-[#F8FAFC] border border-[#CBD5E1] text-xs text-[#0B2545] font-medium focus:outline-none focus:ring-2 focus:ring-[#1B69B6]"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-extrabold uppercase tracking-wider text-[#000000] mb-2">
+                      <label className="block text-xs font-extrabold uppercase tracking-wider text-[#0B2545] mb-2">
                         Service Needed
                       </label>
                       <select
                         value={formData.service}
                         onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                        className="w-full px-4 py-3.5 rounded-xl bg-[#5FCAEF]/10 border border-[#43ACE0]/20 text-xs text-[#000000] font-medium focus:outline-none focus:ring-2 focus:ring-[#43ACE0]"
+                        className="w-full px-4 py-3.5 rounded-xl bg-[#F8FAFC] border border-[#CBD5E1] text-xs text-[#0B2545] font-medium focus:outline-none focus:ring-2 focus:ring-[#1B69B6]"
                       >
                         <option value="General Exam & Cleaning">Dental Exams & Cleanings</option>
                         <option value="Children's Dentistry">Children&apos;s Dentistry</option>
@@ -313,25 +313,25 @@ export default function ContactPage() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-xs font-extrabold uppercase tracking-wider text-[#000000] mb-2">
+                      <label className="block text-xs font-extrabold uppercase tracking-wider text-[#0B2545] mb-2">
                         Preferred Date
                       </label>
                       <input
                         type="date"
                         value={formData.preferredDate}
                         onChange={(e) => setFormData({ ...formData, preferredDate: e.target.value })}
-                        className="w-full px-4 py-3.5 rounded-xl bg-[#5FCAEF]/10 border border-[#43ACE0]/20 text-xs text-[#000000] font-medium focus:outline-none focus:ring-2 focus:ring-[#43ACE0]"
+                        className="w-full px-4 py-3.5 rounded-xl bg-[#F8FAFC] border border-[#CBD5E1] text-xs text-[#0B2545] font-medium focus:outline-none focus:ring-2 focus:ring-[#1B69B6]"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-extrabold uppercase tracking-wider text-[#000000] mb-2">
+                      <label className="block text-xs font-extrabold uppercase tracking-wider text-[#0B2545] mb-2">
                         Preferred Time
                       </label>
                       <select
                         value={formData.preferredTime}
                         onChange={(e) => setFormData({ ...formData, preferredTime: e.target.value })}
-                        className="w-full px-4 py-3.5 rounded-xl bg-[#5FCAEF]/10 border border-[#43ACE0]/20 text-xs text-[#000000] font-medium focus:outline-none focus:ring-2 focus:ring-[#43ACE0]"
+                        className="w-full px-4 py-3.5 rounded-xl bg-[#F8FAFC] border border-[#CBD5E1] text-xs text-[#0B2545] font-medium focus:outline-none focus:ring-2 focus:ring-[#1B69B6]"
                       >
                         <option value="Morning">Morning (10 AM – 12 PM)</option>
                         <option value="Afternoon">Afternoon (1 PM – 4 PM)</option>
@@ -342,7 +342,7 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-extrabold uppercase tracking-wider text-[#000000] mb-2">
+                    <label className="block text-xs font-extrabold uppercase tracking-wider text-[#0B2545] mb-2">
                       Additional Notes or Questions
                     </label>
                     <textarea
@@ -350,13 +350,13 @@ export default function ContactPage() {
                       placeholder="Let us know if you have any dental pain, specific insurance questions, or preferences..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-4 py-3.5 rounded-xl bg-[#5FCAEF]/10 border border-[#43ACE0]/20 text-xs text-[#000000] font-medium focus:outline-none focus:ring-2 focus:ring-[#43ACE0]"
+                      className="w-full px-4 py-3.5 rounded-xl bg-[#F8FAFC] border border-[#CBD5E1] text-xs text-[#0B2545] font-medium focus:outline-none focus:ring-2 focus:ring-[#1B69B6]"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full py-4 rounded-full bg-[#43ACE0] text-[#FFFFFF] text-xs font-extrabold uppercase tracking-widest hover:bg-[#F4A261] transition-colors shadow-lg flex items-center justify-center gap-2 cursor-pointer"
+                    className="w-full py-4 rounded-full bg-[#FF7A00] text-[#FFFFFF] text-xs font-extrabold uppercase tracking-widest hover:bg-[#1B69B6] transition-colors shadow-lg flex items-center justify-center gap-2 cursor-pointer"
                   >
                     <Send className="w-4 h-4" />
                     <span>Submit Appointment Request</span>

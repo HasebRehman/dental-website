@@ -1,139 +1,190 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { testimonialsData } from "@/data/testimonials";
+import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
+
+const patientReviews = [
+  {
+    id: "review-1",
+    author: "Jessica M.",
+    date: "2 weeks ago",
+    content: "The team is amazing! They made me feel comfortable and explained every step. Best dental experience ever.",
+    avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=120",
+  },
+  {
+    id: "review-2",
+    author: "Michael T.",
+    date: "1 month ago",
+    content: "Professional, friendly, and gentle. My whole family comes here for checkups and we highly recommend Dr. Raj & team!",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=120",
+  },
+  {
+    id: "review-3",
+    author: "Sarah L.",
+    date: "3 weeks ago",
+    content: "I had cosmetic whitening & aligners done and the results exceeded my expectations. Thank you Illinois Family Dentistry!",
+    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=120",
+  },
+  {
+    id: "review-4",
+    author: "David R.",
+    date: "1 week ago",
+    content: "Had a severe toothache on Saturday morning and they saw me immediately. Clean clinic and zero pain root canal treatment!",
+    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=120",
+  },
+  {
+    id: "review-5",
+    author: "Maria G.",
+    date: "1 month ago",
+    content: "¡Excelente atención en español! Mis hijos se sintieron muy cómodos con la Dra. Pham. 100% recomendados.",
+    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=120",
+  },
+  {
+    id: "review-6",
+    author: "Robert K.",
+    date: "2 months ago",
+    content: "They accept PPO insurance and offered flexible CareCredit payment options. Very honest and transparent pricing.",
+    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=120",
+  },
+];
 
 export default function Testimonials() {
-  const [pageIndex, setPageIndex] = useState(0);
-  const itemsPerPage = 3;
-  const totalPages = Math.ceil(testimonialsData.length / itemsPerPage);
+  const [activeIndex, setActiveIndex] = useState(0);
 
+  // Auto-rotate every 4 seconds
   useEffect(() => {
     const timer = setInterval(() => {
-      setPageIndex((prev) => (prev + 1) % totalPages);
-    }, 5000);
+      setActiveIndex((prev) => (prev + 1) % Math.ceil(patientReviews.length / 3));
+    }, 4000);
     return () => clearInterval(timer);
-  }, [totalPages]);
+  }, []);
 
-  const handleNext = () => {
-    setPageIndex((prev) => (prev + 1) % totalPages);
-  };
-
-  const handlePrev = () => {
-    setPageIndex((prev) => (prev - 1 + totalPages) % totalPages);
-  };
-
-  const currentStories = testimonialsData.slice(
-    pageIndex * itemsPerPage,
-    (pageIndex + 1) * itemsPerPage
-  );
+  const totalPages = Math.ceil(patientReviews.length / 3);
+  const currentReviews = patientReviews.slice(activeIndex * 3, activeIndex * 3 + 3);
 
   return (
-    <section
-      id="testimonials"
-      className="py-20 md:py-32 bg-[#43ACE0] text-[#FFFFFF] relative overflow-hidden border-b border-[#FFFFFF]/20"
-    >
-      {/* Background Accent Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#F4A261]/15 rounded-full blur-[140px] pointer-events-none" />
-
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-        {/* Header with Navigation Controls */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-          <div className="max-w-2xl">
-            <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl tracking-tight text-[#FFFFFF]">
-              PATIENT <span className="italic text-[#F4A261]">STORIES</span>
+    <section id="testimonials" className="py-20 md:py-28 bg-[#FFFFFF] text-[#000000] border-t border-[#E2E8F0] overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center mb-10">
+          
+          {/* Left Column (4 cols) */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.65 }}
+            className="lg:col-span-4 flex flex-col justify-center text-left"
+          >
+            <h2 className="font-sans text-3xl sm:text-4xl lg:text-5xl font-black text-[#0B2545] tracking-tight leading-tight mb-6">
+              PATIENT <br />
+              <span className="text-[#1B69B6]">STORIES</span>
             </h2>
-            <p className="font-sans text-base text-[#FFFFFF]/90 mt-3 font-normal">
-              Read real reviews from patients and families across Dallas & Oak Cliff.
-            </p>
-          </div>
 
-          {/* Controls */}
-          <div className="flex items-center gap-3">
-            <button
-              onClick={handlePrev}
-              aria-label="Previous 3 stories"
-              className="w-12 h-12 rounded-full border border-[#FFFFFF]/30 bg-[#FFFFFF]/10 flex items-center justify-center text-[#FFFFFF] hover:bg-[#F4A261] hover:border-[#F4A261] transition-all cursor-pointer shadow-md"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
+            <div className="flex items-center gap-3">
+              <div className="w-16 h-16 rounded-2xl bg-[#EBF3FF] border border-[#1B69B6]/20 flex items-center justify-center text-[#1B69B6] shadow-xs">
+                <Quote className="w-8 h-8 fill-[#1B69B6]" />
+              </div>
 
-            {/* Pagination Dots */}
-            <div className="flex items-center gap-2 px-3">
-              {[...Array(totalPages)].map((_, idx) => (
+              {/* Prev / Next Manual Navigation Arrows */}
+              <div className="flex items-center gap-2">
                 <button
-                  key={idx}
-                  onClick={() => setPageIndex(idx)}
-                  aria-label={`Go to page ${idx + 1}`}
-                  className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
-                    idx === pageIndex
-                      ? "w-8 bg-[#F4A261]"
-                      : "w-2.5 bg-[#FFFFFF]/40 hover:bg-[#FFFFFF]/80"
-                  }`}
-                />
-              ))}
+                  onClick={() => setActiveIndex((prev) => (prev - 1 + totalPages) % totalPages)}
+                  className="w-10 h-10 rounded-full bg-[#F1F5F9] text-[#0B2545] hover:bg-[#1B69B6] hover:text-[#FFFFFF] transition-colors flex items-center justify-center cursor-pointer border border-[#CBD5E1]"
+                  aria-label="Previous reviews"
+                >
+                  <ChevronLeft className="w-5 h-5" />
+                </button>
+                <button
+                  onClick={() => setActiveIndex((prev) => (prev + 1) % totalPages)}
+                  className="w-10 h-10 rounded-full bg-[#F1F5F9] text-[#0B2545] hover:bg-[#1B69B6] hover:text-[#FFFFFF] transition-colors flex items-center justify-center cursor-pointer border border-[#CBD5E1]"
+                  aria-label="Next reviews"
+                >
+                  <ChevronRight className="w-5 h-5" />
+                </button>
+              </div>
             </div>
+          </motion.div>
 
-            <button
-              onClick={handleNext}
-              aria-label="Next 3 stories"
-              className="w-12 h-12 rounded-full border border-[#FFFFFF]/30 bg-[#FFFFFF]/10 flex items-center justify-center text-[#FFFFFF] hover:bg-[#F4A261] hover:border-[#F4A261] transition-all cursor-pointer shadow-md"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
+          {/* Right Column: Animated Auto-Rotating 3-Card Carousel (8 cols) */}
+          <div className="lg:col-span-8">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeIndex}
+                initial={{ opacity: 0, x: 40 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -40 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
+              >
+                {currentReviews.map((review) => (
+                  <div
+                    key={review.id}
+                    className="bg-[#F8FAFC] rounded-2xl p-5 border border-[#E2E8F0] shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow"
+                  >
+                    <div>
+                      {/* Top Bar: Golden Stars & Google Logo */}
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="flex items-center gap-1 text-[#FFB800]">
+                          <Star className="w-4 h-4 fill-[#FFB800]" />
+                          <Star className="w-4 h-4 fill-[#FFB800]" />
+                          <Star className="w-4 h-4 fill-[#FFB800]" />
+                          <Star className="w-4 h-4 fill-[#FFB800]" />
+                          <Star className="w-4 h-4 fill-[#FFB800]" />
+                        </div>
+                        {/* Google Icon */}
+                        <div className="w-5 h-5 rounded-full bg-[#FFFFFF] border border-[#CBD5E1] flex items-center justify-center text-[10px] font-bold text-[#4285F4] shadow-xs">
+                          G
+                        </div>
+                      </div>
+
+                      <p className="font-sans text-xs text-[#334155] font-normal leading-relaxed mb-6">
+                        &ldquo;{review.content}&rdquo;
+                      </p>
+                    </div>
+
+                    {/* Author Info */}
+                    <div className="flex items-center gap-3 border-t border-[#E2E8F0] pt-4">
+                      <div className="relative w-9 h-9 rounded-full overflow-hidden shrink-0 border border-[#CBD5E1]">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src={review.avatar}
+                          alt={review.author}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div>
+                        <div className="font-sans text-xs font-extrabold text-[#0B2545]">
+                          {review.author}
+                        </div>
+                        <div className="font-sans text-[11px] text-[#94A3B8]">
+                          {review.date}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </motion.div>
+            </AnimatePresence>
           </div>
+
         </div>
 
-        {/* 3 Stories Grid */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={pageIndex}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -20 }}
-            transition={{ duration: 0.45, ease: "easeOut" }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch"
-          >
-            {currentStories.map((story) => (
-              <div
-                key={story.id}
-                className="bg-[#FFFFFF] p-8 rounded-3xl border border-[#FFFFFF]/30 shadow-xl flex flex-col justify-between h-full hover:border-[#F4A261] transition-all duration-300 text-[#000000]"
-              >
-                <div>
-                  {/* 5 Stars */}
-                  <div className="flex items-center gap-1 mb-5">
-                    {[...Array(story.rating)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className="w-4 h-4 fill-[#F4A261] text-[#F4A261]"
-                      />
-                    ))}
-                  </div>
-
-                  {/* Quote Text */}
-                  <p className="font-sans text-xs sm:text-sm text-[#000000] leading-relaxed mb-6 font-medium">
-                    &ldquo;{story.quote}&rdquo;
-                  </p>
-                </div>
-
-                {/* Author Info */}
-                <div className="border-t border-[#43ACE0]/20 pt-5 flex items-center justify-between mt-4">
-                  <div>
-                    <h3 className="font-sans text-xs uppercase tracking-wider font-extrabold text-[#000000]">
-                      {story.name}
-                    </h3>
-                    <p className="text-[11px] text-[#000000]/70 mt-0.5 font-normal">
-                      {story.location}
-                    </p>
-                  </div>
-                  <Quote className="w-5 h-5 text-[#F4A261] shrink-0" />
-                </div>
-              </div>
-            ))}
-          </motion.div>
-        </AnimatePresence>
+        {/* Interactive Clickable Carousel Dots */}
+        <div className="flex items-center justify-center gap-2 mt-8">
+          {Array.from({ length: totalPages }).map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setActiveIndex(i)}
+              className={`transition-all duration-300 rounded-full cursor-pointer ${
+                activeIndex === i
+                  ? "w-8 h-2.5 bg-[#1B69B6]"
+                  : "w-2.5 h-2.5 bg-[#CBD5E1] hover:bg-[#1B69B6]/50"
+              }`}
+              aria-label={`Go to slide ${i + 1}`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

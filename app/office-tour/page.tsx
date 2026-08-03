@@ -82,9 +82,9 @@ export default function OfficeTourPage() {
       <Navbar />
 
       {/* Hero Header Section */}
-      <section className="pt-44 pb-20 bg-[#43ACE0] text-[#FFFFFF] relative overflow-hidden">
+      <section className="pt-44 pb-20 bg-[#1B69B6] text-[#FFFFFF] relative overflow-hidden">
         {/* Ambient Glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#F4A261]/15 rounded-full blur-[140px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#FF7A00]/15 rounded-full blur-[140px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 text-center">
           <motion.div
@@ -93,12 +93,12 @@ export default function OfficeTourPage() {
             transition={{ duration: 0.65 }}
           >
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FFFFFF]/20 border border-[#FFFFFF]/30 text-xs font-bold uppercase tracking-widest text-[#FFFFFF] mb-4">
-              <Camera className="w-3.5 h-3.5 text-[#F4A261]" />
+              <Camera className="w-3.5 h-3.5 text-[#FF7A00]" />
               <span>Virtual Practice Tour</span>
             </div>
 
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#FFFFFF] mb-4">
-              ILLINOIS DENTISTRY <span className="text-[#F4A261]">OFFICE TOUR</span>
+            <h1 className="font-sans text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-[#FFFFFF] mb-4">
+              ILLINOIS DENTISTRY <span className="text-[#93C5FD]">OFFICE TOUR</span>
             </h1>
 
             <p className="font-sans text-base sm:text-lg text-[#FFFFFF]/90 max-w-2xl mx-auto font-normal leading-relaxed mb-8">
@@ -108,16 +108,16 @@ export default function OfficeTourPage() {
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-[#F4A261] text-[#FFFFFF] text-xs font-extrabold uppercase tracking-widest hover:bg-[#FFFFFF] hover:text-[#000000] transition-colors shadow-lg"
+                className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-[#FF7A00] text-[#FFFFFF] text-xs font-extrabold uppercase tracking-widest hover:bg-[#FFFFFF] hover:text-[#0B2545] transition-colors shadow-lg"
               >
                 <Calendar className="w-4 h-4" />
                 <span>Schedule In-Person Visit</span>
               </Link>
               <a
                 href="tel:4698091919"
-                className="inline-flex items-center gap-2 px-6 py-4 rounded-full bg-[#FFFFFF]/20 border border-[#FFFFFF]/30 text-[#FFFFFF] text-xs font-extrabold uppercase tracking-widest hover:bg-[#FFFFFF] hover:text-[#000000] transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-4 rounded-full bg-[#FFFFFF]/20 border border-[#FFFFFF]/30 text-[#FFFFFF] text-xs font-extrabold uppercase tracking-widest hover:bg-[#FFFFFF] hover:text-[#0B2545] transition-colors"
               >
-                <Phone className="w-4 h-4 text-[#F4A261]" />
+                <Phone className="w-4 h-4 text-[#93C5FD]" />
                 <span>469-809-1919</span>
               </a>
             </div>
@@ -126,46 +126,46 @@ export default function OfficeTourPage() {
       </section>
 
       {/* Facility Highlights Bar */}
-      <section className="py-12 bg-[#5FCAEF]/10 border-b border-[#43ACE0]/20">
+      <section className="py-12 bg-[#F0F6FF] border-b border-[#1B69B6]/20">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 font-sans">
-            <div className="flex items-center gap-3 p-4 rounded-2xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs hover:shadow-md transition-shadow">
-              <CheckCircle2 className="w-5 h-5 text-[#F4A261] shrink-0" />
+            <div className="flex items-center gap-3 p-4 rounded-2xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs hover:shadow-md transition-shadow">
+              <CheckCircle2 className="w-5 h-5 text-[#FF7A00] shrink-0" />
               <div>
-                <div className="text-xs font-extrabold uppercase tracking-wider text-[#000000]">
+                <div className="text-xs font-extrabold uppercase tracking-wider text-[#0B2545]">
                   Modern Reception Lounge
                 </div>
-                <div className="text-[11px] text-[#000000]/70">Relaxing & Kid-Friendly</div>
+                <div className="text-[11px] text-[#64748B]">Relaxing & Kid-Friendly</div>
               </div>
             </div>
 
-            <div className="flex items-center gap-3 p-4 rounded-2xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs hover:shadow-md transition-shadow">
-              <CheckCircle2 className="w-5 h-5 text-[#43ACE0] shrink-0" />
+            <div className="flex items-center gap-3 p-4 rounded-2xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs hover:shadow-md transition-shadow">
+              <CheckCircle2 className="w-5 h-5 text-[#1B69B6] shrink-0" />
               <div>
-                <div className="text-xs font-extrabold uppercase tracking-wider text-[#000000]">
+                <div className="text-xs font-extrabold uppercase tracking-wider text-[#0B2545]">
                   Digital Low-Radiation X-Rays
                 </div>
-                <div className="text-[11px] text-[#000000]/70">90% Less Radiation Exposure</div>
+                <div className="text-[11px] text-[#64748B]">90% Less Radiation Exposure</div>
               </div>
             </div>
 
-            <div className="flex items-center gap-3 p-4 rounded-2xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs hover:shadow-md transition-shadow">
-              <CheckCircle2 className="w-5 h-5 text-[#F4A261] shrink-0" />
+            <div className="flex items-center gap-3 p-4 rounded-2xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs hover:shadow-md transition-shadow">
+              <CheckCircle2 className="w-5 h-5 text-[#FF7A00] shrink-0" />
               <div>
-                <div className="text-xs font-extrabold uppercase tracking-wider text-[#000000]">
+                <div className="text-xs font-extrabold uppercase tracking-wider text-[#0B2545]">
                   Hospital-Grade Sterilization
                 </div>
-                <div className="text-[11px] text-[#000000]/70">Exceeds CDC & OSHA Guidelines</div>
+                <div className="text-[11px] text-[#64748B]">Exceeds CDC & OSHA Guidelines</div>
               </div>
             </div>
 
-            <div className="flex items-center gap-3 p-4 rounded-2xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs hover:shadow-md transition-shadow">
-              <CheckCircle2 className="w-5 h-5 text-[#43ACE0] shrink-0" />
+            <div className="flex items-center gap-3 p-4 rounded-2xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs hover:shadow-md transition-shadow">
+              <CheckCircle2 className="w-5 h-5 text-[#1B69B6] shrink-0" />
               <div>
-                <div className="text-xs font-extrabold uppercase tracking-wider text-[#000000]">
+                <div className="text-xs font-extrabold uppercase tracking-wider text-[#0B2545]">
                   Ergonomic Treatment Chairs
                 </div>
-                <div className="text-[11px] text-[#000000]/70">Overhead Entertainment Screens</div>
+                <div className="text-[11px] text-[#64748B]">Overhead Entertainment Screens</div>
               </div>
             </div>
           </div>
@@ -176,13 +176,13 @@ export default function OfficeTourPage() {
       <section className="py-20 md:py-32 max-w-7xl mx-auto px-6 md:px-12">
         {/* Category Filter Controls */}
         <div className="flex justify-center mb-12">
-          <div className="inline-flex p-1.5 rounded-full bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-md flex-wrap justify-center gap-1">
+          <div className="inline-flex p-1.5 rounded-full bg-[#FFFFFF] border border-[#E2E8F0] shadow-md flex-wrap justify-center gap-1">
             <button
               onClick={() => setSelectedCategory("all")}
               className={`px-6 py-2.5 rounded-full text-xs font-extrabold uppercase tracking-widest transition-all duration-300 cursor-pointer ${
                 selectedCategory === "all"
-                  ? "bg-[#43ACE0] text-[#FFFFFF] shadow-md"
-                  : "text-[#000000] hover:text-[#43ACE0]"
+                  ? "bg-[#1B69B6] text-[#FFFFFF] shadow-md"
+                  : "text-[#334155] hover:text-[#1B69B6]"
               }`}
             >
               All Facility Photos ({officePhotos.length})
@@ -192,8 +192,8 @@ export default function OfficeTourPage() {
               onClick={() => setSelectedCategory("reception")}
               className={`px-6 py-2.5 rounded-full text-xs font-extrabold uppercase tracking-widest transition-all duration-300 cursor-pointer ${
                 selectedCategory === "reception"
-                  ? "bg-[#43ACE0] text-[#FFFFFF] shadow-md"
-                  : "text-[#000000] hover:text-[#43ACE0]"
+                  ? "bg-[#1B69B6] text-[#FFFFFF] shadow-md"
+                  : "text-[#334155] hover:text-[#1B69B6]"
               }`}
             >
               Reception & Lounge
@@ -203,8 +203,8 @@ export default function OfficeTourPage() {
               onClick={() => setSelectedCategory("operatory")}
               className={`px-6 py-2.5 rounded-full text-xs font-extrabold uppercase tracking-widest transition-all duration-300 cursor-pointer ${
                 selectedCategory === "operatory"
-                  ? "bg-[#43ACE0] text-[#FFFFFF] shadow-md"
-                  : "text-[#000000] hover:text-[#43ACE0]"
+                  ? "bg-[#1B69B6] text-[#FFFFFF] shadow-md"
+                  : "text-[#334155] hover:text-[#1B69B6]"
               }`}
             >
               Treatment Suites
@@ -214,8 +214,8 @@ export default function OfficeTourPage() {
               onClick={() => setSelectedCategory("technology")}
               className={`px-6 py-2.5 rounded-full text-xs font-extrabold uppercase tracking-widest transition-all duration-300 cursor-pointer ${
                 selectedCategory === "technology"
-                  ? "bg-[#43ACE0] text-[#FFFFFF] shadow-md"
-                  : "text-[#000000] hover:text-[#43ACE0]"
+                  ? "bg-[#1B69B6] text-[#FFFFFF] shadow-md"
+                  : "text-[#334155] hover:text-[#1B69B6]"
               }`}
             >
               Technology & Sterilization
@@ -235,15 +235,15 @@ export default function OfficeTourPage() {
               className="relative group"
             >
               {/* Backlight Ambient Glow Halo */}
-              <div className="absolute -inset-3 rounded-3xl bg-gradient-to-r from-[#43ACE0]/20 via-[#5FCAEF]/25 to-[#F4A261]/20 blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none -z-10" />
+              <div className="absolute -inset-3 rounded-3xl bg-gradient-to-r from-[#1B69B6]/15 via-[#93C5FD]/20 to-[#FF7A00]/15 blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none -z-10" />
 
               <div
                 onClick={() => setActivePhoto(photo)}
-                className="bg-[#5FCAEF]/10 rounded-3xl overflow-hidden border border-[#43ACE0]/20 shadow-[0_20px_50px_rgba(67,172,224,0.2)] hover:shadow-[0_25px_60px_rgba(67,172,224,0.3)] transition-all duration-300 flex flex-col justify-between cursor-pointer h-full"
+                className="bg-[#F8FAFC] rounded-3xl overflow-hidden border border-[#E2E8F0] shadow-md hover:shadow-xl hover:border-[#1B69B6]/30 transition-all duration-300 flex flex-col justify-between cursor-pointer h-full"
               >
                 <div>
                   {/* Photo Image Container */}
-                  <div className="relative aspect-[16/11] w-full overflow-hidden bg-[#43ACE0]/10">
+                  <div className="relative aspect-[16/11] w-full overflow-hidden bg-[#1B69B6]/10">
                     <Image
                       src={photo.image}
                       alt={photo.title}
@@ -251,16 +251,16 @@ export default function OfficeTourPage() {
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#000000]/70 via-transparent to-transparent opacity-90 group-hover:opacity-100 transition-opacity" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0B2545]/85 via-transparent to-transparent opacity-90 group-hover:opacity-100 transition-opacity" />
 
                     {/* Hover Lightbox Icon Pill */}
-                    <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-[#FFFFFF]/90 backdrop-blur-md text-[11px] font-extrabold text-[#43ACE0] flex items-center gap-1 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity">
-                      <Eye className="w-3.5 h-3.5 text-[#F4A261]" />
+                    <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-[#FFFFFF]/90 backdrop-blur-md text-[11px] font-extrabold text-[#1B69B6] flex items-center gap-1 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                      <Eye className="w-3.5 h-3.5 text-[#FF7A00]" />
                       <span>View Larger</span>
                     </div>
 
                     <div className="absolute bottom-4 left-6 right-6 text-[#FFFFFF]">
-                      <h3 className="font-serif text-xl sm:text-2xl font-bold">
+                      <h3 className="font-sans text-xl sm:text-2xl font-black">
                         {photo.title}
                       </h3>
                     </div>
@@ -268,15 +268,15 @@ export default function OfficeTourPage() {
 
                   {/* Description */}
                   <div className="p-6">
-                    <p className="font-sans text-xs sm:text-sm text-[#000000] leading-relaxed font-normal">
+                    <p className="font-sans text-xs sm:text-sm text-[#475569] leading-relaxed font-normal">
                       {photo.description}
                     </p>
                   </div>
                 </div>
 
-                <div className="p-6 pt-0 border-t border-[#43ACE0]/15 mt-2 flex items-center justify-between text-xs font-bold text-[#43ACE0]">
+                <div className="p-6 pt-0 border-t border-[#E2E8F0] mt-2 flex items-center justify-between text-xs font-bold text-[#1B69B6]">
                   <span>Illinois Family Dentistry Dallas</span>
-                  <span className="text-[#F4A261] group-hover:translate-x-1 transition-transform">
+                  <span className="text-[#FF7A00] font-extrabold group-hover:translate-x-1 transition-transform">
                     Explore →
                   </span>
                 </div>
@@ -333,15 +333,15 @@ export default function OfficeTourPage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.65 }}
-          className="mt-20 bg-[#43ACE0] rounded-3xl p-8 sm:p-12 text-[#FFFFFF] shadow-2xl text-center relative overflow-hidden"
+          className="mt-20 bg-gradient-to-r from-[#0B2545] via-[#1B69B6] to-[#0B2545] rounded-3xl p-8 sm:p-12 text-[#FFFFFF] shadow-2xl text-center relative overflow-hidden border border-[#1B69B6]/40"
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFFFFF]/20 border border-[#FFFFFF]/30 text-xs font-bold uppercase tracking-widest text-[#F4A261] mb-4">
-            <ShieldCheck className="w-4 h-4 text-[#F4A261]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFFFFF]/20 border border-[#FFFFFF]/30 text-xs font-bold uppercase tracking-widest text-[#FFFFFF] mb-4">
+            <ShieldCheck className="w-4 h-4 text-[#FF7A00]" />
             <span>Visit Us In Person in Dallas</span>
           </div>
 
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold mb-3 text-[#FFFFFF]">
-            Ready to See Our Office in Person?
+          <h2 className="font-sans text-3xl sm:text-4xl font-black mb-3 text-[#FFFFFF] tracking-tight">
+            Ready to See Our Office <span className="text-[#93C5FD]">in Person?</span>
           </h2>
           <p className="font-sans text-sm sm:text-base text-[#FFFFFF]/90 max-w-xl mx-auto mb-8 font-normal">
             Call our Dallas clinic at 469-809-1919 or schedule your family&apos;s checkup online today!
@@ -350,13 +350,13 @@ export default function OfficeTourPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/contact"
-              className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#F4A261] text-[#FFFFFF] text-xs font-extrabold uppercase tracking-widest hover:bg-[#FFFFFF] hover:text-[#000000] transition-colors shadow-lg"
+              className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#FF7A00] text-[#FFFFFF] text-xs font-extrabold uppercase tracking-widest hover:bg-[#FFFFFF] hover:text-[#0B2545] transition-colors shadow-lg"
             >
               Book Appointment Online
             </Link>
             <a
               href="tel:4698091919"
-              className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#FFFFFF]/20 border border-[#FFFFFF]/30 text-[#FFFFFF] text-xs font-extrabold uppercase tracking-widest hover:bg-[#FFFFFF] hover:text-[#000000] transition-colors"
+              className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#FFFFFF]/15 border border-[#FFFFFF]/30 text-[#FFFFFF] text-xs font-extrabold uppercase tracking-widest hover:bg-[#FFFFFF] hover:text-[#0B2545] transition-colors"
             >
               Call 469-809-1919
             </a>

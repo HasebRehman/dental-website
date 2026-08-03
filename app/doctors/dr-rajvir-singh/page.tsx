@@ -13,9 +13,9 @@ export default function DrRajPage() {
       <Navbar />
 
       {/* Hero Header Section */}
-      <section className="pt-44 pb-16 bg-[#43ACE0] text-[#FFFFFF] relative overflow-hidden">
+      <section className="pt-44 pb-16 bg-[#1B69B6] text-[#FFFFFF] relative overflow-hidden">
         {/* Background Ambient Glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#F4A261]/15 rounded-full blur-[140px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#FF7A00]/15 rounded-full blur-[140px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
@@ -27,9 +27,9 @@ export default function DrRajPage() {
               className="lg:col-span-5 relative group"
             >
               {/* Backlight Ambient Glow Halo */}
-              <div className="absolute -inset-4 rounded-[40px] bg-gradient-to-tr from-[#43ACE0]/35 via-[#5FCAEF]/25 to-[#F4A261]/35 blur-2xl opacity-80 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none -z-10" />
+              <div className="absolute -inset-4 rounded-[40px] bg-gradient-to-tr from-[#1B69B6]/35 via-[#93C5FD]/25 to-[#FF7A00]/35 blur-2xl opacity-80 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none -z-10" />
 
-              <div className="relative aspect-[4/4] sm:aspect-[4/3] lg:aspect-[4/4] w-full rounded-3xl overflow-hidden shadow-[0_25px_60px_-15px_rgba(67,172,224,0.35)] border-4 border-[#FFFFFF]">
+              <div className="relative aspect-[4/4] sm:aspect-[4/3] lg:aspect-[4/4] w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-[#FFFFFF]">
                 <Image
                   src="/img/Dr.-Raj-Family.jpg"
                   alt="Dr. Rajvir Singh Dr. Raj Dentist in Dallas TX"
@@ -37,7 +37,7 @@ export default function DrRajPage() {
                   className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#000000]/70 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0B2545]/70 via-transparent to-transparent" />
               </div>
             </motion.div>
 
@@ -49,14 +49,14 @@ export default function DrRajPage() {
               className="lg:col-span-7"
             >
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFFFFF]/20 border border-[#FFFFFF]/30 text-xs font-bold uppercase tracking-widest text-[#FFFFFF] mb-4">
-                <Sparkles className="w-3.5 h-3.5 text-[#F4A261]" />
+                <Sparkles className="w-3.5 h-3.5 text-[#FF7A00]" />
                 <span>Dallas Family Dentist</span>
               </div>
 
-              <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#FFFFFF] mb-3">
+              <h1 className="font-sans text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-[#FFFFFF] mb-3">
                 Dr. Rajvir Singh
               </h1>
-              <p className="font-sans text-base sm:text-lg font-extrabold text-[#F4A261] uppercase tracking-wider mb-6">
+              <p className="font-sans text-base sm:text-lg font-extrabold text-[#93C5FD] uppercase tracking-wider mb-6">
                 &quot;Dr. Raj&quot; • Serving Dallas, TX & Surrounding Areas
               </p>
 
@@ -183,10 +183,10 @@ export default function DrRajPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.65 }}
-            className="bg-[#43ACE0] rounded-3xl p-8 sm:p-12 text-[#FFFFFF] shadow-2xl text-center relative overflow-hidden"
+            className="bg-gradient-to-r from-[#0B2545] via-[#1B69B6] to-[#0B2545] rounded-3xl p-8 sm:p-12 text-[#FFFFFF] shadow-2xl text-center relative overflow-hidden border border-[#1B69B6]/40"
           >
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold mb-3 text-[#FFFFFF]">
-              Schedule Your Visit with Dr. Raj
+            <h2 className="font-sans text-3xl sm:text-4xl font-black mb-3 text-[#FFFFFF] tracking-tight">
+              Schedule Your Visit with <span className="text-[#93C5FD]">Dr. Raj</span>
             </h2>
             <p className="font-sans text-sm sm:text-base text-[#FFFFFF]/90 max-w-xl mx-auto mb-8 font-normal">
               Experiencing tooth pain or due for a routine checkup? Dr. Raj and our caring Dallas team are here to help you smile with confidence!
@@ -195,13 +195,13 @@ export default function DrRajPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/contact"
-                className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#F4A261] text-[#FFFFFF] text-xs font-extrabold uppercase tracking-widest hover:bg-[#FFFFFF] hover:text-[#000000] transition-colors shadow-lg"
+                className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#FF7A00] text-[#FFFFFF] text-xs font-extrabold uppercase tracking-widest hover:bg-[#FFFFFF] hover:text-[#0B2545] transition-colors shadow-lg"
               >
                 Book Appointment Online
               </Link>
               <a
                 href="tel:4698091919"
-                className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#FFFFFF]/20 border border-[#FFFFFF]/30 text-[#FFFFFF] text-xs font-extrabold uppercase tracking-widest hover:bg-[#FFFFFF] hover:text-[#000000] transition-colors"
+                className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#FFFFFF]/15 border border-[#FFFFFF]/30 text-[#FFFFFF] text-xs font-extrabold uppercase tracking-widest hover:bg-[#FFFFFF] hover:text-[#0B2545] transition-colors"
               >
                 Call 469-809-1919
               </a>

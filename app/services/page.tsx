@@ -34,18 +34,18 @@ export default function ServicesPage() {
       <Navbar />
 
       {/* Hero Header Section */}
-      <section className="pt-44 pb-20 bg-[#43ACE0] text-[#FFFFFF] relative overflow-hidden">
+      <section className="pt-44 pb-20 bg-[#1B69B6] text-[#FFFFFF] relative overflow-hidden">
         {/* Ambient Glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#F4A261]/15 rounded-full blur-[140px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#FF7A00]/15 rounded-full blur-[140px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FFFFFF]/20 border border-[#FFFFFF]/30 text-xs font-bold uppercase tracking-widest text-[#FFFFFF] mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-[#F4A261]" />
+            <Sparkles className="w-3.5 h-3.5 text-[#FF7A00]" />
             <span>Full-Spectrum Family Dentistry</span>
           </div>
 
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#FFFFFF] mb-4">
-            OUR DENTAL <span className="text-[#F4A261]">SERVICES</span>
+          <h1 className="font-sans text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-[#FFFFFF] mb-4">
+            OUR DENTAL <span className="text-[#93C5FD]">SERVICES</span>
           </h1>
 
           <p className="font-sans text-base sm:text-lg text-[#FFFFFF]/90 max-w-2xl mx-auto font-normal leading-relaxed mb-8">
@@ -55,16 +55,16 @@ export default function ServicesPage() {
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-[#F4A261] text-[#FFFFFF] text-xs font-extrabold uppercase tracking-widest hover:bg-[#FFFFFF] hover:text-[#000000] transition-colors shadow-lg"
+              className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-[#FF7A00] text-[#FFFFFF] text-xs font-extrabold uppercase tracking-widest hover:bg-[#FFFFFF] hover:text-[#0B2545] transition-colors shadow-lg"
             >
               <Calendar className="w-4 h-4" />
               <span>Schedule Appointment</span>
             </Link>
             <a
               href="tel:4698091919"
-              className="inline-flex items-center gap-2 px-6 py-4 rounded-full bg-[#FFFFFF]/20 border border-[#FFFFFF]/30 text-[#FFFFFF] text-xs font-extrabold uppercase tracking-widest hover:bg-[#FFFFFF] hover:text-[#000000] transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-4 rounded-full bg-[#FFFFFF]/20 border border-[#FFFFFF]/30 text-[#FFFFFF] text-xs font-extrabold uppercase tracking-widest hover:bg-[#FFFFFF] hover:text-[#0B2545] transition-colors"
             >
-              <Phone className="w-4 h-4 text-[#F4A261]" />
+              <Phone className="w-4 h-4 text-[#93C5FD]" />
               <span>Call 469-809-1919</span>
             </a>
           </div>
@@ -74,12 +74,12 @@ export default function ServicesPage() {
       {/* Services Grid Section */}
       <section className="py-20 md:py-32 max-w-7xl mx-auto px-6 md:px-12">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#5FCAEF]/15 border border-[#43ACE0]/20 text-xs font-bold uppercase tracking-widest text-[#43ACE0] mb-3">
-            <Stethoscope className="w-3.5 h-3.5 text-[#F4A261]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F0F6FF] border border-[#1B69B6]/20 text-xs font-bold uppercase tracking-widest text-[#1B69B6] mb-3">
+            <Stethoscope className="w-3.5 h-3.5 text-[#FF7A00]" />
             <span>Click Any Service To Read Full Details</span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#000000] font-bold tracking-tight">
-            COMPREHENSIVE <span className="text-[#43ACE0]">PREVENTIVE & RESTORATIVE CARE</span>
+          <h2 className="font-sans text-3xl sm:text-4xl lg:text-5xl text-[#0B2545] font-black tracking-tight">
+            COMPREHENSIVE <span className="text-[#1B69B6]">PREVENTIVE & RESTORATIVE CARE</span>
           </h2>
         </div>
 
@@ -89,7 +89,7 @@ export default function ServicesPage() {
               key={service.id}
               id={service.id}
               onClick={() => setActiveModalService(service)}
-              className="group bg-[#5FCAEF]/10 rounded-3xl overflow-hidden border border-[#43ACE0]/20 shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between cursor-pointer"
+              className="group bg-[#F8FAFC] rounded-3xl overflow-hidden border border-[#E2E8F0] shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between cursor-pointer"
             >
               <div>
                 {/* Photo Container */}
@@ -101,24 +101,24 @@ export default function ServicesPage() {
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#000000]/75 via-transparent to-transparent opacity-90" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B2545]/85 via-transparent to-transparent opacity-90" />
 
                   {/* Badge Number */}
-                  <div className="absolute top-4 left-4 px-3.5 py-1.5 rounded-full bg-[#FFFFFF]/90 backdrop-blur-md text-xs font-extrabold text-[#43ACE0] shadow-xs">
+                  <div className="absolute top-4 left-4 px-3.5 py-1.5 rounded-full bg-[#FFFFFF]/90 backdrop-blur-md text-xs font-extrabold text-[#1B69B6] shadow-xs">
                     SERVICE {service.number}
                   </div>
 
                   {/* View Details Pill */}
-                  <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-[#FFFFFF]/90 backdrop-blur-md text-[11px] font-extrabold text-[#43ACE0] flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <Eye className="w-3.5 h-3.5 text-[#F4A261]" />
+                  <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-[#FFFFFF]/90 backdrop-blur-md text-[11px] font-extrabold text-[#1B69B6] flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <Eye className="w-3.5 h-3.5 text-[#FF7A00]" />
                     <span>View Details</span>
                   </div>
 
                   <div className="absolute bottom-4 left-6 right-6 text-[#FFFFFF]">
-                    <h2 className="font-serif text-2xl sm:text-3xl font-bold">
+                    <h2 className="font-sans text-2xl sm:text-3xl font-black">
                       {service.title}
                     </h2>
-                    <p className="font-sans text-xs uppercase tracking-widest text-[#5FCAEF] font-extrabold mt-1">
+                    <p className="font-sans text-xs uppercase tracking-widest text-[#93C5FD] font-extrabold mt-1">
                       {service.subtitle}
                     </p>
                   </div>
@@ -126,18 +126,18 @@ export default function ServicesPage() {
 
                 {/* Content */}
                 <div className="p-6 sm:p-8">
-                  <p className="font-sans text-sm sm:text-base text-[#000000] leading-relaxed font-normal mb-6">
+                  <p className="font-sans text-sm sm:text-base text-[#475569] leading-relaxed font-normal mb-6">
                     {service.description}
                   </p>
 
                   {/* Features List */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 border-t border-[#43ACE0]/15 pt-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 border-t border-[#E2E8F0] pt-6">
                     {service.features.map((feat, idx) => (
                       <div
                         key={idx}
-                        className="flex items-center gap-2 text-xs font-bold text-[#000000]"
+                        className="flex items-center gap-2 text-xs font-bold text-[#334155]"
                       >
-                        <CheckCircle2 className="w-4 h-4 text-[#F4A261] shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-[#FF7A00] shrink-0" />
                         <span>{feat}</span>
                       </div>
                     ))}
@@ -146,14 +146,14 @@ export default function ServicesPage() {
               </div>
 
               {/* Action Button - Redirects to /contact */}
-              <div className="p-6 sm:p-8 pt-0 border-t border-[#43ACE0]/15 mt-4 flex items-center justify-between gap-3">
+              <div className="p-6 sm:p-8 pt-0 border-t border-[#E2E8F0] mt-4 flex items-center justify-between gap-3">
                 <button
                   type="button"
                   onClick={(e) => {
                     e.stopPropagation();
                     setActiveModalService(service);
                   }}
-                  className="text-xs font-extrabold uppercase tracking-widest text-[#43ACE0] hover:text-[#F4A261] transition-colors"
+                  className="text-xs font-extrabold uppercase tracking-widest text-[#1B69B6] hover:text-[#FF7A00] transition-colors cursor-pointer"
                 >
                   Read Overview →
                 </button>
@@ -161,7 +161,7 @@ export default function ServicesPage() {
                 <Link
                   href="/contact"
                   onClick={(e) => e.stopPropagation()}
-                  className="py-3 px-6 rounded-full bg-[#43ACE0] text-[#FFFFFF] hover:bg-[#F4A261] transition-colors duration-300 flex items-center justify-center gap-2 text-xs uppercase tracking-widest font-extrabold shadow-md"
+                  className="py-3 px-6 rounded-full bg-[#FF7A00] text-[#FFFFFF] hover:bg-[#1B69B6] transition-colors duration-300 flex items-center justify-center gap-2 text-xs uppercase tracking-widest font-extrabold shadow-md"
                 >
                   <span>Book {service.title}</span>
                   <ArrowRight className="w-4 h-4" />
@@ -172,14 +172,14 @@ export default function ServicesPage() {
         </div>
 
         {/* Bottom Insurance & Booking Callout Banner */}
-        <div className="mt-16 bg-[#43ACE0] rounded-3xl p-8 sm:p-12 text-[#FFFFFF] shadow-2xl text-center relative overflow-hidden">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFFFFF]/20 border border-[#FFFFFF]/30 text-xs font-bold uppercase tracking-widest text-[#F4A261] mb-4">
-            <ShieldCheck className="w-4 h-4 text-[#F4A261]" />
+        <div className="mt-16 bg-gradient-to-r from-[#0B2545] via-[#1B69B6] to-[#0B2545] rounded-3xl p-8 sm:p-12 text-[#FFFFFF] shadow-2xl text-center relative overflow-hidden border border-[#1B69B6]/40">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFFFFF]/20 border border-[#FFFFFF]/30 text-xs font-bold uppercase tracking-widest text-[#FFFFFF] mb-4">
+            <ShieldCheck className="w-4 h-4 text-[#FF7A00]" />
             <span>PPO Insurance • Medicaid/CHIP • CareCredit</span>
           </div>
 
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold mb-3 text-[#FFFFFF]">
-            Ready to Schedule Your Appointment?
+          <h2 className="font-sans text-3xl sm:text-4xl font-black mb-3 text-[#FFFFFF] tracking-tight">
+            Ready to Schedule <span className="text-[#93C5FD]">Your Appointment?</span>
           </h2>
           <p className="font-sans text-sm sm:text-base text-[#FFFFFF]/90 max-w-xl mx-auto mb-8 font-normal">
             Whether you need a routine cleaning, pediatric visit, or same-day emergency relief, Dr. Raj & Dr. Pham are ready to welcome your family!
@@ -188,13 +188,13 @@ export default function ServicesPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/contact"
-              className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#F4A261] text-[#FFFFFF] text-xs font-extrabold uppercase tracking-widest hover:bg-[#FFFFFF] hover:text-[#000000] transition-colors shadow-lg"
+              className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#FF7A00] text-[#FFFFFF] text-xs font-extrabold uppercase tracking-widest hover:bg-[#FFFFFF] hover:text-[#0B2545] transition-colors shadow-lg"
             >
               Book Online Now
             </Link>
             <a
               href="tel:4698091919"
-              className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#FFFFFF]/20 border border-[#FFFFFF]/30 text-[#FFFFFF] text-xs font-extrabold uppercase tracking-widest hover:bg-[#FFFFFF] hover:text-[#000000] transition-colors"
+              className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#FFFFFF]/15 border border-[#FFFFFF]/30 text-[#FFFFFF] text-xs font-extrabold uppercase tracking-widest hover:bg-[#FFFFFF] hover:text-[#0B2545] transition-colors"
             >
               Call 469-809-1919
             </a>
