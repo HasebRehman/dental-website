@@ -17,23 +17,28 @@ export interface PracticeInfo {
     day: string;
     time: string;
   }[];
+  announcements: string[];
   badges: string[];
+  pdfForms: {
+    english: string;
+    spanish: string;
+  };
 }
 
 export const siteData: PracticeInfo = {
   name: "Illinois Family Dentistry",
-  tagline: "Modern dentistry. Personal care. Built around your family.",
+  tagline: "Smiles You Can Trust! High-Quality Family Dentistry in Dallas, TX.",
   phone: "469-809-1919",
   phoneRaw: "+14698091919",
   email: "info@illinoisdentistrydallas.com",
   address: {
     street: "2300 W Illinois Ave",
-    plaza: "Illinois and Hampton Plaza (Next to El Rancho)",
+    plaza: "Illinois and Hampton Plaza (Next to El Rancho Supermercado)",
     city: "Dallas",
     state: "TX",
     zip: "75224",
     full: "2300 W Illinois Ave, Dallas, TX 75224",
-    mapUrl: "https://maps.google.com/?q=2300+W+Illinois+Ave,+Dallas,+TX+75224",
+    mapUrl: "https://goo.gl/maps/qf3d9Rc87jkN5s8b6",
   },
   hours: [
     { day: "Monday", time: "1:00 PM – 7:00 PM" },
@@ -44,13 +49,24 @@ export const siteData: PracticeInfo = {
     { day: "Saturday", time: "10:00 AM – 2:00 PM" },
     { day: "Sunday", time: "Closed" },
   ],
+  announcements: [
+    "Insurance / Medicaid / CHIP",
+    "Special Offers",
+    "Same-Day Emergencies",
+    "Evening & Weekend Appointments",
+    "Hablamos Español",
+  ],
   badges: [
-    "FAMILY DENTISTRY",
-    "5★ PATIENT CARE",
+    "SMILES YOU CAN TRUST",
+    "FAMILY DENTISTRY DALLAS",
     "ALL AGES WELCOME",
-    "EVENING & SATURDAY CARE",
+    "EVENING & SATURDAY SLOTS",
     "HABLAMOS ESPAÑOL",
     "MOST INSURANCE ACCEPTED",
-    "SAME-DAY EMERGENCY CARE",
+    "SAME-DAY EMERGENCY RELIEF",
   ],
+  pdfForms: {
+    english: "https://illinoisdentistrydallas.com/wp-content/uploads/2023/10/IFD-New-Patient-Forms-English.pdf",
+    spanish: "https://illinoisdentistrydallas.com/wp-content/uploads/2024/02/Illinois-Family-Dentistry-New-Patient-Form-Spanish.pdf",
+  },
 };

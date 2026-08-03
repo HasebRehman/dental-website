@@ -1,147 +1,143 @@
 "use client";
 
-import { MapPin, Phone, Clock, Navigation, ExternalLink, Sparkles } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Navigation, Globe } from "lucide-react";
 import { siteData } from "@/data/siteData";
 
 export default function Location() {
   return (
     <section
       id="location"
-      className="py-24 md:py-36 bg-[#EFECE6] border-b border-[#121820]/10 overflow-hidden"
+      className="py-20 md:py-32 bg-[#FFFFFF] border-b border-[#43ACE0]/20 relative overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
-        {/* Header */}
-        <div className="max-w-3xl mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F8F7F3] border border-[#121820]/10 text-xs font-semibold uppercase tracking-widest text-[#5A6472] mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-[#2563EB]" />
-            <span>Visit Our Practice</span>
+      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#5FCAEF]/15 border border-[#43ACE0]/20 text-xs font-bold uppercase tracking-widest text-[#43ACE0] mb-3">
+            <MapPin className="w-3.5 h-3.5 text-[#F4A261]" />
+            <span>Convenient Oak Cliff & Dallas Access</span>
           </div>
-          <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl text-[#121820] tracking-tight">
-            LOCATION & <span className="italic text-[#2563EB]">HOURS</span>
+
+          <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl text-[#000000] font-bold tracking-tight">
+            OUR DALLAS <span className="text-[#43ACE0]">LOCATION</span>
           </h2>
-          <p className="font-sans text-sm text-[#5A6472] font-light max-w-md mt-2">
-            Conveniently located in Dallas at the Illinois & Hampton Plaza (next to El Rancho Supermercado).
+
+          <p className="font-sans text-sm sm:text-base text-[#000000] mt-4 font-normal leading-relaxed">
+            Conveniently located at Illinois & Hampton Plaza, right next to El Rancho Supermercado in Dallas, TX.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
-          {/* Left Details Cards (5 cols) */}
-          <div className="lg:col-span-5 flex flex-col justify-between gap-6">
-            {/* Address Card */}
-            <div className="bg-[#F8F7F3] p-8 rounded-3xl border border-[#121820]/10 shadow-lg">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-12 h-12 rounded-full bg-[#2563EB] text-[#F8F7F3] flex items-center justify-center shrink-0">
-                  <MapPin className="w-6 h-6" />
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+          {/* Left Column (5 cols): Details & Operating Hours */}
+          <div className="lg:col-span-5 space-y-6 flex flex-col justify-between">
+            {/* Info Box */}
+            <div className="bg-[#5FCAEF]/10 rounded-3xl p-8 border border-[#43ACE0]/20 shadow-xl space-y-6 text-xs sm:text-sm font-sans">
+              {/* Address */}
+              <div className="flex items-start gap-3.5">
+                <div className="w-10 h-10 rounded-xl bg-[#43ACE0]/15 border border-[#43ACE0]/30 flex items-center justify-center text-[#F4A261] shrink-0 mt-0.5">
+                  <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="font-serif text-2xl text-[#121820] font-normal">
-                    {siteData.name}
-                  </h3>
-                  <p className="font-sans text-xs text-[#2563EB] font-bold uppercase tracking-wider mt-1">
-                    {siteData.address.plaza}
+                  <div className="text-xs uppercase font-extrabold tracking-wider text-[#000000] mb-1">
+                    ADDRESS & LANDMARK
+                  </div>
+                  <div className="font-extrabold text-[#000000] text-base mb-0.5">
+                    Illinois Family Dentistry
+                  </div>
+                  <p className="text-[#000000] font-normal">
+                    2300 W Illinois Ave, Dallas, TX 75224
                   </p>
-                  <p className="font-sans text-sm text-[#5A6472] mt-2 font-light">
-                    {siteData.address.street} <br />
-                    {siteData.address.city}, {siteData.address.state} {siteData.address.zip}
+                  <p className="text-[11px] text-[#000000]/70 mt-0.5">
+                    Illinois & Hampton Plaza (Next to El Rancho Supermercado)
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 border-t border-[#121820]/10 pt-6">
-                <a
-                  href={siteData.address.mapUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 inline-flex items-center justify-center gap-2 py-3 rounded-full bg-[#121820] text-[#F8F7F3] text-xs font-semibold uppercase tracking-widest hover:bg-[#2563EB] transition-colors"
-                >
-                  <Navigation className="w-3.5 h-3.5" />
-                  <span>Get Directions</span>
-                  <ExternalLink className="w-3 h-3 opacity-60" />
-                </a>
+              {/* Phone */}
+              <div className="flex items-start gap-3.5">
+                <div className="w-10 h-10 rounded-xl bg-[#43ACE0]/15 border border-[#43ACE0]/30 flex items-center justify-center text-[#43ACE0] shrink-0 mt-0.5">
+                  <Phone className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="text-xs uppercase font-extrabold tracking-wider text-[#000000] mb-1">
+                    PHONE & TEXT
+                  </div>
+                  <a
+                    href={`tel:${siteData.phoneRaw}`}
+                    className="font-extrabold text-[#43ACE0] text-lg hover:underline block"
+                  >
+                    469-809-1919
+                  </a>
+                </div>
+              </div>
 
-                <a
-                  href={`tel:${siteData.phoneRaw}`}
-                  className="p-3 rounded-full border border-[#121820]/20 text-[#121820] hover:bg-[#121820] hover:text-[#F8F7F3] transition-colors"
-                  aria-label="Call clinic"
-                >
-                  <Phone className="w-4 h-4" />
-                </a>
+              {/* Languages */}
+              <div className="flex items-start gap-3.5">
+                <div className="w-10 h-10 rounded-xl bg-[#43ACE0]/15 border border-[#43ACE0]/30 flex items-center justify-center text-[#43ACE0] shrink-0 mt-0.5">
+                  <Globe className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="text-xs uppercase font-extrabold tracking-wider text-[#000000] mb-1">
+                    LANGUAGES
+                  </div>
+                  <div className="font-extrabold text-[#000000]">
+                    English & Hablamos Español
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* Hours Breakdown Card */}
-            <div className="bg-[#F8F7F3] p-8 rounded-3xl border border-[#121820]/10 shadow-lg">
-              <div className="flex items-center gap-3 mb-6">
-                <Clock className="w-5 h-5 text-[#2563EB]" />
-                <h3 className="font-serif text-2xl text-[#121820] font-normal">
-                  Opening Hours
-                </h3>
-              </div>
+            {/* Operating Hours Box */}
+            <div className="bg-[#43ACE0] text-[#FFFFFF] rounded-3xl p-8 shadow-xl">
+              <h3 className="font-serif text-xl font-bold mb-4 flex items-center gap-2">
+                <Clock className="w-5 h-5 text-[#F4A261]" />
+                <span>Office Hours</span>
+              </h3>
 
-              <div className="space-y-3 border-t border-[#121820]/10 pt-4">
-                {siteData.hours.map((item, idx) => (
-                  <div
-                    key={idx}
-                    className="flex items-center justify-between text-xs font-sans py-1 border-b border-[#121820]/5 last:border-none"
-                  >
-                    <span className="font-bold uppercase tracking-wider text-[#121820]">
-                      {item.day}
-                    </span>
-                    <span
-                      className={`font-semibold ${
-                        item.time === "Closed"
-                          ? "text-red-500"
-                          : "text-[#5A6472]"
-                      }`}
-                    >
-                      {item.time}
-                    </span>
-                  </div>
-                ))}
-              </div>
+              <ul className="space-y-2.5 font-sans text-xs sm:text-sm">
+                <li className="flex justify-between border-b border-[#FFFFFF]/20 pb-2">
+                  <span className="font-semibold text-[#FFFFFF]/80">Monday</span>
+                  <span className="font-extrabold text-[#FFFFFF]">1:00 PM – 7:00 PM</span>
+                </li>
+                <li className="flex justify-between border-b border-[#FFFFFF]/20 pb-2">
+                  <span className="font-semibold text-[#FFFFFF]/80">Tuesday – Friday</span>
+                  <span className="font-extrabold text-[#FFFFFF]">10:00 AM – 7:00 PM</span>
+                </li>
+                <li className="flex justify-between border-b border-[#FFFFFF]/20 pb-2">
+                  <span className="font-semibold text-[#FFFFFF]/80">Saturday</span>
+                  <span className="font-extrabold text-[#F4A261]">10:00 AM – 2:00 PM</span>
+                </li>
+                <li className="flex justify-between">
+                  <span className="font-semibold text-[#FFFFFF]/80">Sunday</span>
+                  <span className="font-bold text-[#FFFFFF]">Closed</span>
+                </li>
+              </ul>
             </div>
           </div>
 
-          {/* Right Custom Styled Map Container (7 cols) */}
-          <div className="lg:col-span-7 bg-[#121820] rounded-3xl overflow-hidden shadow-2xl relative min-h-[400px] border border-[#121820]/10 flex flex-col justify-between p-8 md:p-12 text-[#F8F7F3]">
-            {/* Dark Mode Map Graphic Background */}
-            <div className="absolute inset-0 opacity-30 pointer-events-none bg-[radial-gradient(#2563EB_1px,transparent_1px)] [background-size:16px_16px]" />
+          {/* Right Column (7 cols): Map Embed Container */}
+          <div className="lg:col-span-7 relative min-h-[400px] rounded-3xl overflow-hidden shadow-2xl border border-[#43ACE0]/20 flex flex-col">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3356.592186714088!2d-96.858482!3d32.723467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864e99f664db801b%3A0x8e5fbbd84a7e7a8!2s2300%20W%20Illinois%20Ave%2C%20Dallas%2C%20TX%2075224!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+              className="w-full h-full min-h-[420px] border-0 flex-1"
+              allowFullScreen={false}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Illinois Family Dentistry Map Location"
+            />
 
-            <div className="relative z-10">
-              <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#2563EB]">
-                Interactive Location Map
+            {/* Bottom Bar overlay for Map */}
+            <div className="p-4 bg-[#FFFFFF] border-t border-[#43ACE0]/20 flex items-center justify-between">
+              <span className="text-xs font-bold text-[#000000]">
+                2300 W Illinois Ave, Dallas, TX 75224
               </span>
-              <h3 className="font-serif text-3xl font-normal mt-2">
-                Situated at Illinois & Hampton Plaza
-              </h3>
-              <p className="text-xs text-[#94A3B8] font-light mt-2 max-w-md">
-                Easily accessible from Oak Cliff, South Dallas, Grand Prairie, and Duncanville with ample free plaza parking.
-              </p>
-            </div>
-
-            {/* Embedded Responsive Map */}
-            <div className="relative z-10 w-full h-64 md:h-72 rounded-2xl overflow-hidden border border-[#F8F7F3]/10 shadow-lg my-6">
-              <iframe
-                title="Illinois Family Dentistry Map Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3356.6669649216447!2d-96.8598912!3d32.7237077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864e99f57d605c31%3A0xb32c8ecae8f86f7b!2s2300%20W%20Illinois%20Ave%2C%20Dallas%2C%20TX%2075224!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
-                width="100%"
-                height="100%"
-                style={{ border: 0, filter: "grayscale(20%) contrast(1.1)" }}
-                allowFullScreen={false}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
-
-            <div className="relative z-10 flex flex-wrap items-center justify-between gap-4 pt-2 border-t border-[#F8F7F3]/10 text-xs text-[#94A3B8]">
-              <span>📍 2300 W Illinois Ave, Dallas, TX 75224</span>
               <a
                 href={siteData.address.mapUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#F8F7F3] font-semibold underline hover:text-[#2563EB]"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#43ACE0] text-[#FFFFFF] text-xs uppercase tracking-widest font-bold hover:bg-[#F4A261] transition-colors shadow-sm"
               >
-                Open in Google Maps →
+                <Navigation className="w-3.5 h-3.5" />
+                <span>Get Directions</span>
               </a>
             </div>
           </div>

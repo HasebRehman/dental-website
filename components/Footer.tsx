@@ -1,135 +1,164 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
-import { Phone, Mail, MapPin, ArrowUp, Heart } from "lucide-react";
+import { Phone, Mail, MapPin, Heart, FileText, Clock } from "lucide-react";
 import { siteData } from "@/data/siteData";
+import { images } from "@/data/images";
 
 export default function Footer() {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   return (
-    <footer className="bg-[#121820] text-[#F8F7F3] pt-20 pb-12 border-t border-[#F8F7F3]/10">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
-        {/* Top Branding & Giant Typography */}
-        <div className="border-b border-[#F8F7F3]/10 pb-16 mb-16 flex flex-col md:flex-row md:items-end justify-between gap-8">
-          <div>
-            <span className="text-xs uppercase tracking-[0.3em] font-semibold text-[#2563EB]">
-              Premier Dallas Family Dental Practice
-            </span>
-            <h2 className="font-serif text-5xl sm:text-6xl md:text-7xl font-normal tracking-tight text-[#F8F7F3] mt-2">
-              ILLINOIS FAMILY DENTISTRY
-            </h2>
-            <p className="font-sans text-sm text-[#94A3B8] font-light mt-2 max-w-lg">
-              {siteData.tagline} • Hablamos Español.
-            </p>
+    <footer className="bg-[#000000] text-[#FFFFFF] pt-16 pb-12 border-t border-[#FFFFFF]/15 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+        {/* Top Header Bar */}
+        <div className="border-b border-[#FFFFFF]/15 pb-12 mb-12 flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <div className="relative h-12 w-56 overflow-hidden">
+              <Image
+                src={images.logo}
+                alt="Illinois Family Dentistry Logo"
+                fill
+                className="object-contain object-left brightness-200"
+              />
+            </div>
           </div>
-
-          <button
-            onClick={scrollToTop}
-            aria-label="Back to top"
-            className="self-start md:self-auto px-6 py-3 rounded-full border border-[#F8F7F3]/20 text-xs font-semibold uppercase tracking-widest hover:bg-[#F8F7F3] hover:text-[#121820] transition-colors flex items-center gap-2"
-          >
-            <span>Back to Top</span>
-            <ArrowUp className="w-3.5 h-3.5" />
-          </button>
+          <div className="text-xs text-[#FFFFFF]/80 font-semibold hidden sm:block">
+            Illinois & Hampton Plaza • Next to El Rancho
+          </div>
         </div>
 
-        {/* 4-Column Navigation & Info Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 font-sans text-xs">
-          {/* Col 1: Practice Overview */}
+        {/* 4 Clean Columns Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12 font-sans text-xs">
+          {/* Col 1: About */}
           <div>
-            <h3 className="font-serif text-lg text-[#F8F7F3] font-normal mb-4">
-              About The Practice
+            <h3 className="font-serif text-sm uppercase tracking-widest text-[#F4A261] font-extrabold mb-4">
+              ABOUT OUR PRACTICE
             </h3>
-            <p className="text-[#94A3B8] font-light leading-relaxed mb-4">
-              Providing family-centered oral healthcare to Dallas, Oak Cliff, Grand Prairie, and Duncanville since 2009. Accepting most insurance, Medicaid/CHIP, and offering flexible payment options.
+            <p className="text-[#FFFFFF]/80 font-normal leading-relaxed mb-4">
+              Illinois Family Dentistry delivers high-quality, gentle dental care to families across Dallas, Oak Cliff, Grand Prairie, and Duncanville.
             </p>
+            <div className="text-[11px] text-[#FFFFFF]/80 font-semibold">
+              Accepting PPO Insurances, Medicaid/CHIP & CareCredit.
+            </div>
           </div>
 
-          {/* Col 2: Navigation Links */}
+          {/* Col 2: Navigation */}
           <div>
-            <h3 className="font-serif text-lg text-[#F8F7F3] font-normal mb-4">
-              Quick Links
+            <h3 className="font-serif text-sm uppercase tracking-widest text-[#F4A261] font-extrabold mb-4">
+              QUICK NAVIGATION
             </h3>
-            <ul className="space-y-2.5 text-[#94A3B8]">
-              {["Hero", "About", "Services", "Why-Us", "Doctors", "Testimonials", "Financing", "Location"].map((item) => (
-                <li key={item}>
-                  <a
-                    href={`#${item.toLowerCase()}`}
-                    className="hover:text-[#F8F7F3] transition-colors"
+            <ul className="space-y-2.5 text-[#FFFFFF]/80">
+              {[
+                { name: "Home", href: "/" },
+                { name: "About Us", href: "/#about" },
+                { name: "Dental Services", href: "/services" },
+                { name: "Why Choose Us", href: "/#why-us" },
+                { name: "Meet Doctors", href: "/#doctors" },
+                { name: "Patient Stories", href: "/#testimonials" },
+                { name: "Financial Info", href: "/financial-info" },
+                { name: "Contact & Hours", href: "/contact" },
+              ].map((item) => (
+                <li key={item.name}>
+                  <Link
+                    href={item.href}
+                    className="hover:text-[#43ACE0] transition-colors font-medium text-[#FFFFFF]"
                   >
-                    {item.replace("-", " ")}
-                  </a>
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Col 3: Services */}
+          {/* Col 3: Patient Downloads & Forms */}
           <div>
-            <h3 className="font-serif text-lg text-[#F8F7F3] font-normal mb-4">
-              Dental Services
+            <h3 className="font-serif text-sm uppercase tracking-widest text-[#F4A261] font-extrabold mb-4">
+              PATIENT FORMS (PDF)
             </h3>
-            <ul className="space-y-2.5 text-[#94A3B8]">
-              <li>General Exams & Cleanings</li>
-              <li>Cosmetic Whitening & Veneers</li>
-              <li>Invisalign® Clear Aligners</li>
-              <li>Children&apos;s Pediatric Dentistry</li>
-              <li>Same-Day Emergency Dental Care</li>
-              <li>Crowns, Bridges & Implants</li>
+            <ul className="space-y-2.5 text-[#FFFFFF]/80">
+              <li>
+                <a
+                  href={siteData.pdfForms.english}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#43ACE0] transition-colors font-medium text-[#FFFFFF] flex items-center gap-2"
+                >
+                  <FileText className="w-4 h-4 text-[#F4A261] shrink-0" />
+                  <span>English New Patient Form</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href={siteData.pdfForms.spanish}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#43ACE0] transition-colors font-medium text-[#FFFFFF] flex items-center gap-2"
+                >
+                  <FileText className="w-4 h-4 text-[#F4A261] shrink-0" />
+                  <span>Forma Nuevos Pacientes (Español)</span>
+                </a>
+              </li>
+              <li className="text-[11px] text-[#FFFFFF]/70 pt-2">
+                Print and fill out your forms before your visit for faster check-in.
+              </li>
             </ul>
           </div>
 
-          {/* Col 4: Contact & Hours Summary */}
+          {/* Col 4: Contact & Hours */}
           <div>
-            <h3 className="font-serif text-lg text-[#F8F7F3] font-normal mb-4">
-              Contact & Location
+            <h3 className="font-serif text-sm uppercase tracking-widest text-[#F4A261] font-extrabold mb-4">
+              CONTACT & HOURS
             </h3>
-            <ul className="space-y-3 text-[#94A3B8]">
-              <li className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-[#2563EB] shrink-0 mt-0.5" />
-                <span>{siteData.address.full}</span>
+            <ul className="space-y-3.5 text-[#FFFFFF]/80">
+              <li className="flex items-start gap-2.5">
+                <MapPin className="w-4 h-4 text-[#F4A261] shrink-0 mt-0.5" />
+                <span className="text-[#FFFFFF]">2300 W Illinois Ave, Dallas, TX 75224</span>
               </li>
-              <li className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-[#2563EB] shrink-0" />
+              <li className="flex items-center gap-2.5">
+                <Phone className="w-4 h-4 text-[#F4A261] shrink-0" />
                 <a
                   href={`tel:${siteData.phoneRaw}`}
-                  className="hover:text-[#F8F7F3] transition-colors font-semibold"
+                  className="hover:text-[#43ACE0] transition-colors font-extrabold text-[#FFFFFF]"
                 >
-                  {siteData.phone}
+                  469-809-1919
                 </a>
               </li>
-              <li className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-[#2563EB] shrink-0" />
+              <li className="flex items-center gap-2.5">
+                <Mail className="w-4 h-4 text-[#F4A261] shrink-0" />
                 <a
                   href={`mailto:${siteData.email}`}
-                  className="hover:text-[#F8F7F3] transition-colors"
+                  className="hover:text-[#43ACE0] transition-colors text-[#FFFFFF]"
                 >
                   {siteData.email}
                 </a>
+              </li>
+              <li className="flex items-start gap-2.5 pt-1">
+                <Clock className="w-4 h-4 text-[#F4A261] shrink-0 mt-0.5" />
+                <div>
+                  <span className="font-bold text-[#FFFFFF] block">Mon 1pm-7pm | Tue-Fri 10am-7pm</span>
+                  <span className="font-semibold text-[#FFFFFF]/80">Sat 10am-2pm | Sun Closed</span>
+                </div>
               </li>
             </ul>
           </div>
         </div>
 
-        {/* Bottom Legal Copyright */}
-        <div className="border-t border-[#F8F7F3]/10 pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#94A3B8] gap-4">
+        {/* Bottom Bar */}
+        <div className="border-t border-[#FFFFFF]/15 pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#FFFFFF]/70 gap-4">
           <div className="flex items-center gap-1">
             <span>© 2026 Illinois Family Dentistry. All rights reserved. Crafted with</span>
-            <Heart className="w-3 h-3 text-red-500 fill-red-500" />
+            <Heart className="w-3 h-3 text-[#F4A261] fill-[#F4A261]" />
             <span>in Dallas, TX.</span>
           </div>
 
-          <div className="flex items-center gap-6">
-            <Link href="#hero" className="hover:text-[#F8F7F3] transition-colors">
+          <div className="flex items-center gap-6 font-bold text-[#FFFFFF]">
+            <Link href="/" className="hover:text-[#43ACE0] transition-colors">
               Privacy Policy
             </Link>
-            <Link href="#hero" className="hover:text-[#F8F7F3] transition-colors">
+            <Link href="/" className="hover:text-[#43ACE0] transition-colors">
               Terms of Service
             </Link>
-            <Link href="#hero" className="hover:text-[#F8F7F3] transition-colors">
+            <Link href="/" className="hover:text-[#43ACE0] transition-colors">
               Accessibility
             </Link>
           </div>

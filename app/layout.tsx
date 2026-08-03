@@ -1,26 +1,32 @@
 import type { Metadata } from "next";
-import { Instrument_Serif, Manrope } from "next/font/google";
+import { Outfit, Plus_Jakarta_Sans, Alex_Brush } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import { siteData } from "@/data/siteData";
 
-const instrumentSerif = Instrument_Serif({
-  weight: "400",
+const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-serif",
   display: "swap",
 });
 
-const manrope = Manrope({
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
 });
 
+const alexBrush = Alex_Brush({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-script",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "Illinois Family Dentistry | Dallas TX Dental Practice",
+  title: "Illinois Family Dentistry | Smiles You Can Trust in Dallas, TX",
   description:
-    "Luxury, comfortable & personalized family dentistry in Dallas, TX. Comprehensive dental care, emergency appointments, cosmetic treatments, Invisalign, and pediatric care.",
+    "Smiles You Can Trust! High-Quality Family Dentistry in Dallas TX, Tailored for Every Member. Reserve Your Family’s Spot Now! 2300 W Illinois Ave. Call 469-809-1919.",
   keywords: [
     "Illinois Family Dentistry",
     "Dentist Dallas TX",
@@ -31,10 +37,18 @@ export const metadata: Metadata = {
     "Hablamos Español Dentista",
   ],
   authors: [{ name: "Illinois Family Dentistry" }],
+  icons: {
+    icon: [
+      { url: "/img/teeth-img.webp", type: "image/webp" },
+      { url: "/icon.webp", type: "image/webp" },
+    ],
+    shortcut: "/img/teeth-img.webp",
+    apple: "/img/teeth-img.webp",
+  },
   openGraph: {
-    title: "Illinois Family Dentistry | Modern & Personal Dental Care in Dallas",
+    title: "Illinois Family Dentistry | Dentist in Dallas, TX | Family Dentistry",
     description:
-      "Experience luxury, family-first dental care in Dallas, TX. Flexible hours, evening appointments, and most insurance accepted.",
+      "Smiles You Can Trust! High-Quality Family Dentistry in Dallas TX. Open weekdays until 7 PM & Saturdays. Medicaid/CHIP & PPO accepted. Hablamos Español.",
     url: "https://illinoisdentistrydallas.com",
     siteName: "Illinois Family Dentistry",
     locale: "en_US",
@@ -54,7 +68,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Structured Data for SEO
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Dentist",
@@ -88,15 +101,18 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${instrumentSerif.variable} ${manrope.variable} antialiased`}
+      suppressHydrationWarning
+      className={`${outfit.variable} ${plusJakartaSans.variable} ${alexBrush.variable} antialiased`}
     >
       <head>
+        <link rel="icon" href="/img/teeth-img.webp" type="image/webp" />
+        <link rel="apple-touch-icon" href="/img/teeth-img.webp" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>

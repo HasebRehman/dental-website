@@ -1,145 +1,135 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import { Sparkles, Clock, Heart, Sparkle, ShieldAlert, Award } from "lucide-react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
+import { Clock, Heart, Sparkle, ShieldAlert, Award } from "lucide-react";
+import { motion } from "framer-motion";
 
 const whyUsPillars = [
   {
     num: "01",
-    title: "FAMILY FIRST",
-    desc: "We treat every patient like a member of our own household, catering to all ages from children to seniors with warmth and respect.",
+    title: "EXPERIENCED & CARING TEAM",
+    desc: "Led by Dr. Rajvir Singh ('Dr. Raj') and Dr. Tiffany Pham. We prioritize patient comfort and gentle technique for every generation.",
     icon: Heart,
   },
   {
     num: "02",
-    title: "MODERN APPROACH",
-    desc: "Digital imaging, low-radiation X-rays, and precision restorative materials for faster, safer, and longer-lasting dental results.",
+    title: "STATE-OF-THE-ART DENTISTRY",
+    desc: "Low-radiation digital X-rays, modern diagnostic equipment, and tooth-colored materials for long-lasting aesthetic beauty.",
     icon: Sparkle,
   },
   {
     num: "03",
-    title: "COMFORTABLE CARE",
-    desc: "Gentle technique and soothing environment designed for anxious patients so every visit is stress-free and relaxed.",
+    title: "COMFORT-FIRST & BILINGUAL",
+    desc: "Our warm staff speaks English & Spanish (Hablamos Español). We take time to listen so nervous patients feel completely relaxed.",
     icon: Award,
   },
   {
     num: "04",
-    title: "CONVENIENT HOURS",
-    desc: "Open till 7:00 PM on weekdays and open on Saturdays, allowing you to get quality care without missing work or school.",
+    title: "EVENING & SATURDAY SLOTS",
+    desc: "Open until 7:00 PM on weekdays and open on Saturdays, allowing you to receive care without taking off work or missing school.",
     icon: Clock,
   },
   {
     num: "05",
-    title: "PERSONALIZED ATTENTION",
-    desc: "We never double-book or rush your appointment. You receive direct one-on-one time with your doctor every single visit.",
+    title: "INSURANCE & MEDICAID ACCEPTED",
+    desc: "We accept most PPO insurances, Medicaid/CHIP for children, and offer flexible payment arrangements via CareCredit.",
     icon: ShieldAlert,
   },
 ];
 
 export default function WhyChooseUs() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    const ctx = gsap.context(() => {
-      gsap.from(".why-item", {
-        opacity: 0,
-        y: 35,
-        stagger: 0.15,
-        duration: 0.9,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 70%",
-        },
-      });
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
-
   return (
     <section
       id="why-us"
-      ref={sectionRef}
-      className="py-24 md:py-36 bg-[#121820] text-[#F8F7F3] relative overflow-hidden"
+      className="py-20 md:py-32 bg-[#43ACE0] text-[#FFFFFF] relative overflow-hidden"
     >
-      {/* Decorative Glow */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#2563EB]/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#0D9488]/10 rounded-full blur-[100px] pointer-events-none" />
+      {/* Glow Effects */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#5FCAEF]/20 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#F4A261]/20 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-        {/* Header */}
-        <div className="max-w-3xl mb-20">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F8F7F3]/10 border border-[#F8F7F3]/15 text-xs font-semibold uppercase tracking-widest text-[#94A3B8] mb-6">
-            <Sparkles className="w-3.5 h-3.5 text-[#2563EB]" />
-            <span>The Illinois Dentistry Difference</span>
-          </div>
-
-          <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.02] tracking-tight mb-6">
-            WHY ILLINOIS <br />
-            <span className="italic text-[#2563EB]">FAMILY DENTISTRY?</span>
+        {/* Header with Scroll Reveal */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6 }}
+          className="max-w-3xl mb-12"
+        >
+          {/* Headline in 2 lines */}
+          <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight mb-5">
+            <span className="block text-[#FFFFFF]">WHY CHOOSE</span>
+            <span className="block text-[#F4A261]">ILLINOIS FAMILY DENTISTRY?</span>
           </h2>
 
-          <p className="font-sans text-lg text-[#94A3B8] font-light leading-relaxed">
-            We don&apos;t just treat teeth. We take care of people. Our commitment to clinical excellence and genuine patient care sets us apart across Dallas.
+          <p className="font-sans text-base sm:text-lg text-[#FFFFFF]/90 font-normal leading-relaxed">
+            We don&apos;t just treat teeth. We take care of people. Our commitment to clinical excellence and compassionate patient care makes us Dallas&apos;s trusted choice.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Pillars List */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {whyUsPillars.map((pillar) => (
-            <div
+        {/* 6-Box Grid with Staggered Scroll Reveal & Multi-Layer Shadow */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
+          {whyUsPillars.map((pillar, idx) => (
+            <motion.div
               key={pillar.num}
-              className="why-item group bg-[#1A222D] p-8 rounded-3xl border border-[#F8F7F3]/10 hover:border-[#2563EB]/50 transition-all duration-300 flex flex-col justify-between"
+              initial={{ opacity: 0, y: 35 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.55, delay: idx * 0.1 }}
+              className="group bg-[#FFFFFF] p-8 rounded-3xl border border-[#FFFFFF]/30 hover:border-[#F4A261] transition-all duration-300 flex flex-col justify-between h-full shadow-[0_15px_35px_rgba(0,0,0,0.15)] hover:shadow-[0_25px_50px_rgba(0,0,0,0.25)] text-[#000000]"
             >
               <div>
-                <div className="flex items-center justify-between mb-8">
-                  <span className="font-serif text-4xl font-normal text-[#2563EB]">
+                <div className="flex items-center justify-between mb-6">
+                  <span className="font-serif text-4xl font-bold text-[#43ACE0]">
                     {pillar.num}
                   </span>
-                  <div className="w-10 h-10 rounded-full bg-[#F8F7F3]/5 flex items-center justify-center group-hover:scale-110 group-hover:bg-[#2563EB] text-[#F8F7F3] transition-all">
+                  <div className="w-10 h-10 rounded-xl bg-[#5FCAEF]/20 flex items-center justify-center group-hover:scale-110 group-hover:bg-[#43ACE0] group-hover:text-[#FFFFFF] text-[#43ACE0] transition-all">
                     <pillar.icon className="w-5 h-5" />
                   </div>
                 </div>
 
-                <h3 className="font-sans text-base uppercase tracking-widest font-bold text-[#F8F7F3] mb-3">
+                <h3 className="font-sans text-sm uppercase tracking-widest font-extrabold text-[#000000] mb-3">
                   {pillar.title}
                 </h3>
 
-                <p className="font-sans text-xs text-[#94A3B8] font-light leading-relaxed">
+                <p className="font-sans text-xs text-[#000000]/70 font-normal leading-relaxed">
                   {pillar.desc}
                 </p>
               </div>
 
-              <div className="w-full h-[1px] bg-[#F8F7F3]/10 mt-8 group-hover:bg-[#2563EB] transition-colors" />
-            </div>
+              <div className="w-full h-[1px] bg-[#43ACE0]/20 mt-8 group-hover:bg-[#F4A261] transition-colors" />
+            </motion.div>
           ))}
 
-          {/* Quick CTA Card in Grid */}
-          <div className="why-item bg-gradient-to-br from-[#2563EB] to-[#1D4ED8] p-8 rounded-3xl text-[#F8F7F3] flex flex-col justify-between shadow-xl">
+          {/* 6th Card: Exact Peach CTA Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 35 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.55, delay: 0.5 }}
+            className="bg-[#F4A261] p-8 rounded-3xl text-[#FFFFFF] flex flex-col justify-between h-full shadow-2xl border border-[#FFFFFF]/20 hover:scale-[1.01] transition-transform"
+          >
             <div>
-              <span className="text-xs uppercase tracking-widest font-bold text-[#F8F7F3]/80">
-                Dallas Patient Care
+              <span className="text-[11px] uppercase tracking-widest font-extrabold text-[#FFFFFF]/90 block mb-2">
+                DALLAS FAMILY HEALTHCARE
               </span>
-              <h3 className="font-serif text-3xl font-normal mt-3 mb-4">
-                Ready for a better dental experience?
+              <h3 className="font-sans text-2xl sm:text-3xl font-extrabold text-[#FFFFFF] leading-tight mb-3">
+                Ready for a stress-free experience?
               </h3>
-              <p className="text-xs text-[#F8F7F3]/90 font-light leading-relaxed">
-                Schedule your comprehensive exam or emergency visit today. Hablamos Español.
+              <p className="font-sans text-xs text-[#FFFFFF]/95 font-normal leading-relaxed mb-4">
+                Schedule your family&apos;s checkup or emergency visit today with Dr. Raj & Dr. Pham. Hablamos Español.
               </p>
             </div>
 
-            <a
-              href="#appointment"
-              className="mt-8 w-full text-center py-3.5 rounded-full bg-[#F8F7F3] text-[#121820] font-semibold text-xs uppercase tracking-widest hover:bg-[#121820] hover:text-[#F8F7F3] transition-colors"
-            >
-              Book Appointment Now
-            </a>
-          </div>
+            <div className="pt-4 border-t border-[#FFFFFF]/20">
+              <Link
+                href="/contact"
+                className="w-full text-center block py-4 rounded-full bg-[#000000] text-[#FFFFFF] font-extrabold text-xs uppercase tracking-widest hover:bg-[#FFFFFF] hover:text-[#000000] transition-all duration-300 shadow-md"
+              >
+                RESERVE YOUR SPOT NOW
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

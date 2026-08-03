@@ -1,123 +1,139 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Star, ChevronLeft, ChevronRight, Quote, Sparkles, CheckCircle } from "lucide-react";
 import { testimonialsData } from "@/data/testimonials";
 
 export default function Testimonials() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [pageIndex, setPageIndex] = useState(0);
+  const itemsPerPage = 3;
+  const totalPages = Math.ceil(testimonialsData.length / itemsPerPage);
 
-  const activeTestimonial = testimonialsData[currentIndex];
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setPageIndex((prev) => (prev + 1) % totalPages);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [totalPages]);
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonialsData.length);
+    setPageIndex((prev) => (prev + 1) % totalPages);
   };
 
   const handlePrev = () => {
-    setCurrentIndex(
-      (prev) => (prev - 1 + testimonialsData.length) % testimonialsData.length
-    );
+    setPageIndex((prev) => (prev - 1 + totalPages) % totalPages);
   };
+
+  const currentStories = testimonialsData.slice(
+    pageIndex * itemsPerPage,
+    (pageIndex + 1) * itemsPerPage
+  );
 
   return (
     <section
       id="testimonials"
-      className="py-24 md:py-36 bg-[#121820] text-[#F8F7F3] relative overflow-hidden"
+      className="py-20 md:py-32 bg-[#43ACE0] text-[#FFFFFF] relative overflow-hidden border-b border-[#FFFFFF]/20"
     >
       {/* Background Accent Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#2563EB]/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#F4A261]/15 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-        {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6">
-          <div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F8F7F3]/10 border border-[#F8F7F3]/15 text-xs font-semibold uppercase tracking-widest text-[#94A3B8] mb-4">
-              <Sparkles className="w-3.5 h-3.5 text-[#2563EB]" />
-              <span>Verified Patient Experiences</span>
-            </div>
-            <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl tracking-tight">
-              PATIENT <span className="italic text-[#2563EB]">STORIES</span>
+        {/* Header with Navigation Controls */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          <div className="max-w-2xl">
+            <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl tracking-tight text-[#FFFFFF]">
+              PATIENT <span className="italic text-[#F4A261]">STORIES</span>
             </h2>
+            <p className="font-sans text-base text-[#FFFFFF]/90 mt-3 font-normal">
+              Read real reviews from patients and families across Dallas & Oak Cliff.
+            </p>
           </div>
 
+          {/* Controls */}
           <div className="flex items-center gap-3">
             <button
               onClick={handlePrev}
-              aria-label="Previous patient story"
-              className="w-12 h-12 rounded-full border border-[#F8F7F3]/20 flex items-center justify-center hover:bg-[#F8F7F3] hover:text-[#121820] transition-colors"
+              aria-label="Previous 3 stories"
+              className="w-12 h-12 rounded-full border border-[#FFFFFF]/30 bg-[#FFFFFF]/10 flex items-center justify-center text-[#FFFFFF] hover:bg-[#F4A261] hover:border-[#F4A261] transition-all cursor-pointer shadow-md"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
-            <span className="font-mono text-xs text-[#94A3B8] px-2">
-              0{currentIndex + 1} / 0{testimonialsData.length}
-            </span>
+
+            {/* Pagination Dots */}
+            <div className="flex items-center gap-2 px-3">
+              {[...Array(totalPages)].map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setPageIndex(idx)}
+                  aria-label={`Go to page ${idx + 1}`}
+                  className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
+                    idx === pageIndex
+                      ? "w-8 bg-[#F4A261]"
+                      : "w-2.5 bg-[#FFFFFF]/40 hover:bg-[#FFFFFF]/80"
+                  }`}
+                />
+              ))}
+            </div>
+
             <button
               onClick={handleNext}
-              aria-label="Next patient story"
-              className="w-12 h-12 rounded-full border border-[#F8F7F3]/20 flex items-center justify-center hover:bg-[#F8F7F3] hover:text-[#121820] transition-colors"
+              aria-label="Next 3 stories"
+              className="w-12 h-12 rounded-full border border-[#FFFFFF]/30 bg-[#FFFFFF]/10 flex items-center justify-center text-[#FFFFFF] hover:bg-[#F4A261] hover:border-[#F4A261] transition-all cursor-pointer shadow-md"
             >
               <ChevronRight className="w-5 h-5" />
             </button>
           </div>
         </div>
 
-        {/* Main Editorial Testimonial Card */}
-        <div className="max-w-4xl mx-auto">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeTestimonial.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
-              className="bg-[#1A222D] p-8 md:p-14 rounded-3xl border border-[#F8F7F3]/10 shadow-2xl relative"
-            >
-              <Quote className="w-12 h-12 text-[#2563EB]/40 absolute top-8 right-8" />
-
-              {/* Star Rating */}
-              <div className="flex items-center gap-1.5 mb-8">
-                {[...Array(activeTestimonial.rating)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-5 h-5 fill-[#D97706] text-[#D97706]"
-                  />
-                ))}
-                <span className="ml-2 text-xs uppercase tracking-widest font-semibold text-[#94A3B8]">
-                  5.0 Exceptional Care
-                </span>
-              </div>
-
-              {/* Quote Text */}
-              <blockquote className="font-serif text-2xl sm:text-3xl md:text-4xl text-[#F8F7F3] leading-snug mb-10 font-normal">
-                &ldquo;{activeTestimonial.quote}&rdquo;
-              </blockquote>
-
-              {/* Author Footer */}
-              <div className="flex flex-wrap items-center justify-between border-t border-[#F8F7F3]/10 pt-6 gap-4">
+        {/* 3 Stories Grid */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={pageIndex}
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -20 }}
+            transition={{ duration: 0.45, ease: "easeOut" }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch"
+          >
+            {currentStories.map((story) => (
+              <div
+                key={story.id}
+                className="bg-[#FFFFFF] p-8 rounded-3xl border border-[#FFFFFF]/30 shadow-xl flex flex-col justify-between h-full hover:border-[#F4A261] transition-all duration-300 text-[#000000]"
+              >
                 <div>
-                  <div className="flex items-center gap-2">
-                    <span className="font-sans text-base font-bold text-[#F8F7F3]">
-                      {activeTestimonial.name}
-                    </span>
-                    {activeTestimonial.verified && (
-                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#2563EB]/20 text-[#2563EB] text-[10px] uppercase font-semibold">
-                        <CheckCircle className="w-3 h-3" /> Verified Patient
-                      </span>
-                    )}
+                  {/* 5 Stars */}
+                  <div className="flex items-center gap-1 mb-5">
+                    {[...Array(story.rating)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className="w-4 h-4 fill-[#F4A261] text-[#F4A261]"
+                      />
+                    ))}
                   </div>
-                  <div className="text-xs text-[#94A3B8] mt-0.5">
-                    {activeTestimonial.location}
-                  </div>
+
+                  {/* Quote Text */}
+                  <p className="font-sans text-xs sm:text-sm text-[#000000] leading-relaxed mb-6 font-medium">
+                    &ldquo;{story.quote}&rdquo;
+                  </p>
                 </div>
 
-                <div className="px-4 py-2 rounded-xl bg-[#F8F7F3]/5 border border-[#F8F7F3]/10 text-xs font-semibold uppercase tracking-wider text-[#94A3B8]">
-                  Treatment: {activeTestimonial.treatment}
+                {/* Author Info */}
+                <div className="border-t border-[#43ACE0]/20 pt-5 flex items-center justify-between mt-4">
+                  <div>
+                    <h3 className="font-sans text-xs uppercase tracking-wider font-extrabold text-[#000000]">
+                      {story.name}
+                    </h3>
+                    <p className="text-[11px] text-[#000000]/70 mt-0.5 font-normal">
+                      {story.location}
+                    </p>
+                  </div>
+                  <Quote className="w-5 h-5 text-[#F4A261] shrink-0" />
                 </div>
               </div>
-            </motion.div>
-          </AnimatePresence>
-        </div>
+            ))}
+          </motion.div>
+        </AnimatePresence>
       </div>
     </section>
   );

@@ -45,4 +45,22 @@ export const testimonialsData: Testimonial[] = [
     quote: "Clean, luxury feel with true family-oriented care. They accepted my PPO insurance and made billing completely hassle-free. Evening hours are so convenient after work!",
     verified: true,
   },
+  {
+    id: "t5",
+    name: "Sofia L.",
+    location: "Dallas, TX",
+    rating: 5,
+    treatment: "Pediatric Dentistry & Checkup",
+    quote: "Finding a dentist who takes Medicaid and provides top-tier care for children was a dream come true. The office is warm and my kids love coming here!",
+    verified: true,
+  },
+  {
+    id: "t6",
+    name: "Carlos V.",
+    location: "Duncanville, TX",
+    rating: 5,
+    treatment: "Crowns & Restorations",
+    quote: "Exceptional service! The entire team is attentive and bilingual. I received a custom porcelain crown that matches my natural teeth perfectly.",
+    verified: true,
+  },
 ];
