@@ -15,7 +15,7 @@ export default function About() {
       {/* Glow Effects */}
       <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-[#5FCAEF]/15 rounded-full blur-[140px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+      <div className="max-w-[1700px] mx-auto px-6 md:px-12 xl:px-16 2xl:px-20 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column (6 cols): Composite Image Collages with Ambient Drop Shadows */}
           <motion.div

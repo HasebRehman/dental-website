@@ -18,7 +18,7 @@ export default function MeetTheTeamPage() {
         {/* Ambient Glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#FF7A00]/15 rounded-full blur-[140px] pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 text-center">
+        <div className="max-w-[1700px] mx-auto px-6 md:px-12 xl:px-16 2xl:px-20 relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
@@ -60,7 +60,7 @@ export default function MeetTheTeamPage() {
       </section>
 
       {/* Main Team Showcase Photo Section */}
-      <section className="py-10 md:py-24 max-w-7xl mx-auto px-6 md:px-12">
+      <section className="py-10 md:py-24 max-w-[1700px] mx-auto px-6 md:px-12 xl:px-16 2xl:px-20">
         <motion.div
           initial={{ opacity: 0, scale: 0.96, y: 30 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}

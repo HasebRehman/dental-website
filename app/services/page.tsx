@@ -38,7 +38,7 @@ export default function ServicesPage() {
         {/* Ambient Glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#FF7A00]/15 rounded-full blur-[140px] pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 text-center">
+        <div className="max-w-[1700px] mx-auto px-6 md:px-12 xl:px-16 2xl:px-20 relative z-10 text-center">
           <div className="inline-flex items-center gap-1 px-2 py-0.5 sm:px-3.5 sm:py-1.5 rounded-full bg-[#FFFFFF]/20 border border-[#FFFFFF]/30 text-[9px] sm:text-xs font-extrabold uppercase tracking-wider text-[#FFFFFF] mb-3 sm:mb-4 w-fit mx-auto">
             <Sparkles className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 text-[#FF7A00] shrink-0" />
             <span>Full-Spectrum Family Dentistry</span>
@@ -72,7 +72,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Grid Section */}
-      <section className="py-8 sm:py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
+      <section className="py-8 sm:py-16 md:py-24 max-w-[1700px] mx-auto px-4 sm:px-6 md:px-12 xl:px-16 2xl:px-20">
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-16">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F0F6FF] border border-[#1B69B6]/20 text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#1B69B6] mb-3">
             <Stethoscope className="w-3.5 h-3.5 text-[#FF7A00]" />

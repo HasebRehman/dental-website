@@ -13,7 +13,7 @@ export default function Hero() {
       id="hero"
       className="relative pt-36 sm:pt-44 lg:pt-52 pb-12 md:pb-24 bg-gradient-to-b from-[#F0F6FF] via-[#FFFFFF] to-[#FFFFFF] overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+      <div className="max-w-[1700px] mx-auto px-6 md:px-12 xl:px-16 2xl:px-20 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           {/* Left Content Column (7 cols) */}

@@ -60,7 +60,7 @@ export default function SmileTransformation() {
       id="transformations"
       className="py-24 md:py-36 bg-[#EEF2F6] border-b border-[#0F2C59]/10 overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+      <div className="max-w-[1700px] mx-auto px-6 md:px-12 xl:px-16 2xl:px-20">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F8F9FA] border border-[#0F2C59]/10 text-xs font-bold uppercase tracking-widest text-[#FF6B00] mb-3">

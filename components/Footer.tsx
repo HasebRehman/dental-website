@@ -33,7 +33,7 @@ function YoutubeIcon({ className = "w-4 h-4" }: { className?: string }) {
 export default function Footer() {
   return (
     <footer className="bg-[#0B2545] text-[#FFFFFF] pt-16 pb-8 border-t border-[#1E3A8A]">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+      <div className="max-w-[1700px] mx-auto px-6 md:px-12 xl:px-16 2xl:px-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-[#FFFFFF]/10">
           
           {/* Column 1: Brand & Socials */}

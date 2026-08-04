@@ -86,7 +86,7 @@ export default function OfficeTourPage() {
         {/* Ambient Glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#FF7A00]/15 rounded-full blur-[140px] pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 text-center">
+        <div className="max-w-[1700px] mx-auto px-6 md:px-12 xl:px-16 2xl:px-20 relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
@@ -129,7 +129,7 @@ export default function OfficeTourPage() {
 
       {/* Facility Highlights Bar (2 Per Row on Mobile) */}
       <section className="py-6 sm:py-12 bg-[#F0F6FF] border-b border-[#1B69B6]/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
+        <div className="max-w-[1700px] mx-auto px-4 sm:px-6 md:px-12 xl:px-16 2xl:px-20">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-6 font-sans">
             <div className="flex items-center gap-2 sm:gap-3 p-2.5 sm:p-4 rounded-xl sm:rounded-2xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs hover:shadow-md transition-shadow">
               <CheckCircle2 className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-[#FF7A00] shrink-0" />
@@ -175,7 +175,7 @@ export default function OfficeTourPage() {
       </section>
 
       {/* Main Gallery Section */}
-      <section className="py-8 sm:py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
+      <section className="py-8 sm:py-16 md:py-24 max-w-[1700px] mx-auto px-4 sm:px-6 md:px-12 xl:px-16 2xl:px-20">
         {/* Category Filter Controls (Scrollable 1-Row Tabs on Mobile) */}
         <div className="w-full overflow-x-auto no-scrollbar scrollbar-none pb-2 mb-6 sm:mb-12 flex justify-start sm:justify-center">
           <div className="inline-flex p-1 sm:p-1.5 rounded-full bg-[#FFFFFF] border border-[#E2E8F0] shadow-sm shrink-0 whitespace-nowrap gap-1">

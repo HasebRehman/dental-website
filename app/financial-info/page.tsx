@@ -79,7 +79,7 @@ export default function FinancialInfoPage() {
         {/* Ambient Glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#FF7A00]/15 rounded-full blur-[140px] pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 text-center">
+        <div className="max-w-[1700px] mx-auto px-6 md:px-12 xl:px-16 2xl:px-20 relative z-10 text-center">
           <div className="inline-flex items-center gap-1 px-2 py-0.5 sm:px-3.5 sm:py-1.5 rounded-full bg-[#FFFFFF]/20 border border-[#FFFFFF]/30 text-[9px] sm:text-xs font-extrabold uppercase tracking-wider text-[#FFFFFF] mb-3 sm:mb-4 w-fit mx-auto">
             <ShieldCheck className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 text-[#FF7A00] shrink-0" />
             <span>Transparent Pricing & Payment Options</span>
@@ -113,7 +113,7 @@ export default function FinancialInfoPage() {
       </section>
 
       {/* Main Content Section */}
-      <section className="py-8 sm:py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
+      <section className="py-8 sm:py-16 md:py-24 max-w-[1700px] mx-auto px-4 sm:px-6 md:px-12 xl:px-16 2xl:px-20">
         {/* 3 Main Financial Options Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-20 items-stretch">
           {/* Card 1: PPO Insurance */}

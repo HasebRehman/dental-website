@@ -23,7 +23,7 @@ export default function AppointmentCTA() {
       id="appointment"
       className="py-20 md:py-32 bg-[#5FCAEF]/10 border-b border-[#43ACE0]/20 relative overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+      <div className="max-w-[1700px] mx-auto px-6 md:px-12 xl:px-16 2xl:px-20 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column (6 cols): Copy & Fast Direct Phone Call */}
           <div className="lg:col-span-6 flex flex-col justify-center">

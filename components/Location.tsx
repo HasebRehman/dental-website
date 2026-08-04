@@ -23,7 +23,7 @@ export default function Location() {
 
   return (
     <section id="appointment" className="py-10 md:py-28 bg-[#FFFFFF] text-[#000000] border-t border-[#E2E8F0]">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+      <div className="max-w-[1700px] mx-auto px-6 md:px-12 xl:px-16 2xl:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
           {/* Left Card: Appointment Form (6 cols) */}
