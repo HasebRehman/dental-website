@@ -64,7 +64,7 @@ export default function Testimonials() {
   const currentReviews = patientReviews.slice(activeIndex * 3, activeIndex * 3 + 3);
 
   return (
-    <section id="testimonials" className="py-20 md:py-28 bg-[#FFFFFF] text-[#000000] border-t border-[#E2E8F0] overflow-hidden">
+    <section id="testimonials" className="py-10 md:py-28 bg-[#FFFFFF] text-[#000000] border-t border-[#E2E8F0] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center mb-10">
           

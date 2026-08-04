@@ -11,10 +11,10 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative pt-44 sm:pt-48 lg:pt-52 pb-16 md:pb-24 bg-gradient-to-b from-[#F0F6FF] via-[#FFFFFF] to-[#FFFFFF] overflow-hidden"
+      className="relative pt-36 sm:pt-44 lg:pt-52 pb-12 md:pb-24 bg-gradient-to-b from-[#F0F6FF] via-[#FFFFFF] to-[#FFFFFF] overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           {/* Left Content Column (7 cols) */}
           <motion.div
@@ -23,9 +23,9 @@ export default function Hero() {
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="lg:col-span-7 flex flex-col justify-center text-left"
           >
-            {/* Top Pill Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF3FF] border border-[#1B69B6]/20 text-xs font-bold text-[#1B69B6] mb-6 w-fit">
-              <Check className="w-3.5 h-3.5 text-[#1B69B6]" />
+            {/* Top Pill Badge (Sleek & Compact on Mobile) */}
+            <div className="inline-flex items-center gap-1 px-2 py-0.5 sm:px-3.5 sm:py-1.5 rounded-full bg-[#EBF3FF] border border-[#1B69B6]/20 text-[9px] sm:text-xs font-bold text-[#1B69B6] mb-3 sm:mb-6 w-fit">
+              <Check className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 text-[#1B69B6]" />
               <span>ACCEPTING NEW PATIENTS</span>
             </div>
 
@@ -38,44 +38,44 @@ export default function Hero() {
             </h1>
 
             {/* Subtitle Paragraph */}
-            <p className="font-sans text-sm sm:text-base md:text-lg text-[#475569] max-w-xl font-normal leading-relaxed mb-6">
+            <p className="font-sans text-xs sm:text-base md:text-lg text-[#475569] max-w-xl font-normal leading-relaxed mb-5 sm:mb-6">
               Compassionate care for your whole family. Healthier smiles. Happier lives.
             </p>
 
             {/* Google Rating Bar */}
-            <div className="flex items-center gap-3 mb-8">
+            <div className="flex items-center gap-2.5 sm:gap-3 mb-6 sm:mb-8">
               <div className="flex items-center gap-1 text-[#FFB800]">
-                <Star className="w-4 h-4 fill-[#FFB800]" />
-                <Star className="w-4 h-4 fill-[#FFB800]" />
-                <Star className="w-4 h-4 fill-[#FFB800]" />
-                <Star className="w-4 h-4 fill-[#FFB800]" />
-                <Star className="w-4 h-4 fill-[#FFB800]" />
+                <Star className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-[#FFB800]" />
+                <Star className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-[#FFB800]" />
+                <Star className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-[#FFB800]" />
+                <Star className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-[#FFB800]" />
+                <Star className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-[#FFB800]" />
               </div>
-              <span className="font-extrabold text-sm text-[#0B2545]">4.9</span>
+              <span className="font-extrabold text-xs sm:text-sm text-[#0B2545]">4.9</span>
               {/* Google G Icon */}
-              <div className="w-5 h-5 rounded-full bg-[#FFFFFF] border border-[#CBD5E1] flex items-center justify-center text-[10px] font-bold text-[#4285F4] shadow-xs">
+              <div className="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-[#FFFFFF] border border-[#CBD5E1] flex items-center justify-center text-[9px] sm:text-[10px] font-bold text-[#4285F4] shadow-xs">
                 G
               </div>
-              <span className="text-xs text-[#64748B] font-medium">
+              <span className="text-[11px] sm:text-xs text-[#64748B] font-medium">
                 Based on 700+ Google Reviews
               </span>
             </div>
 
-            {/* CTA Buttons Row */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-10">
+            {/* Compact CTA Buttons Row */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 max-w-[240px] sm:max-w-none mb-8 sm:mb-10">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-[#FF7A00] text-[#FFFFFF] text-xs font-extrabold tracking-wide hover:bg-[#1B69B6] transition-all duration-300 shadow-md hover:shadow-lg"
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:px-7 sm:py-3.5 rounded-full bg-[#FF7A00] text-[#FFFFFF] text-[11px] sm:text-xs font-extrabold tracking-wide hover:bg-[#1B69B6] transition-all duration-300 shadow-md hover:shadow-lg"
               >
-                <Calendar className="w-4 h-4" />
+                <Calendar className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 <span>Schedule Appointment</span>
               </Link>
 
               <a
                 href={`tel:${siteData.phoneRaw}`}
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#FFFFFF] border border-[#1B69B6]/40 text-[#1B69B6] text-xs font-extrabold tracking-wide hover:bg-[#F0F6FF] transition-colors shadow-xs"
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3.5 rounded-full bg-[#FFFFFF] border border-[#1B69B6]/40 text-[#1B69B6] text-[11px] sm:text-xs font-extrabold tracking-wide hover:bg-[#F0F6FF] transition-colors shadow-xs"
               >
-                <Phone className="w-4 h-4 text-[#1B69B6]" />
+                <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#1B69B6]" />
                 <span>Call Now</span>
               </a>
             </div>

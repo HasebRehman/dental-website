@@ -34,62 +34,62 @@ export default function ServicesPage() {
       <Navbar />
 
       {/* Hero Header Section */}
-      <section className="pt-44 pb-20 bg-[#1B69B6] text-[#FFFFFF] relative overflow-hidden">
+      <section className="pt-32 sm:pt-44 pb-10 sm:pb-20 bg-[#1B69B6] text-[#FFFFFF] relative overflow-hidden">
         {/* Ambient Glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#FF7A00]/15 rounded-full blur-[140px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FFFFFF]/20 border border-[#FFFFFF]/30 text-xs font-bold uppercase tracking-widest text-[#FFFFFF] mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-[#FF7A00]" />
+          <div className="inline-flex items-center gap-1 px-2 py-0.5 sm:px-3.5 sm:py-1.5 rounded-full bg-[#FFFFFF]/20 border border-[#FFFFFF]/30 text-[9px] sm:text-xs font-extrabold uppercase tracking-wider text-[#FFFFFF] mb-3 sm:mb-4 w-fit mx-auto">
+            <Sparkles className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 text-[#FF7A00] shrink-0" />
             <span>Full-Spectrum Family Dentistry</span>
           </div>
 
-          <h1 className="font-sans text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-[#FFFFFF] mb-4">
+          <h1 className="font-sans text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-[#FFFFFF] mb-3 sm:mb-4">
             OUR DENTAL <span className="text-[#93C5FD]">SERVICES</span>
           </h1>
 
-          <p className="font-sans text-base sm:text-lg text-[#FFFFFF]/90 max-w-2xl mx-auto font-normal leading-relaxed mb-8">
+          <p className="font-sans text-xs sm:text-base md:text-lg text-[#FFFFFF]/90 max-w-2xl mx-auto font-normal leading-relaxed mb-5 sm:mb-8">
             Providing gentle, high-quality, and affordable oral healthcare for families across Dallas, Oak Cliff, Grand Prairie, and Duncanville.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5 max-w-[220px] sm:max-w-none mx-auto">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-[#FF7A00] text-[#FFFFFF] text-xs font-extrabold uppercase tracking-widest hover:bg-[#FFFFFF] hover:text-[#0B2545] transition-colors shadow-lg"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:px-7 sm:py-3.5 rounded-full bg-[#FF7A00] text-[#FFFFFF] text-[11px] sm:text-xs font-extrabold uppercase tracking-wider hover:bg-[#FFFFFF] hover:text-[#0B2545] transition-colors shadow-md"
             >
-              <Calendar className="w-4 h-4" />
-              <span>Schedule Appointment</span>
+              <Calendar className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+              <span>Schedule Visit</span>
             </Link>
             <a
               href="tel:4698091919"
-              className="inline-flex items-center gap-2 px-6 py-4 rounded-full bg-[#FFFFFF]/20 border border-[#FFFFFF]/30 text-[#FFFFFF] text-xs font-extrabold uppercase tracking-widest hover:bg-[#FFFFFF] hover:text-[#0B2545] transition-colors"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3.5 rounded-full bg-[#FFFFFF]/20 border border-[#FFFFFF]/30 text-[#FFFFFF] text-[11px] sm:text-xs font-extrabold uppercase tracking-wider hover:bg-[#FFFFFF] hover:text-[#0B2545] transition-colors"
             >
-              <Phone className="w-4 h-4 text-[#93C5FD]" />
-              <span>Call 469-809-1919</span>
+              <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#93C5FD]" />
+              <span>469-809-1919</span>
             </a>
           </div>
         </div>
       </section>
 
       {/* Services Grid Section */}
-      <section className="py-20 md:py-32 max-w-7xl mx-auto px-6 md:px-12">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F0F6FF] border border-[#1B69B6]/20 text-xs font-bold uppercase tracking-widest text-[#1B69B6] mb-3">
+      <section className="py-8 sm:py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-16">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F0F6FF] border border-[#1B69B6]/20 text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#1B69B6] mb-3">
             <Stethoscope className="w-3.5 h-3.5 text-[#FF7A00]" />
             <span>Click Any Service To Read Full Details</span>
           </div>
-          <h2 className="font-sans text-3xl sm:text-4xl lg:text-5xl text-[#0B2545] font-black tracking-tight">
+          <h2 className="font-sans text-2xl sm:text-4xl lg:text-5xl text-[#0B2545] font-black tracking-tight">
             COMPREHENSIVE <span className="text-[#1B69B6]">PREVENTIVE & RESTORATIVE CARE</span>
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 items-stretch">
           {servicesData.map((service) => (
             <div
               key={service.id}
               id={service.id}
               onClick={() => setActiveModalService(service)}
-              className="group bg-[#F8FAFC] rounded-3xl overflow-hidden border border-[#E2E8F0] shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between cursor-pointer"
+              className="group bg-[#F8FAFC] rounded-2xl sm:rounded-3xl overflow-hidden border border-[#E2E8F0] shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between cursor-pointer"
             >
               <div>
                 {/* Photo Container */}
@@ -104,40 +104,40 @@ export default function ServicesPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0B2545]/85 via-transparent to-transparent opacity-90" />
 
                   {/* Badge Number */}
-                  <div className="absolute top-4 left-4 px-3.5 py-1.5 rounded-full bg-[#FFFFFF]/90 backdrop-blur-md text-xs font-extrabold text-[#1B69B6] shadow-xs">
+                  <div className="absolute top-3 left-3 sm:top-4 sm:left-4 px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-[#FFFFFF]/90 backdrop-blur-md text-[10px] sm:text-xs font-extrabold text-[#1B69B6] shadow-xs">
                     SERVICE {service.number}
                   </div>
 
                   {/* View Details Pill */}
-                  <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-[#FFFFFF]/90 backdrop-blur-md text-[11px] font-extrabold text-[#1B69B6] flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <Eye className="w-3.5 h-3.5 text-[#FF7A00]" />
+                  <div className="absolute top-3 right-3 sm:top-4 sm:right-4 px-2.5 py-1 sm:px-3 sm:py-1 rounded-full bg-[#FFFFFF]/90 backdrop-blur-md text-[10px] sm:text-[11px] font-extrabold text-[#1B69B6] flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <Eye className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#FF7A00]" />
                     <span>View Details</span>
                   </div>
 
-                  <div className="absolute bottom-4 left-6 right-6 text-[#FFFFFF]">
-                    <h2 className="font-sans text-2xl sm:text-3xl font-black">
+                  <div className="absolute bottom-3 left-4 right-4 sm:bottom-4 sm:left-6 sm:right-6 text-[#FFFFFF]">
+                    <h2 className="font-sans text-xl sm:text-3xl font-black">
                       {service.title}
                     </h2>
-                    <p className="font-sans text-xs uppercase tracking-widest text-[#93C5FD] font-extrabold mt-1">
+                    <p className="font-sans text-[10px] sm:text-xs uppercase tracking-wider text-[#93C5FD] font-extrabold mt-0.5 sm:mt-1">
                       {service.subtitle}
                     </p>
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="p-6 sm:p-8">
-                  <p className="font-sans text-sm sm:text-base text-[#475569] leading-relaxed font-normal mb-6">
+                <div className="p-4 sm:p-8">
+                  <p className="font-sans text-xs sm:text-base text-[#475569] leading-relaxed font-normal mb-4 sm:mb-6">
                     {service.description}
                   </p>
 
                   {/* Features List */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 border-t border-[#E2E8F0] pt-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 border-t border-[#E2E8F0] pt-4 sm:pt-6">
                     {service.features.map((feat, idx) => (
                       <div
                         key={idx}
                         className="flex items-center gap-2 text-xs font-bold text-[#334155]"
                       >
-                        <CheckCircle2 className="w-4 h-4 text-[#FF7A00] shrink-0" />
+                        <CheckCircle2 className="w-3.5 h-3.5 text-[#FF7A00] shrink-0" />
                         <span>{feat}</span>
                       </div>
                     ))}
@@ -146,14 +146,14 @@ export default function ServicesPage() {
               </div>
 
               {/* Action Button - Redirects to /contact */}
-              <div className="p-6 sm:p-8 pt-0 border-t border-[#E2E8F0] mt-4 flex items-center justify-between gap-3">
+              <div className="p-4 sm:p-8 pt-0 border-t border-[#E2E8F0] mt-3 flex items-center justify-between gap-2.5">
                 <button
                   type="button"
                   onClick={(e) => {
                     e.stopPropagation();
                     setActiveModalService(service);
                   }}
-                  className="text-xs font-extrabold uppercase tracking-widest text-[#1B69B6] hover:text-[#FF7A00] transition-colors cursor-pointer"
+                  className="text-[10px] sm:text-xs font-extrabold uppercase tracking-wider text-[#1B69B6] hover:text-[#FF7A00] transition-colors cursor-pointer whitespace-nowrap shrink-0"
                 >
                   Read Overview →
                 </button>
@@ -161,40 +161,35 @@ export default function ServicesPage() {
                 <Link
                   href="/contact"
                   onClick={(e) => e.stopPropagation()}
-                  className="py-3 px-6 rounded-full bg-[#FF7A00] text-[#FFFFFF] hover:bg-[#1B69B6] transition-colors duration-300 flex items-center justify-center gap-2 text-xs uppercase tracking-widest font-extrabold shadow-md"
+                  className="py-2.5 px-3.5 sm:px-6 rounded-full bg-[#FF7A00] text-[#FFFFFF] hover:bg-[#1B69B6] transition-colors duration-300 flex items-center justify-center gap-1.5 text-[10px] sm:text-xs uppercase tracking-wider font-extrabold shadow-md whitespace-nowrap shrink-0"
                 >
-                  <span>Book {service.title}</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <span>Book Appointment</span>
+                  <ArrowRight className="w-3.5 h-3.5 shrink-0" />
                 </Link>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Bottom Insurance & Booking Callout Banner */}
-        <div className="mt-16 bg-gradient-to-r from-[#0B2545] via-[#1B69B6] to-[#0B2545] rounded-3xl p-8 sm:p-12 text-[#FFFFFF] shadow-2xl text-center relative overflow-hidden border border-[#1B69B6]/40">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFFFFF]/20 border border-[#FFFFFF]/30 text-xs font-bold uppercase tracking-widest text-[#FFFFFF] mb-4">
-            <ShieldCheck className="w-4 h-4 text-[#FF7A00]" />
-            <span>PPO Insurance • Medicaid/CHIP • CareCredit</span>
-          </div>
-
-          <h2 className="font-sans text-3xl sm:text-4xl font-black mb-3 text-[#FFFFFF] tracking-tight">
+        {/* Bottom Insurance & Booking Callout Banner (Badge Removed & Super Responsive) */}
+        <div className="mt-8 sm:mt-20 bg-gradient-to-r from-[#0B2545] via-[#1B69B6] to-[#0B2545] rounded-2xl sm:rounded-3xl p-4 sm:p-10 text-[#FFFFFF] shadow-xl text-center relative overflow-hidden border border-[#1B69B6]/40">
+          <h2 className="font-sans text-base sm:text-3xl lg:text-4xl font-black mb-1.5 sm:mb-2 text-[#FFFFFF] tracking-tight">
             Ready to Schedule <span className="text-[#93C5FD]">Your Appointment?</span>
           </h2>
-          <p className="font-sans text-sm sm:text-base text-[#FFFFFF]/90 max-w-xl mx-auto mb-8 font-normal">
+          <p className="font-sans text-[11px] sm:text-base text-[#FFFFFF]/90 max-w-md sm:max-w-xl mx-auto mb-4 sm:mb-8 font-normal leading-relaxed">
             Whether you need a routine cleaning, pediatric visit, or same-day emergency relief, Dr. Raj & Dr. Pham are ready to welcome your family!
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 max-w-[200px] sm:max-w-none mx-auto">
             <Link
               href="/contact"
-              className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#FF7A00] text-[#FFFFFF] text-xs font-extrabold uppercase tracking-widest hover:bg-[#FFFFFF] hover:text-[#0B2545] transition-colors shadow-lg"
+              className="w-full sm:w-auto px-4 py-2 sm:px-8 sm:py-3.5 rounded-full bg-[#FF7A00] text-[#FFFFFF] text-[10px] sm:text-xs font-extrabold uppercase tracking-wider hover:bg-[#FFFFFF] hover:text-[#0B2545] transition-colors shadow-md"
             >
               Book Online Now
             </Link>
             <a
               href="tel:4698091919"
-              className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#FFFFFF]/15 border border-[#FFFFFF]/30 text-[#FFFFFF] text-xs font-extrabold uppercase tracking-widest hover:bg-[#FFFFFF] hover:text-[#0B2545] transition-colors"
+              className="w-full sm:w-auto px-4 py-2 sm:px-8 sm:py-3.5 rounded-full bg-[#FFFFFF]/15 border border-[#FFFFFF]/30 text-[#FFFFFF] text-[10px] sm:text-xs font-extrabold uppercase tracking-wider hover:bg-[#FFFFFF] hover:text-[#0B2545] transition-colors"
             >
               Call 469-809-1919
             </a>
@@ -212,12 +207,12 @@ export default function ServicesPage() {
           <div
             onClick={(e) => e.stopPropagation()}
             onWheel={(e) => e.stopPropagation()}
-            className="bg-[#FFFFFF] rounded-3xl max-w-4xl w-full max-h-[85vh] border border-[#43ACE0]/30 shadow-2xl relative text-left text-[#000000] flex flex-col overflow-hidden"
+            className="bg-[#FFFFFF] rounded-3xl max-w-4xl w-full max-h-[85vh] border border-[#1B69B6]/30 shadow-2xl relative text-left text-[#000000] flex flex-col overflow-hidden"
           >
             {/* Sticky Header with Close Button */}
-            <div className="sticky top-0 bg-[#43ACE0] text-[#FFFFFF] p-6 sm:p-8 rounded-t-3xl flex items-center justify-between z-20 shadow-md shrink-0">
+            <div className="sticky top-0 bg-[#1B69B6] text-[#FFFFFF] p-6 sm:p-8 rounded-t-3xl flex items-center justify-between z-20 shadow-md shrink-0">
               <div>
-                <span className="text-xs uppercase font-extrabold tracking-widest text-[#F4A261] block mb-1">
+                <span className="text-xs uppercase font-extrabold tracking-widest text-[#FF7A00] block mb-1">
                   ILLINOIS FAMILY DENTISTRY SERVICE
                 </span>
                 <h3 className="font-serif text-2xl sm:text-3xl font-bold">
@@ -226,7 +221,7 @@ export default function ServicesPage() {
               </div>
               <button
                 onClick={() => setActiveModalService(null)}
-                className="w-10 h-10 rounded-full bg-[#FFFFFF]/20 hover:bg-[#F4A261] text-[#FFFFFF] transition-colors flex items-center justify-center font-bold text-lg cursor-pointer"
+                className="w-10 h-10 rounded-full bg-[#FFFFFF]/20 hover:bg-[#FF7A00] text-[#FFFFFF] transition-colors flex items-center justify-center font-bold text-lg cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -240,8 +235,8 @@ export default function ServicesPage() {
               {/* 1. Dental Exams & Cleanings */}
               {activeModalService.id === "exams-cleanings" && (
                 <div className="space-y-6 text-sm text-[#000000] leading-relaxed font-normal">
-                  <div className="p-5 rounded-2xl bg-[#5FCAEF]/10 border border-[#43ACE0]/20 font-medium">
-                    At <span className="font-extrabold text-[#43ACE0]">Illinois Family Dentistry</span>, we believe in prevention as the first line of defense against dental disease. We are pleased to offer cutting-edge smile solutions, including comprehensive dental exams and cleanings, to maintain strong, healthy, and beautiful smiles. We invite you to experience preventive dental care at its best!
+                  <div className="p-5 rounded-2xl bg-[#F0F6FF]/10 border border-[#1B69B6]/20 font-medium">
+                    At <span className="font-extrabold text-[#1B69B6]">Illinois Family Dentistry</span>, we believe in prevention as the first line of defense against dental disease. We are pleased to offer cutting-edge smile solutions, including comprehensive dental exams and cleanings, to maintain strong, healthy, and beautiful smiles. We invite you to experience preventive dental care at its best!
                   </div>
 
                   <div className="space-y-3 pt-2">
@@ -249,17 +244,17 @@ export default function ServicesPage() {
                       How Often Should I See My Dentist?
                     </h4>
                     <p>
-                      According to the <span className="font-bold text-[#43ACE0]">American Dental Association (ADA)</span>, you should schedule dental exams and cleanings at regular intervals recommended by your dentist. In most cases, our patients require twice-yearly preventive dental appointments. However, individuals with periodontal (gum) disease or those at risk of developing dental problems may need more frequent dental visits.
+                      According to the <span className="font-bold text-[#1B69B6]">American Dental Association (ADA)</span>, you should schedule dental exams and cleanings at regular intervals recommended by your dentist. In most cases, our patients require twice-yearly preventive dental appointments. However, individuals with periodontal (gum) disease or those at risk of developing dental problems may need more frequent dental visits.
                     </p>
 
                     <div className="space-y-3 pt-3">
-                      <h5 className="font-sans text-xs uppercase font-extrabold tracking-widest text-[#F4A261]">
+                      <h5 className="font-sans text-xs uppercase font-extrabold tracking-widest text-[#FF7A00]">
                         Routine dental exams and cleanings offer numerous benefits:
                       </h5>
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                          <span className="font-bold text-[#43ACE0] block text-xs uppercase tracking-wider mb-1">
+                        <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                          <span className="font-bold text-[#1B69B6] block text-xs uppercase tracking-wider mb-1">
                             🛡️ Prevention
                           </span>
                           <span className="text-xs">
@@ -267,8 +262,8 @@ export default function ServicesPage() {
                           </span>
                         </div>
 
-                        <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                          <span className="font-bold text-[#43ACE0] block text-xs uppercase tracking-wider mb-1">
+                        <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                          <span className="font-bold text-[#1B69B6] block text-xs uppercase tracking-wider mb-1">
                             🔍 Early Detection
                           </span>
                           <span className="text-xs">
@@ -276,8 +271,8 @@ export default function ServicesPage() {
                           </span>
                         </div>
 
-                        <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                          <span className="font-bold text-[#43ACE0] block text-xs uppercase tracking-wider mb-1">
+                        <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                          <span className="font-bold text-[#1B69B6] block text-xs uppercase tracking-wider mb-1">
                             🪥 Healthy Habits
                           </span>
                           <span className="text-xs">
@@ -285,8 +280,8 @@ export default function ServicesPage() {
                           </span>
                         </div>
 
-                        <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                          <span className="font-bold text-[#43ACE0] block text-xs uppercase tracking-wider mb-1">
+                        <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                          <span className="font-bold text-[#1B69B6] block text-xs uppercase tracking-wider mb-1">
                             🫀 Better Health
                           </span>
                           <span className="text-xs">
@@ -294,8 +289,8 @@ export default function ServicesPage() {
                           </span>
                         </div>
 
-                        <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs sm:col-span-2">
-                          <span className="font-bold text-[#43ACE0] block text-xs uppercase tracking-wider mb-1">
+                        <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs sm:col-span-2">
+                          <span className="font-bold text-[#1B69B6] block text-xs uppercase tracking-wider mb-1">
                             ✨ Improved Appearance
                           </span>
                           <span className="text-xs">
@@ -306,7 +301,7 @@ export default function ServicesPage() {
                     </div>
                   </div>
 
-                  <div className="space-y-3 pt-4 border-t border-[#43ACE0]/15">
+                  <div className="space-y-3 pt-4 border-t border-[#1B69B6]/15">
                     <h4 className="font-serif text-xl sm:text-2xl font-bold text-[#000000]">
                       What Can I Expect During My Appointment?
                     </h4>
@@ -315,8 +310,8 @@ export default function ServicesPage() {
                     </p>
 
                     <div className="space-y-3">
-                      <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#5FCAEF]/10 border border-[#43ACE0]/15">
-                        <CheckCircle2 className="w-4 h-4 text-[#F4A261] shrink-0 mt-0.5" />
+                      <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F0F6FF]/10 border border-[#1B69B6]/15">
+                        <CheckCircle2 className="w-4 h-4 text-[#FF7A00] shrink-0 mt-0.5" />
                         <div>
                           <strong className="text-xs uppercase font-extrabold text-[#000000] block">
                             Dental X-Rays
@@ -327,8 +322,8 @@ export default function ServicesPage() {
                         </div>
                       </div>
 
-                      <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#5FCAEF]/10 border border-[#43ACE0]/15">
-                        <CheckCircle2 className="w-4 h-4 text-[#43ACE0] shrink-0 mt-0.5" />
+                      <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F0F6FF]/10 border border-[#1B69B6]/15">
+                        <CheckCircle2 className="w-4 h-4 text-[#1B69B6] shrink-0 mt-0.5" />
                         <div>
                           <strong className="text-xs uppercase font-extrabold text-[#000000] block">
                             Intraoral Camera Evaluation
@@ -339,8 +334,8 @@ export default function ServicesPage() {
                         </div>
                       </div>
 
-                      <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#5FCAEF]/10 border border-[#43ACE0]/15">
-                        <CheckCircle2 className="w-4 h-4 text-[#F4A261] shrink-0 mt-0.5" />
+                      <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F0F6FF]/10 border border-[#1B69B6]/15">
+                        <CheckCircle2 className="w-4 h-4 text-[#FF7A00] shrink-0 mt-0.5" />
                         <div>
                           <strong className="text-xs uppercase font-extrabold text-[#000000] block">
                             Comprehensive Dental Exam
@@ -351,8 +346,8 @@ export default function ServicesPage() {
                         </div>
                       </div>
 
-                      <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#5FCAEF]/10 border border-[#43ACE0]/15">
-                        <CheckCircle2 className="w-4 h-4 text-[#43ACE0] shrink-0 mt-0.5" />
+                      <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F0F6FF]/10 border border-[#1B69B6]/15">
+                        <CheckCircle2 className="w-4 h-4 text-[#1B69B6] shrink-0 mt-0.5" />
                         <div>
                           <strong className="text-xs uppercase font-extrabold text-[#000000] block">
                             Oral Cancer Screening
@@ -363,8 +358,8 @@ export default function ServicesPage() {
                         </div>
                       </div>
 
-                      <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#5FCAEF]/10 border border-[#43ACE0]/15">
-                        <CheckCircle2 className="w-4 h-4 text-[#F4A261] shrink-0 mt-0.5" />
+                      <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F0F6FF]/10 border border-[#1B69B6]/15">
+                        <CheckCircle2 className="w-4 h-4 text-[#FF7A00] shrink-0 mt-0.5" />
                         <div>
                           <strong className="text-xs uppercase font-extrabold text-[#000000] block">
                             TMJ & Bruxism Screening
@@ -375,8 +370,8 @@ export default function ServicesPage() {
                         </div>
                       </div>
 
-                      <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#5FCAEF]/10 border border-[#43ACE0]/15">
-                        <CheckCircle2 className="w-4 h-4 text-[#43ACE0] shrink-0 mt-0.5" />
+                      <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F0F6FF]/10 border border-[#1B69B6]/15">
+                        <CheckCircle2 className="w-4 h-4 text-[#1B69B6] shrink-0 mt-0.5" />
                         <div>
                           <strong className="text-xs uppercase font-extrabold text-[#000000] block">
                             Ultrasonic Dental Cleaning
@@ -387,8 +382,8 @@ export default function ServicesPage() {
                         </div>
                       </div>
 
-                      <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#5FCAEF]/10 border border-[#43ACE0]/15">
-                        <CheckCircle2 className="w-4 h-4 text-[#F4A261] shrink-0 mt-0.5" />
+                      <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F0F6FF]/10 border border-[#1B69B6]/15">
+                        <CheckCircle2 className="w-4 h-4 text-[#FF7A00] shrink-0 mt-0.5" />
                         <div>
                           <strong className="text-xs uppercase font-extrabold text-[#000000] block">
                             Fluoride Treatments
@@ -399,8 +394,8 @@ export default function ServicesPage() {
                         </div>
                       </div>
 
-                      <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#5FCAEF]/10 border border-[#43ACE0]/15">
-                        <CheckCircle2 className="w-4 h-4 text-[#43ACE0] shrink-0 mt-0.5" />
+                      <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F0F6FF]/10 border border-[#1B69B6]/15">
+                        <CheckCircle2 className="w-4 h-4 text-[#1B69B6] shrink-0 mt-0.5" />
                         <div>
                           <strong className="text-xs uppercase font-extrabold text-[#000000] block">
                             Next Steps & Custom Treatment Plan
@@ -413,7 +408,7 @@ export default function ServicesPage() {
                     </div>
                   </div>
 
-                  <div className="p-5 rounded-2xl bg-[#43ACE0]/10 border border-[#43ACE0]/30 space-y-2">
+                  <div className="p-5 rounded-2xl bg-[#1B69B6]/10 border border-[#1B69B6]/30 space-y-2">
                     <h4 className="font-serif text-lg font-bold text-[#000000]">
                       Dental Exams and Cleanings Near Me in Dallas, TX
                     </h4>
@@ -427,8 +422,8 @@ export default function ServicesPage() {
               {/* 2. Children's Dentistry */}
               {activeModalService.id === "childrens-dentistry" && (
                 <div className="space-y-6 text-sm text-[#000000] leading-relaxed font-normal">
-                  <div className="p-5 rounded-2xl bg-[#5FCAEF]/10 border border-[#43ACE0]/20 font-medium">
-                    We know you’ll agree that establishing healthy oral care habits from a young age is one of the most important things parents can do. That’s why our kid-friendly team at <span className="font-extrabold text-[#43ACE0]">Illinois Family Dentistry</span> emphasizes home oral hygiene and regular visits to the dentist. We are committed to providing our young patients with outstanding care and positive experiences to lay the groundwork for healthy smiles for life!
+                  <div className="p-5 rounded-2xl bg-[#F0F6FF]/10 border border-[#1B69B6]/20 font-medium">
+                    We know you’ll agree that establishing healthy oral care habits from a young age is one of the most important things parents can do. That’s why our kid-friendly team at <span className="font-extrabold text-[#1B69B6]">Illinois Family Dentistry</span> emphasizes home oral hygiene and regular visits to the dentist. We are committed to providing our young patients with outstanding care and positive experiences to lay the groundwork for healthy smiles for life!
                   </div>
 
                   <div className="space-y-3 pt-2">
@@ -436,17 +431,17 @@ export default function ServicesPage() {
                       My Child’s First Dental Visit
                     </h4>
                     <p>
-                      Most dental professionals recommend seeing a dentist once the first tooth erupts, around 6-8 months, or by the first birthday at the latest. Our focus at <span className="font-bold text-[#43ACE0]">Illinois Family Dentistry</span> is on prevention and early intervention to build a foundation for good oral hygiene and healthy, lasting smiles.
+                      Most dental professionals recommend seeing a dentist once the first tooth erupts, around 6-8 months, or by the first birthday at the latest. Our focus at <span className="font-bold text-[#1B69B6]">Illinois Family Dentistry</span> is on prevention and early intervention to build a foundation for good oral hygiene and healthy, lasting smiles.
                     </p>
 
                     <div className="space-y-3 pt-3">
-                      <h5 className="font-sans text-xs uppercase font-extrabold tracking-widest text-[#F4A261]">
+                      <h5 className="font-sans text-xs uppercase font-extrabold tracking-widest text-[#FF7A00]">
                         Early dental visits offer numerous benefits:
                       </h5>
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                          <span className="font-bold text-[#43ACE0] block text-xs uppercase tracking-wider mb-1">
+                        <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                          <span className="font-bold text-[#1B69B6] block text-xs uppercase tracking-wider mb-1">
                             🛡️ Maintaining Healthy Smiles
                           </span>
                           <span className="text-xs">
@@ -454,8 +449,8 @@ export default function ServicesPage() {
                           </span>
                         </div>
 
-                        <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                          <span className="font-bold text-[#43ACE0] block text-xs uppercase tracking-wider mb-1">
+                        <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                          <span className="font-bold text-[#1B69B6] block text-xs uppercase tracking-wider mb-1">
                             🪥 Setting Up Good Habits for Life
                           </span>
                           <span className="text-xs">
@@ -463,8 +458,8 @@ export default function ServicesPage() {
                           </span>
                         </div>
 
-                        <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                          <span className="font-bold text-[#43ACE0] block text-xs uppercase tracking-wider mb-1">
+                        <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                          <span className="font-bold text-[#1B69B6] block text-xs uppercase tracking-wider mb-1">
                             🫀 Promoting Lifelong Oral Health
                           </span>
                           <span className="text-xs">
@@ -472,8 +467,8 @@ export default function ServicesPage() {
                           </span>
                         </div>
 
-                        <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                          <span className="font-bold text-[#43ACE0] block text-xs uppercase tracking-wider mb-1">
+                        <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                          <span className="font-bold text-[#1B69B6] block text-xs uppercase tracking-wider mb-1">
                             🧸 Avoiding Dental Fear
                           </span>
                           <span className="text-xs">
@@ -484,7 +479,7 @@ export default function ServicesPage() {
                     </div>
                   </div>
 
-                  <div className="space-y-3 pt-4 border-t border-[#43ACE0]/15">
+                  <div className="space-y-3 pt-4 border-t border-[#1B69B6]/15">
                     <h4 className="font-serif text-xl sm:text-2xl font-bold text-[#000000]">
                       What Can I Expect During My Child’s Dental Visits?
                     </h4>
@@ -493,8 +488,8 @@ export default function ServicesPage() {
                     </p>
 
                     <div className="space-y-3">
-                      <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#5FCAEF]/10 border border-[#43ACE0]/15">
-                        <CheckCircle2 className="w-4 h-4 text-[#F4A261] shrink-0 mt-0.5" />
+                      <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F0F6FF]/10 border border-[#1B69B6]/15">
+                        <CheckCircle2 className="w-4 h-4 text-[#FF7A00] shrink-0 mt-0.5" />
                         <div>
                           <strong className="text-xs uppercase font-extrabold text-[#000000] block">
                             Comprehensive Dental Exams & X-Rays
@@ -505,8 +500,8 @@ export default function ServicesPage() {
                         </div>
                       </div>
 
-                      <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#5FCAEF]/10 border border-[#43ACE0]/15">
-                        <CheckCircle2 className="w-4 h-4 text-[#43ACE0] shrink-0 mt-0.5" />
+                      <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F0F6FF]/10 border border-[#1B69B6]/15">
+                        <CheckCircle2 className="w-4 h-4 text-[#1B69B6] shrink-0 mt-0.5" />
                         <div>
                           <strong className="text-xs uppercase font-extrabold text-[#000000] block">
                             Gentle Pediatric Cleanings & Polishing
@@ -517,8 +512,8 @@ export default function ServicesPage() {
                         </div>
                       </div>
 
-                      <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#5FCAEF]/10 border border-[#43ACE0]/15">
-                        <CheckCircle2 className="w-4 h-4 text-[#F4A261] shrink-0 mt-0.5" />
+                      <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F0F6FF]/10 border border-[#1B69B6]/15">
+                        <CheckCircle2 className="w-4 h-4 text-[#FF7A00] shrink-0 mt-0.5" />
                         <div>
                           <strong className="text-xs uppercase font-extrabold text-[#000000] block">
                             Interactive Patient & Parent Education
@@ -529,8 +524,8 @@ export default function ServicesPage() {
                         </div>
                       </div>
 
-                      <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#5FCAEF]/10 border border-[#43ACE0]/15">
-                        <CheckCircle2 className="w-4 h-4 text-[#43ACE0] shrink-0 mt-0.5" />
+                      <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F0F6FF]/10 border border-[#1B69B6]/15">
+                        <CheckCircle2 className="w-4 h-4 text-[#1B69B6] shrink-0 mt-0.5" />
                         <div>
                           <strong className="text-xs uppercase font-extrabold text-[#000000] block">
                             Cavity-Fighting Fluoride Treatments
@@ -541,8 +536,8 @@ export default function ServicesPage() {
                         </div>
                       </div>
 
-                      <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#5FCAEF]/10 border border-[#43ACE0]/15">
-                        <CheckCircle2 className="w-4 h-4 text-[#F4A261] shrink-0 mt-0.5" />
+                      <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F0F6FF]/10 border border-[#1B69B6]/15">
+                        <CheckCircle2 className="w-4 h-4 text-[#FF7A00] shrink-0 mt-0.5" />
                         <div>
                           <strong className="text-xs uppercase font-extrabold text-[#000000] block">
                             Protective Dental Sealants
@@ -553,8 +548,8 @@ export default function ServicesPage() {
                         </div>
                       </div>
 
-                      <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#5FCAEF]/10 border border-[#43ACE0]/15">
-                        <CheckCircle2 className="w-4 h-4 text-[#43ACE0] shrink-0 mt-0.5" />
+                      <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F0F6FF]/10 border border-[#1B69B6]/15">
+                        <CheckCircle2 className="w-4 h-4 text-[#1B69B6] shrink-0 mt-0.5" />
                         <div>
                           <strong className="text-xs uppercase font-extrabold text-[#000000] block">
                             Tooth-Colored Fillings for Kids
@@ -567,7 +562,7 @@ export default function ServicesPage() {
                     </div>
                   </div>
 
-                  <div className="p-5 rounded-2xl bg-[#43ACE0]/10 border border-[#43ACE0]/30 space-y-2">
+                  <div className="p-5 rounded-2xl bg-[#1B69B6]/10 border border-[#1B69B6]/30 space-y-2">
                     <h4 className="font-serif text-lg font-bold text-[#000000]">
                       Children’s Dentistry Near Me in Dallas, TX
                     </h4>
@@ -581,8 +576,8 @@ export default function ServicesPage() {
               {/* 3. Periodontal Therapy */}
               {activeModalService.id === "periodontal-therapy" && (
                 <div className="space-y-6 text-sm text-[#000000] leading-relaxed font-normal">
-                  <div className="p-5 rounded-2xl bg-[#5FCAEF]/10 border border-[#43ACE0]/20 font-medium">
-                    Periodontal disease is a serious gum infection that can damage the bone and tissues supporting the teeth. Left untreated, the devastating condition can lead to tooth loss and impact your overall health. That’s why <span className="font-extrabold text-[#43ACE0]">Illinois Family Dentistry</span> focuses on preventing, treating, and managing periodontal disease to maintain healthy smiles for a lifetime.
+                  <div className="p-5 rounded-2xl bg-[#F0F6FF]/10 border border-[#1B69B6]/20 font-medium">
+                    Periodontal disease is a serious gum infection that can damage the bone and tissues supporting the teeth. Left untreated, the devastating condition can lead to tooth loss and impact your overall health. That’s why <span className="font-extrabold text-[#1B69B6]">Illinois Family Dentistry</span> focuses on preventing, treating, and managing periodontal disease to maintain healthy smiles for a lifetime.
                   </div>
 
                   <div className="space-y-3 pt-2">
@@ -597,7 +592,7 @@ export default function ServicesPage() {
                     </p>
                   </div>
 
-                  <div className="space-y-3 pt-4 border-t border-[#43ACE0]/15">
+                  <div className="space-y-3 pt-4 border-t border-[#1B69B6]/15">
                     <h4 className="font-serif text-xl sm:text-2xl font-bold text-[#000000]">
                       What Are the Warning Symptoms of Periodontal Disease?
                     </h4>
@@ -606,34 +601,34 @@ export default function ServicesPage() {
                     </p>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      <div className="flex items-center gap-3 p-3.5 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                        <AlertTriangle className="w-4 h-4 text-[#F4A261] shrink-0" />
+                      <div className="flex items-center gap-3 p-3.5 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                        <AlertTriangle className="w-4 h-4 text-[#FF7A00] shrink-0" />
                         <span className="text-xs font-bold">Red, swollen, or tender gums</span>
                       </div>
 
-                      <div className="flex items-center gap-3 p-3.5 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                        <AlertTriangle className="w-4 h-4 text-[#F4A261] shrink-0" />
+                      <div className="flex items-center gap-3 p-3.5 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                        <AlertTriangle className="w-4 h-4 text-[#FF7A00] shrink-0" />
                         <span className="text-xs font-bold">Gums that bleed when brushing or flossing</span>
                       </div>
 
-                      <div className="flex items-center gap-3 p-3.5 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                        <AlertTriangle className="w-4 h-4 text-[#F4A261] shrink-0" />
+                      <div className="flex items-center gap-3 p-3.5 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                        <AlertTriangle className="w-4 h-4 text-[#FF7A00] shrink-0" />
                         <span className="text-xs font-bold">Loose or sensitive teeth</span>
                       </div>
 
-                      <div className="flex items-center gap-3 p-3.5 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                        <AlertTriangle className="w-4 h-4 text-[#F4A261] shrink-0" />
+                      <div className="flex items-center gap-3 p-3.5 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                        <AlertTriangle className="w-4 h-4 text-[#FF7A00] shrink-0" />
                         <span className="text-xs font-bold">Persistent bad breath (halitosis)</span>
                       </div>
 
-                      <div className="flex items-center gap-3 p-3.5 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs sm:col-span-2">
-                        <AlertTriangle className="w-4 h-4 text-[#F4A261] shrink-0" />
+                      <div className="flex items-center gap-3 p-3.5 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs sm:col-span-2">
+                        <AlertTriangle className="w-4 h-4 text-[#FF7A00] shrink-0" />
                         <span className="text-xs font-bold">Changes in how your teeth fit together when biting</span>
                       </div>
                     </div>
                   </div>
 
-                  <div className="space-y-3 pt-4 border-t border-[#43ACE0]/15">
+                  <div className="space-y-3 pt-4 border-t border-[#1B69B6]/15">
                     <h4 className="font-serif text-xl sm:text-2xl font-bold text-[#000000]">
                       How Can Periodontal Disease Impact My Health?
                     </h4>
@@ -642,31 +637,31 @@ export default function ServicesPage() {
                     </p>
                   </div>
 
-                  <div className="space-y-3 pt-4 border-t border-[#43ACE0]/15">
+                  <div className="space-y-3 pt-4 border-t border-[#1B69B6]/15">
                     <h4 className="font-serif text-xl sm:text-2xl font-bold text-[#000000]">
                       How Is Periodontal Disease Treated?
                     </h4>
                     <p>
-                      Periodontal disease treatment starts with a professional deep cleaning, a procedure known as <span className="font-bold text-[#43ACE0]">scaling and root planing</span>. Scaling involves using an ultrasonic scaler to blast away plaque and tartar from the teeth and right below your gum line. Root planing, on the other hand, involves cleaning and smoothing your tooth root surfaces. That helps discourage inflammation and prevents the infection from spreading, promoting healing and gum tissue reattachment.
+                      Periodontal disease treatment starts with a professional deep cleaning, a procedure known as <span className="font-bold text-[#1B69B6]">scaling and root planing</span>. Scaling involves using an ultrasonic scaler to blast away plaque and tartar from the teeth and right below your gum line. Root planing, on the other hand, involves cleaning and smoothing your tooth root surfaces. That helps discourage inflammation and prevents the infection from spreading, promoting healing and gum tissue reattachment.
                     </p>
                     <p>
                       You may require topical or oral antibiotics to control the infection, depending on your unique needs. In severe cases of periodontitis, surgical intervention may be necessary.
                     </p>
                   </div>
 
-                  <div className="space-y-3 pt-4 border-t border-[#43ACE0]/15">
+                  <div className="space-y-3 pt-4 border-t border-[#1B69B6]/15">
                     <h4 className="font-serif text-xl sm:text-2xl font-bold text-[#000000]">
                       What Is Periodontal Maintenance?
                     </h4>
                     <p>
-                      After gum disease treatment, we typically recommend periodontal maintenance appointments every <span className="font-bold text-[#F4A261]">three to four months</span> rather than the standard twice-yearly dental cleanings. During your visits, we will clean your teeth, monitor your gum health, and provide any necessary treatments to keep your gums as healthy as possible.
+                      After gum disease treatment, we typically recommend periodontal maintenance appointments every <span className="font-bold text-[#FF7A00]">three to four months</span> rather than the standard twice-yearly dental cleanings. During your visits, we will clean your teeth, monitor your gum health, and provide any necessary treatments to keep your gums as healthy as possible.
                     </p>
                     <p>
                       Practicing good home oral hygiene is essential to your periodontal maintenance plan. Make sure to brush and floss regularly and rinse with an antimicrobial mouthwash. The goal is to stop the progression of periodontal disease and maintain healthy gums and teeth.
                     </p>
                   </div>
 
-                  <div className="p-5 rounded-2xl bg-[#43ACE0]/10 border border-[#43ACE0]/30 space-y-2">
+                  <div className="p-5 rounded-2xl bg-[#1B69B6]/10 border border-[#1B69B6]/30 space-y-2">
                     <h4 className="font-serif text-lg font-bold text-[#000000]">
                       Periodontal Therapy Near Me in Dallas, TX
                     </h4>
@@ -680,8 +675,8 @@ export default function ServicesPage() {
               {/* 4. Tooth-Colored Fillings */}
               {activeModalService.id === "tooth-colored-fillings" && (
                 <div className="space-y-6 text-sm text-[#000000] leading-relaxed font-normal">
-                  <div className="p-5 rounded-2xl bg-[#5FCAEF]/10 border border-[#43ACE0]/20 font-medium">
-                    According to the <span className="font-bold text-[#43ACE0]">American Dental Association</span>, approximately 91 percent of adults will experience at least one cavity in a permanent tooth at some point. The good news is that tooth-colored fillings can restore your smile&apos;s health and function with seamless results. Our team at <span className="font-extrabold text-[#43ACE0]">Illinois Family Dentistry</span> is committed to using the best available filling materials for long-term healthy smiles.
+                  <div className="p-5 rounded-2xl bg-[#F0F6FF]/10 border border-[#1B69B6]/20 font-medium">
+                    According to the <span className="font-bold text-[#1B69B6]">American Dental Association</span>, approximately 91 percent of adults will experience at least one cavity in a permanent tooth at some point. The good news is that tooth-colored fillings can restore your smile&apos;s health and function with seamless results. Our team at <span className="font-extrabold text-[#1B69B6]">Illinois Family Dentistry</span> is committed to using the best available filling materials for long-term healthy smiles.
                   </div>
 
                   <div className="space-y-3 pt-2">
@@ -696,13 +691,13 @@ export default function ServicesPage() {
                     </p>
 
                     <div className="space-y-3 pt-3">
-                      <h5 className="font-sans text-xs uppercase font-extrabold tracking-widest text-[#F4A261]">
+                      <h5 className="font-sans text-xs uppercase font-extrabold tracking-widest text-[#FF7A00]">
                         Benefits of Tooth-Colored Composite Fillings:
                       </h5>
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                          <span className="font-bold text-[#43ACE0] block text-xs uppercase tracking-wider mb-1">
+                        <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                          <span className="font-bold text-[#1B69B6] block text-xs uppercase tracking-wider mb-1">
                             ✨ Look Completely Natural
                           </span>
                           <span className="text-xs">
@@ -710,8 +705,8 @@ export default function ServicesPage() {
                           </span>
                         </div>
 
-                        <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                          <span className="font-bold text-[#43ACE0] block text-xs uppercase tracking-wider mb-1">
+                        <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                          <span className="font-bold text-[#1B69B6] block text-xs uppercase tracking-wider mb-1">
                             🦷 Preserve Tooth Structure
                           </span>
                           <span className="text-xs">
@@ -719,8 +714,8 @@ export default function ServicesPage() {
                           </span>
                         </div>
 
-                        <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                          <span className="font-bold text-[#43ACE0] block text-xs uppercase tracking-wider mb-1">
+                        <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                          <span className="font-bold text-[#1B69B6] block text-xs uppercase tracking-wider mb-1">
                             🛠️ Highly Versatile
                           </span>
                           <span className="text-xs">
@@ -728,8 +723,8 @@ export default function ServicesPage() {
                           </span>
                         </div>
 
-                        <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                          <span className="font-bold text-[#43ACE0] block text-xs uppercase tracking-wider mb-1">
+                        <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                          <span className="font-bold text-[#1B69B6] block text-xs uppercase tracking-wider mb-1">
                             🔗 Bond Directly to Tooth
                           </span>
                           <span className="text-xs">
@@ -737,8 +732,8 @@ export default function ServicesPage() {
                           </span>
                         </div>
 
-                        <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                          <span className="font-bold text-[#43ACE0] block text-xs uppercase tracking-wider mb-1">
+                        <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                          <span className="font-bold text-[#1B69B6] block text-xs uppercase tracking-wider mb-1">
                             🌡️ No Expansion/Contraction
                           </span>
                           <span className="text-xs">
@@ -746,8 +741,8 @@ export default function ServicesPage() {
                           </span>
                         </div>
 
-                        <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                          <span className="font-bold text-[#43ACE0] block text-xs uppercase tracking-wider mb-1">
+                        <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                          <span className="font-bold text-[#1B69B6] block text-xs uppercase tracking-wider mb-1">
                             🍃 100% Mercury-Free
                           </span>
                           <span className="text-xs">
@@ -758,7 +753,7 @@ export default function ServicesPage() {
                     </div>
                   </div>
 
-                  <div className="space-y-3 pt-4 border-t border-[#43ACE0]/15">
+                  <div className="space-y-3 pt-4 border-t border-[#1B69B6]/15">
                     <h4 className="font-serif text-xl sm:text-2xl font-bold text-[#000000]">
                       What Is the Tooth-Colored Filling Procedure?
                     </h4>
@@ -767,7 +762,7 @@ export default function ServicesPage() {
                     </p>
                   </div>
 
-                  <div className="space-y-3 pt-4 border-t border-[#43ACE0]/15">
+                  <div className="space-y-3 pt-4 border-t border-[#1B69B6]/15">
                     <h4 className="font-serif text-xl sm:text-2xl font-bold text-[#000000]">
                       Caring for Teeth with Tooth-Colored Fillings
                     </h4>
@@ -779,7 +774,7 @@ export default function ServicesPage() {
                     </p>
                   </div>
 
-                  <div className="p-5 rounded-2xl bg-[#43ACE0]/10 border border-[#43ACE0]/30 space-y-2">
+                  <div className="p-5 rounded-2xl bg-[#1B69B6]/10 border border-[#1B69B6]/30 space-y-2">
                     <h4 className="font-serif text-lg font-bold text-[#000000]">
                       Tooth-Colored Fillings Near Me in Dallas, TX
                     </h4>
@@ -793,8 +788,8 @@ export default function ServicesPage() {
               {/* 5. Dental Crowns & Bridges */}
               {activeModalService.id === "crowns-bridges" && (
                 <div className="space-y-6 text-sm text-[#000000] leading-relaxed font-normal">
-                  <div className="p-5 rounded-2xl bg-[#5FCAEF]/10 border border-[#43ACE0]/20 font-medium">
-                    If you have damaged or missing teeth, <span className="font-extrabold text-[#43ACE0]">Illinois Family Dentistry</span> is here to help. Our dedicated team takes pride in offering custom dental crowns and bridges made to match the appearance and texture of your natural teeth. Our skilled dentists are committed to restoring your smile’s health, function, and beautifully natural appearance tailored to your unique needs.
+                  <div className="p-5 rounded-2xl bg-[#F0F6FF]/10 border border-[#1B69B6]/20 font-medium">
+                    If you have damaged or missing teeth, <span className="font-extrabold text-[#1B69B6]">Illinois Family Dentistry</span> is here to help. Our dedicated team takes pride in offering custom dental crowns and bridges made to match the appearance and texture of your natural teeth. Our skilled dentists are committed to restoring your smile’s health, function, and beautifully natural appearance tailored to your unique needs.
                   </div>
 
                   <div className="space-y-3 pt-2">
@@ -805,11 +800,11 @@ export default function ServicesPage() {
                       Dental crowns are tooth-shaped restorations that cap or fully encase the visible portions of damaged teeth, restoring their form and function. They offer an excellent solution for repairing chipped or broken teeth, supporting fractured teeth, protecting teeth after root canal therapy, or strengthening teeth with deep decay or large fillings.
                     </p>
                     <p>
-                      At <span className="font-bold text-[#43ACE0]">Illinois Family Dentistry</span>, we offer the best crown materials available, including porcelain-fused-to-metal (PFM), all-porcelain, ceramic, and high-strength zirconia.
+                      At <span className="font-bold text-[#1B69B6]">Illinois Family Dentistry</span>, we offer the best crown materials available, including porcelain-fused-to-metal (PFM), all-porcelain, ceramic, and high-strength zirconia.
                     </p>
                   </div>
 
-                  <div className="space-y-3 pt-4 border-t border-[#43ACE0]/15">
+                  <div className="space-y-3 pt-4 border-t border-[#1B69B6]/15">
                     <h4 className="font-serif text-xl sm:text-2xl font-bold text-[#000000]">
                       What Are Dental Bridges?
                     </h4>
@@ -818,7 +813,7 @@ export default function ServicesPage() {
                     </p>
                   </div>
 
-                  <div className="space-y-3 pt-4 border-t border-[#43ACE0]/15">
+                  <div className="space-y-3 pt-4 border-t border-[#1B69B6]/15">
                     <h4 className="font-serif text-xl sm:text-2xl font-bold text-[#000000]">
                       What Are the Benefits of Dental Crowns and Bridges?
                     </h4>
@@ -826,8 +821,8 @@ export default function ServicesPage() {
                       Restoring damaged or missing teeth with a dental crown or fixed bridge offers many benefits:
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                        <span className="font-bold text-[#43ACE0] block text-xs uppercase tracking-wider mb-1">
+                      <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                        <span className="font-bold text-[#1B69B6] block text-xs uppercase tracking-wider mb-1">
                           👑 Enhances Appearance & Function
                         </span>
                         <span className="text-xs">
@@ -835,8 +830,8 @@ export default function ServicesPage() {
                         </span>
                       </div>
 
-                      <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                        <span className="font-bold text-[#43ACE0] block text-xs uppercase tracking-wider mb-1">
+                      <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                        <span className="font-bold text-[#1B69B6] block text-xs uppercase tracking-wider mb-1">
                           🦷 Prevents Tooth Shifting
                         </span>
                         <span className="text-xs">
@@ -844,8 +839,8 @@ export default function ServicesPage() {
                         </span>
                       </div>
 
-                      <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                        <span className="font-bold text-[#43ACE0] block text-xs uppercase tracking-wider mb-1">
+                      <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                        <span className="font-bold text-[#1B69B6] block text-xs uppercase tracking-wider mb-1">
                           ⚖️ Redistributes Bite Forces
                         </span>
                         <span className="text-xs">
@@ -853,8 +848,8 @@ export default function ServicesPage() {
                         </span>
                       </div>
 
-                      <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                        <span className="font-bold text-[#43ACE0] block text-xs uppercase tracking-wider mb-1">
+                      <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                        <span className="font-bold text-[#1B69B6] block text-xs uppercase tracking-wider mb-1">
                           ⏳ Exceptional Longevity
                         </span>
                         <span className="text-xs">
@@ -864,7 +859,7 @@ export default function ServicesPage() {
                     </div>
                   </div>
 
-                  <div className="space-y-3 pt-4 border-t border-[#43ACE0]/15">
+                  <div className="space-y-3 pt-4 border-t border-[#1B69B6]/15">
                     <h4 className="font-serif text-xl sm:text-2xl font-bold text-[#000000]">
                       What Is the Dental Crown or Bridge Procedure?
                     </h4>
@@ -873,7 +868,7 @@ export default function ServicesPage() {
                     </p>
                   </div>
 
-                  <div className="p-5 rounded-2xl bg-[#43ACE0]/10 border border-[#43ACE0]/30 space-y-2">
+                  <div className="p-5 rounded-2xl bg-[#1B69B6]/10 border border-[#1B69B6]/30 space-y-2">
                     <h4 className="font-serif text-lg font-bold text-[#000000]">
                       Dental Crowns and Bridges Near Me in Dallas, TX
                     </h4>
@@ -887,8 +882,8 @@ export default function ServicesPage() {
               {/* 6. Teeth Whitening */}
               {activeModalService.id === "teeth-whitening" && (
                 <div className="space-y-6 text-sm text-[#000000] leading-relaxed font-normal">
-                  <div className="p-5 rounded-2xl bg-[#5FCAEF]/10 border border-[#43ACE0]/20 font-medium">
-                    Looking for solutions to erase teeth stains and discoloration? If so, you’ve come to the right place. <span className="font-extrabold text-[#43ACE0]">Illinois Family Dentistry</span> is pleased to offer professional whitening at your convenience in the comfort of your home. Our safe and effective treatments are tailored to your unique needs, delivering beautifully white, bright, and dazzling smiles!
+                  <div className="p-5 rounded-2xl bg-[#F0F6FF]/10 border border-[#1B69B6]/20 font-medium">
+                    Looking for solutions to erase teeth stains and discoloration? If so, you’ve come to the right place. <span className="font-extrabold text-[#1B69B6]">Illinois Family Dentistry</span> is pleased to offer professional whitening at your convenience in the comfort of your home. Our safe and effective treatments are tailored to your unique needs, delivering beautifully white, bright, and dazzling smiles!
                   </div>
 
                   <div className="space-y-3 pt-2">
@@ -903,7 +898,7 @@ export default function ServicesPage() {
                     </p>
                   </div>
 
-                  <div className="space-y-3 pt-4 border-t border-[#43ACE0]/15">
+                  <div className="space-y-3 pt-4 border-t border-[#1B69B6]/15">
                     <h4 className="font-serif text-xl sm:text-2xl font-bold text-[#000000]">
                       Over-the-Counter vs. Professional Teeth Whitening
                     </h4>
@@ -912,7 +907,7 @@ export default function ServicesPage() {
                     </p>
                   </div>
 
-                  <div className="space-y-3 pt-4 border-t border-[#43ACE0]/15">
+                  <div className="space-y-3 pt-4 border-t border-[#1B69B6]/15">
                     <h4 className="font-serif text-xl sm:text-2xl font-bold text-[#000000]">
                       Professional At-Home Teeth Whitening Kits
                     </h4>
@@ -921,7 +916,7 @@ export default function ServicesPage() {
                     </p>
                   </div>
 
-                  <div className="space-y-3 pt-4 border-t border-[#43ACE0]/15">
+                  <div className="space-y-3 pt-4 border-t border-[#1B69B6]/15">
                     <h4 className="font-serif text-xl sm:text-2xl font-bold text-[#000000]">
                       Am I a Candidate for Teeth Whitening?
                     </h4>
@@ -930,7 +925,7 @@ export default function ServicesPage() {
                     </p>
                   </div>
 
-                  <div className="p-5 rounded-2xl bg-[#43ACE0]/10 border border-[#43ACE0]/30 space-y-2">
+                  <div className="p-5 rounded-2xl bg-[#1B69B6]/10 border border-[#1B69B6]/30 space-y-2">
                     <h4 className="font-serif text-lg font-bold text-[#000000]">
                       Teeth Whitening Near Me in Dallas, TX
                     </h4>
@@ -944,8 +939,8 @@ export default function ServicesPage() {
               {/* 7. Root Canal Therapy */}
               {activeModalService.id === "root-canal-therapy" && (
                 <div className="space-y-6 text-sm text-[#000000] leading-relaxed font-normal">
-                  <div className="p-5 rounded-2xl bg-[#5FCAEF]/10 border border-[#43ACE0]/20 font-medium">
-                    Do you have severe, persistent tooth pain? If so, chances are you have an infected tooth requiring root canal therapy. Despite what you may have heard, the procedure is relatively comfortable, comparable to having a cavity filled. Our team at <span className="font-extrabold text-[#43ACE0]">Illinois Family Dentistry</span> uses modern technology, techniques, and anesthetics to provide you with the exceptional care you deserve.
+                  <div className="p-5 rounded-2xl bg-[#F0F6FF]/10 border border-[#1B69B6]/20 font-medium">
+                    Do you have severe, persistent tooth pain? If so, chances are you have an infected tooth requiring root canal therapy. Despite what you may have heard, the procedure is relatively comfortable, comparable to having a cavity filled. Our team at <span className="font-extrabold text-[#1B69B6]">Illinois Family Dentistry</span> uses modern technology, techniques, and anesthetics to provide you with the exceptional care you deserve.
                   </div>
 
                   <div className="space-y-3 pt-2">
@@ -960,7 +955,7 @@ export default function ServicesPage() {
                     </p>
                   </div>
 
-                  <div className="space-y-3 pt-4 border-t border-[#43ACE0]/15">
+                  <div className="space-y-3 pt-4 border-t border-[#1B69B6]/15">
                     <h4 className="font-serif text-xl sm:text-2xl font-bold text-[#000000]">
                       What Are Signs of Root Canal Problems?
                     </h4>
@@ -969,39 +964,39 @@ export default function ServicesPage() {
                     </p>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      <div className="flex items-center gap-3 p-3.5 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                        <AlertTriangle className="w-4 h-4 text-[#F4A261] shrink-0" />
+                      <div className="flex items-center gap-3 p-3.5 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                        <AlertTriangle className="w-4 h-4 text-[#FF7A00] shrink-0" />
                         <span className="text-xs font-bold">Persistent, throbbing tooth pain</span>
                       </div>
 
-                      <div className="flex items-center gap-3 p-3.5 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                        <AlertTriangle className="w-4 h-4 text-[#F4A261] shrink-0" />
+                      <div className="flex items-center gap-3 p-3.5 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                        <AlertTriangle className="w-4 h-4 text-[#FF7A00] shrink-0" />
                         <span className="text-xs font-bold">Lingering sensitivity to hot and cold</span>
                       </div>
 
-                      <div className="flex items-center gap-3 p-3.5 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                        <AlertTriangle className="w-4 h-4 text-[#F4A261] shrink-0" />
+                      <div className="flex items-center gap-3 p-3.5 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                        <AlertTriangle className="w-4 h-4 text-[#FF7A00] shrink-0" />
                         <span className="text-xs font-bold">Pain when chewing or pressing on tooth</span>
                       </div>
 
-                      <div className="flex items-center gap-3 p-3.5 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                        <AlertTriangle className="w-4 h-4 text-[#F4A261] shrink-0" />
+                      <div className="flex items-center gap-3 p-3.5 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                        <AlertTriangle className="w-4 h-4 text-[#FF7A00] shrink-0" />
                         <span className="text-xs font-bold">Swollen, tender, or inflamed gums</span>
                       </div>
 
-                      <div className="flex items-center gap-3 p-3.5 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                        <AlertTriangle className="w-4 h-4 text-[#F4A261] shrink-0" />
+                      <div className="flex items-center gap-3 p-3.5 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                        <AlertTriangle className="w-4 h-4 text-[#FF7A00] shrink-0" />
                         <span className="text-xs font-bold">Pimple or bump on gums (abscess)</span>
                       </div>
 
-                      <div className="flex items-center gap-3 p-3.5 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                        <AlertTriangle className="w-4 h-4 text-[#F4A261] shrink-0" />
+                      <div className="flex items-center gap-3 p-3.5 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                        <AlertTriangle className="w-4 h-4 text-[#FF7A00] shrink-0" />
                         <span className="text-xs font-bold">Darkened or discolored tooth enamel</span>
                       </div>
                     </div>
                   </div>
 
-                  <div className="space-y-3 pt-4 border-t border-[#43ACE0]/15">
+                  <div className="space-y-3 pt-4 border-t border-[#1B69B6]/15">
                     <h4 className="font-serif text-xl sm:text-2xl font-bold text-[#000000]">
                       What Is the Root Canal Procedure?
                     </h4>
@@ -1013,7 +1008,7 @@ export default function ServicesPage() {
                     </p>
                   </div>
 
-                  <div className="p-5 rounded-2xl bg-[#43ACE0]/10 border border-[#43ACE0]/30 space-y-2">
+                  <div className="p-5 rounded-2xl bg-[#1B69B6]/10 border border-[#1B69B6]/30 space-y-2">
                     <h4 className="font-serif text-lg font-bold text-[#000000]">
                       Root Canal Therapy Near Me in Dallas, TX
                     </h4>
@@ -1027,8 +1022,8 @@ export default function ServicesPage() {
               {/* 8. Invisalign® Clear Aligners */}
               {activeModalService.id === "invisalign" && (
                 <div className="space-y-6 text-sm text-[#000000] leading-relaxed font-normal">
-                  <div className="p-5 rounded-2xl bg-[#5FCAEF]/10 border border-[#43ACE0]/20 font-medium">
-                    If you’ve been hiding your smile because of crooked teeth, <span className="font-extrabold text-[#43ACE0]">Illinois Family Dentistry</span> is here to help. We are pleased to offer Invisalign, the world’s leading clear aligner system. A visit to our Dallas office will get you on track to the smile of your dreams.
+                  <div className="p-5 rounded-2xl bg-[#F0F6FF]/10 border border-[#1B69B6]/20 font-medium">
+                    If you’ve been hiding your smile because of crooked teeth, <span className="font-extrabold text-[#1B69B6]">Illinois Family Dentistry</span> is here to help. We are pleased to offer Invisalign, the world’s leading clear aligner system. A visit to our Dallas office will get you on track to the smile of your dreams.
                   </div>
 
                   <div className="space-y-3 pt-2">
@@ -1040,7 +1035,7 @@ export default function ServicesPage() {
                     </p>
                   </div>
 
-                  <div className="space-y-3 pt-4 border-t border-[#43ACE0]/15">
+                  <div className="space-y-3 pt-4 border-t border-[#1B69B6]/15">
                     <h4 className="font-serif text-xl sm:text-2xl font-bold text-[#000000]">
                       How Does Invisalign Work?
                     </h4>
@@ -1052,13 +1047,13 @@ export default function ServicesPage() {
                     </p>
                   </div>
 
-                  <div className="space-y-3 pt-4 border-t border-[#43ACE0]/15">
+                  <div className="space-y-3 pt-4 border-t border-[#1B69B6]/15">
                     <h4 className="font-serif text-xl sm:text-2xl font-bold text-[#000000]">
                       What Are the Benefits of Invisalign?
                     </h4>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                        <span className="font-bold text-[#43ACE0] block text-xs uppercase tracking-wider mb-1">
+                      <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                        <span className="font-bold text-[#1B69B6] block text-xs uppercase tracking-wider mb-1">
                           ✨ Practically Invisible
                         </span>
                         <span className="text-xs">
@@ -1066,8 +1061,8 @@ export default function ServicesPage() {
                         </span>
                       </div>
 
-                      <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                        <span className="font-bold text-[#43ACE0] block text-xs uppercase tracking-wider mb-1">
+                      <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                        <span className="font-bold text-[#1B69B6] block text-xs uppercase tracking-wider mb-1">
                           🍿 100% Convenient
                         </span>
                         <span className="text-xs">
@@ -1075,8 +1070,8 @@ export default function ServicesPage() {
                         </span>
                       </div>
 
-                      <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                        <span className="font-bold text-[#43ACE0] block text-xs uppercase tracking-wider mb-1">
+                      <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                        <span className="font-bold text-[#1B69B6] block text-xs uppercase tracking-wider mb-1">
                           🛋️ Enhanced Comfort
                         </span>
                         <span className="text-xs">
@@ -1084,8 +1079,8 @@ export default function ServicesPage() {
                         </span>
                       </div>
 
-                      <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                        <span className="font-bold text-[#43ACE0] block text-xs uppercase tracking-wider mb-1">
+                      <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                        <span className="font-bold text-[#1B69B6] block text-xs uppercase tracking-wider mb-1">
                           ⚡ Up to 50% Faster
                         </span>
                         <span className="text-xs">
@@ -1093,8 +1088,8 @@ export default function ServicesPage() {
                         </span>
                       </div>
 
-                      <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                        <span className="font-bold text-[#43ACE0] block text-xs uppercase tracking-wider mb-1">
+                      <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                        <span className="font-bold text-[#1B69B6] block text-xs uppercase tracking-wider mb-1">
                           🪥 Easy Oral Hygiene
                         </span>
                         <span className="text-xs">
@@ -1102,8 +1097,8 @@ export default function ServicesPage() {
                         </span>
                       </div>
 
-                      <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                        <span className="font-bold text-[#43ACE0] block text-xs uppercase tracking-wider mb-1">
+                      <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                        <span className="font-bold text-[#1B69B6] block text-xs uppercase tracking-wider mb-1">
                           🎯 Corrects Complex Bites
                         </span>
                         <span className="text-xs">
@@ -1113,7 +1108,7 @@ export default function ServicesPage() {
                     </div>
                   </div>
 
-                  <div className="p-5 rounded-2xl bg-[#43ACE0]/10 border border-[#43ACE0]/30 space-y-2">
+                  <div className="p-5 rounded-2xl bg-[#1B69B6]/10 border border-[#1B69B6]/30 space-y-2">
                     <h4 className="font-serif text-lg font-bold text-[#000000]">
                       Invisalign Near Me in Dallas, TX
                     </h4>
@@ -1127,8 +1122,8 @@ export default function ServicesPage() {
               {/* 9. Dental Emergencies */}
               {activeModalService.id === "emergencies" && (
                 <div className="space-y-6 text-sm text-[#000000] leading-relaxed font-normal">
-                  <div className="p-5 rounded-2xl bg-[#5FCAEF]/10 border border-[#43ACE0]/20 font-medium">
-                    Dental emergencies can happen when you least expect and can cause considerable pain and discomfort. If you ever bite into hard food and break a tooth or suffer a blow to your face, don’t panic. The <span className="font-extrabold text-[#43ACE0]">Illinois Family Dentistry</span> team is here to relieve your pain and help restore your healthy smile.
+                  <div className="p-5 rounded-2xl bg-[#F0F6FF]/10 border border-[#1B69B6]/20 font-medium">
+                    Dental emergencies can happen when you least expect and can cause considerable pain and discomfort. If you ever bite into hard food and break a tooth or suffer a blow to your face, don’t panic. The <span className="font-extrabold text-[#1B69B6]">Illinois Family Dentistry</span> team is here to relieve your pain and help restore your healthy smile.
                   </div>
 
                   <div className="space-y-3 pt-2">
@@ -1140,19 +1135,19 @@ export default function ServicesPage() {
                     </p>
                   </div>
 
-                  <div className="space-y-3 pt-4 border-t border-[#43ACE0]/15">
+                  <div className="space-y-3 pt-4 border-t border-[#1B69B6]/15">
                     <h4 className="font-serif text-xl sm:text-2xl font-bold text-[#000000]">
                       When Should I Call for Emergency Dental Care?
                     </h4>
                     <p>
-                      Contact <span className="font-bold text-[#43ACE0]">Illinois Family Dentistry</span> immediately at 469-809-1919. We offer same-day, evening, and Saturday emergency appointments to provide prompt relief.
+                      Contact <span className="font-bold text-[#1B69B6]">Illinois Family Dentistry</span> immediately at 469-809-1919. We offer same-day, evening, and Saturday emergency appointments to provide prompt relief.
                     </p>
-                    <div className="p-4 rounded-xl bg-[#F4A261]/15 border border-[#F4A261]/30 text-xs font-bold text-[#000000]">
+                    <div className="p-4 rounded-xl bg-[#FF7A00]/15 border border-[#FF7A00]/30 text-xs font-bold text-[#000000]">
                       ⚠️ Note: If you have a life-threatening emergency or severe bleeding that won’t stop, call 911 or head to your nearest hospital ER.
                     </div>
                   </div>
 
-                  <div className="space-y-3 pt-4 border-t border-[#43ACE0]/15">
+                  <div className="space-y-3 pt-4 border-t border-[#1B69B6]/15">
                     <h4 className="font-serif text-xl sm:text-2xl font-bold text-[#000000]">
                       What Can I Expect During an Emergency Visit?
                     </h4>
@@ -1161,7 +1156,7 @@ export default function ServicesPage() {
                     </p>
                   </div>
 
-                  <div className="p-5 rounded-2xl bg-[#43ACE0]/10 border border-[#43ACE0]/30 space-y-2">
+                  <div className="p-5 rounded-2xl bg-[#1B69B6]/10 border border-[#1B69B6]/30 space-y-2">
                     <h4 className="font-serif text-lg font-bold text-[#000000]">
                       Emergency Dental Care Near Me in Dallas, TX
                     </h4>
@@ -1175,8 +1170,8 @@ export default function ServicesPage() {
               {/* 10. Missing Teeth Replacements */}
               {activeModalService.id === "missing-teeth" && (
                 <div className="space-y-6 text-sm text-[#000000] leading-relaxed font-normal">
-                  <div className="p-5 rounded-2xl bg-[#5FCAEF]/10 border border-[#43ACE0]/20 font-medium">
-                    At <span className="font-extrabold text-[#43ACE0]">Illinois Family Dentistry</span>, we understand the challenges of living with missing teeth and are here to help. We offer a range of tooth replacement options, including complete and partial dentures and implant restorations, to restore your smile’s health, function, and aesthetics.
+                  <div className="p-5 rounded-2xl bg-[#F0F6FF]/10 border border-[#1B69B6]/20 font-medium">
+                    At <span className="font-extrabold text-[#1B69B6]">Illinois Family Dentistry</span>, we understand the challenges of living with missing teeth and are here to help. We offer a range of tooth replacement options, including complete and partial dentures and implant restorations, to restore your smile’s health, function, and aesthetics.
                   </div>
 
                   <div className="space-y-3 pt-2">
@@ -1187,24 +1182,24 @@ export default function ServicesPage() {
                       Dentures and partials offer a cost-effective, time-tested solution to restore missing teeth. Today’s restorations are sleeker, more functional, and more natural-looking than ever!
                     </p>
                     <div className="space-y-2">
-                      <div className="p-3.5 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20">
-                        <strong className="text-xs uppercase font-extrabold text-[#43ACE0] block">
+                      <div className="p-3.5 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20">
+                        <strong className="text-xs uppercase font-extrabold text-[#1B69B6] block">
                           Immediate Dentures
                         </strong>
                         <span className="text-xs">
                           Placed immediately after extractions so you never go without teeth while gums heal.
                         </span>
                       </div>
-                      <div className="p-3.5 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20">
-                        <strong className="text-xs uppercase font-extrabold text-[#43ACE0] block">
+                      <div className="p-3.5 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20">
+                        <strong className="text-xs uppercase font-extrabold text-[#1B69B6] block">
                           Conventional Dentures
                         </strong>
                         <span className="text-xs">
                           Custom crafted from impressions after full healing for maximum comfort, stability, and aesthetic fit.
                         </span>
                       </div>
-                      <div className="p-3.5 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20">
-                        <strong className="text-xs uppercase font-extrabold text-[#43ACE0] block">
+                      <div className="p-3.5 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20">
+                        <strong className="text-xs uppercase font-extrabold text-[#1B69B6] block">
                           Removable Partial Dentures
                         </strong>
                         <span className="text-xs">
@@ -1214,7 +1209,7 @@ export default function ServicesPage() {
                     </div>
                   </div>
 
-                  <div className="space-y-3 pt-4 border-t border-[#43ACE0]/15">
+                  <div className="space-y-3 pt-4 border-t border-[#1B69B6]/15">
                     <h4 className="font-serif text-xl sm:text-2xl font-bold text-[#000000]">
                       Dental Implant Restorations
                     </h4>
@@ -1222,24 +1217,24 @@ export default function ServicesPage() {
                       Dental implants are small titanium posts placed in your jawbone to replace missing tooth roots, fusing with bone to preserve jawbone density and support lifelong replacement teeth.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                      <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                        <span className="font-bold text-[#43ACE0] block text-xs uppercase tracking-wider mb-1">
+                      <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                        <span className="font-bold text-[#1B69B6] block text-xs uppercase tracking-wider mb-1">
                           Implant Crowns
                         </span>
                         <span className="text-xs">
                           Single porcelain crown attached to an implant post.
                         </span>
                       </div>
-                      <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                        <span className="font-bold text-[#43ACE0] block text-xs uppercase tracking-wider mb-1">
+                      <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                        <span className="font-bold text-[#1B69B6] block text-xs uppercase tracking-wider mb-1">
                           Implant Bridges
                         </span>
                         <span className="text-xs">
                           Fixed multi-tooth bridge anchored by dental implants.
                         </span>
                       </div>
-                      <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#43ACE0]/20 shadow-xs">
-                        <span className="font-bold text-[#43ACE0] block text-xs uppercase tracking-wider mb-1">
+                      <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#1B69B6]/20 shadow-xs">
+                        <span className="font-bold text-[#1B69B6] block text-xs uppercase tracking-wider mb-1">
                           Implant Dentures
                         </span>
                         <span className="text-xs">
@@ -1249,7 +1244,7 @@ export default function ServicesPage() {
                     </div>
                   </div>
 
-                  <div className="p-5 rounded-2xl bg-[#43ACE0]/10 border border-[#43ACE0]/30 space-y-2">
+                  <div className="p-5 rounded-2xl bg-[#1B69B6]/10 border border-[#1B69B6]/30 space-y-2">
                     <h4 className="font-serif text-lg font-bold text-[#000000]">
                       Missing Teeth Replacements Near Me in Dallas, TX
                     </h4>
@@ -1261,7 +1256,7 @@ export default function ServicesPage() {
               )}
 
               {/* Modal Footer CTA Button - Redirects to /contact */}
-              <div className="pt-6 border-t border-[#43ACE0]/20 flex flex-col sm:flex-row items-center justify-between gap-4 shrink-0">
+              <div className="pt-6 border-t border-[#1B69B6]/20 flex flex-col sm:flex-row items-center justify-between gap-4 shrink-0">
                 <div className="text-xs font-bold text-[#000000]">
                   Illinois Family Dentistry • 2300 W Illinois Ave, Dallas TX
                 </div>
@@ -1269,7 +1264,7 @@ export default function ServicesPage() {
                 <Link
                   href="/contact"
                   onClick={() => setActiveModalService(null)}
-                  className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#43ACE0] text-[#FFFFFF] text-xs font-extrabold uppercase tracking-widest hover:bg-[#F4A261] transition-colors shadow-lg text-center flex items-center justify-center gap-2"
+                  className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#1B69B6] text-[#FFFFFF] text-xs font-extrabold uppercase tracking-widest hover:bg-[#FF7A00] transition-colors shadow-lg text-center flex items-center justify-center gap-2"
                 >
                   <Calendar className="w-4 h-4" />
                   <span>Schedule Appointment</span>

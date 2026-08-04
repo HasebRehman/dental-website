@@ -39,7 +39,7 @@ const showcaseServices = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-20 md:py-28 bg-[#FFFFFF] text-[#000000]">
+    <section id="services" className="py-10 md:py-28 bg-[#FFFFFF] text-[#000000]">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           

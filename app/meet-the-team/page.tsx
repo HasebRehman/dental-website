@@ -14,7 +14,7 @@ export default function MeetTheTeamPage() {
       <Navbar />
 
       {/* Hero Header Section */}
-      <section className="pt-44 pb-20 bg-[#1B69B6] text-[#FFFFFF] relative overflow-hidden">
+      <section className="pt-32 sm:pt-44 pb-10 sm:pb-20 bg-[#1B69B6] text-[#FFFFFF] relative overflow-hidden">
         {/* Ambient Glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#FF7A00]/15 rounded-full blur-[140px] pointer-events-none" />
 
@@ -24,32 +24,34 @@ export default function MeetTheTeamPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FFFFFF]/20 border border-[#FFFFFF]/30 text-xs font-bold uppercase tracking-widest text-[#FFFFFF] mb-4">
-              <Users className="w-3.5 h-3.5 text-[#FF7A00]" />
+            {/* Top Pill Badge (Sleek & Compact on Mobile) */}
+            <div className="inline-flex items-center gap-1 px-2 py-0.5 sm:px-3.5 sm:py-1.5 rounded-full bg-[#FFFFFF]/20 border border-[#FFFFFF]/30 text-[9px] sm:text-xs font-extrabold uppercase tracking-wider text-[#FFFFFF] mb-3 sm:mb-4 w-fit mx-auto">
+              <Users className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 text-[#FF7A00] shrink-0" />
               <span>Dallas Family Dental Specialists</span>
             </div>
 
-            <h1 className="font-sans text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-[#FFFFFF] mb-4">
+            <h1 className="font-sans text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-[#FFFFFF] mb-3 sm:mb-4">
               MEET OUR <span className="text-[#93C5FD]">TEAM</span>
             </h1>
 
-            <p className="font-sans text-base sm:text-lg text-[#FFFFFF]/90 max-w-2xl mx-auto font-normal leading-relaxed mb-8">
+            <p className="font-sans text-xs sm:text-base md:text-lg text-[#FFFFFF]/90 max-w-2xl mx-auto font-normal leading-relaxed mb-5 sm:mb-8">
               Behind every healthy smile is a dedicated team of passionate professionals. Get to know the friendly staff serving families across Dallas & Oak Cliff.
             </p>
 
-            <div className="flex flex-wrap items-center justify-center gap-4">
+            {/* Compact Responsive Buttons Row */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5 max-w-[220px] sm:max-w-none mx-auto">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-[#FF7A00] text-[#FFFFFF] text-xs font-extrabold uppercase tracking-widest hover:bg-[#FFFFFF] hover:text-[#0B2545] transition-colors shadow-lg"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:px-7 sm:py-3.5 rounded-full bg-[#FF7A00] text-[#FFFFFF] text-[11px] sm:text-xs font-extrabold uppercase tracking-wider hover:bg-[#FFFFFF] hover:text-[#0B2545] transition-colors shadow-md"
               >
-                <Calendar className="w-4 h-4" />
+                <Calendar className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 <span>Schedule Visit</span>
               </Link>
               <a
                 href="tel:4698091919"
-                className="inline-flex items-center gap-2 px-6 py-4 rounded-full bg-[#FFFFFF]/20 border border-[#FFFFFF]/30 text-[#FFFFFF] text-xs font-extrabold uppercase tracking-widest hover:bg-[#FFFFFF] hover:text-[#0B2545] transition-colors"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3.5 rounded-full bg-[#FFFFFF]/20 border border-[#FFFFFF]/30 text-[#FFFFFF] text-[11px] sm:text-xs font-extrabold uppercase tracking-wider hover:bg-[#FFFFFF] hover:text-[#0B2545] transition-colors"
               >
-                <Phone className="w-4 h-4 text-[#93C5FD]" />
+                <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#93C5FD]" />
                 <span>469-809-1919</span>
               </a>
             </div>
@@ -57,8 +59,8 @@ export default function MeetTheTeamPage() {
         </div>
       </section>
 
-      {/* Main Team Showcase Photo Section with Soft Ambient Glow Halo */}
-      <section className="py-16 md:py-24 max-w-7xl mx-auto px-6 md:px-12">
+      {/* Main Team Showcase Photo Section */}
+      <section className="py-10 md:py-24 max-w-7xl mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, scale: 0.96, y: 30 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -173,31 +175,31 @@ export default function MeetTheTeamPage() {
           ))}
         </div>
 
-        {/* Bottom Booking Banner */}
+        {/* Bottom Booking Banner (Sleek & Responsive on Mobile) */}
         <motion.div
           initial={{ opacity: 0, y: 35 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.65 }}
-          className="mt-20 bg-gradient-to-r from-[#0B2545] via-[#1B69B6] to-[#0B2545] rounded-3xl p-8 sm:p-12 text-[#FFFFFF] shadow-2xl text-center relative overflow-hidden border border-[#1B69B6]/40"
+          className="mt-10 sm:mt-20 bg-gradient-to-r from-[#0B2545] via-[#1B69B6] to-[#0B2545] rounded-2xl sm:rounded-3xl p-5 sm:p-10 text-[#FFFFFF] shadow-xl text-center relative overflow-hidden border border-[#1B69B6]/40"
         >
-          <h2 className="font-sans text-3xl sm:text-4xl font-black mb-3 text-[#FFFFFF] tracking-tight">
+          <h2 className="font-sans text-xl sm:text-3xl lg:text-4xl font-black mb-2 text-[#FFFFFF] tracking-tight">
             Ready to Experience <span className="text-[#93C5FD]">Gentle Family Care?</span>
           </h2>
-          <p className="font-sans text-sm sm:text-base text-[#FFFFFF]/90 max-w-xl mx-auto mb-8 font-normal">
+          <p className="font-sans text-xs sm:text-base text-[#FFFFFF]/90 max-w-xl mx-auto mb-5 sm:mb-8 font-normal leading-relaxed">
             Dr. Raj, Dr. Pham, and our entire Dallas team are ready to welcome you and your loved ones to Illinois Family Dentistry.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5 max-w-[240px] sm:max-w-none mx-auto">
             <Link
               href="/contact"
-              className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#FF7A00] text-[#FFFFFF] text-xs font-extrabold uppercase tracking-widest hover:bg-[#FFFFFF] hover:text-[#0B2545] transition-colors shadow-lg"
+              className="w-full sm:w-auto px-5 py-2.5 sm:px-8 sm:py-3.5 rounded-full bg-[#FF7A00] text-[#FFFFFF] text-[11px] sm:text-xs font-extrabold uppercase tracking-wider hover:bg-[#FFFFFF] hover:text-[#0B2545] transition-colors shadow-md"
             >
               Book Appointment Online
             </Link>
             <a
               href="tel:4698091919"
-              className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#FFFFFF]/15 border border-[#FFFFFF]/30 text-[#FFFFFF] text-xs font-extrabold uppercase tracking-widest hover:bg-[#FFFFFF] hover:text-[#0B2545] transition-colors"
+              className="w-full sm:w-auto px-5 py-2.5 sm:px-8 sm:py-3.5 rounded-full bg-[#FFFFFF]/15 border border-[#FFFFFF]/30 text-[#FFFFFF] text-[11px] sm:text-xs font-extrabold uppercase tracking-wider hover:bg-[#FFFFFF] hover:text-[#0B2545] transition-colors"
             >
               Call 469-809-1919
             </a>
