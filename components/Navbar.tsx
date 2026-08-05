@@ -175,7 +175,6 @@ export default function Navbar() {
             }`}
           >
             <span>Services</span>
-            <ChevronDown className={`w-3.5 h-3.5 ${isServicesActive ? "text-[#1B69B6]" : "text-[#64748B]"}`} />
           </Link>
 
           {/* For Patients Dropdown */}
